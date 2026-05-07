@@ -40,7 +40,7 @@
                 
                 if (tag) {{
                     // 設定你的 GitHub Repository 資訊
-                    const repoOwner = "你的GitHub帳號"; // 這裡要改寫成你的帳號
+                    const repoOwner = "terry0119"; // 這裡要改寫成你的帳號
                     const repoName = "eco-news-daily"; // 這裡改為你的專案名
                     
                     // 構建 GitHub Issue 的 URL
