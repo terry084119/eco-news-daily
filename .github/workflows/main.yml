@@ -2,11 +2,11 @@ name: Update News Website
 
 on:
   schedule:
-    - cron: '0 */12 * * *' # 每 12 小時執行一次
-  workflow_dispatch: # 允許手動點擊執行
+    - cron: '0 */12 * * *' 
+  workflow_dispatch: 
 
 permissions:
-  contents: write
+  contents: write  # 強制開啟寫入權限
 
 jobs:
   build:
@@ -21,7 +21,8 @@ jobs:
           python-version: '3.9'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install feedparser google-generativeai requests beautifulsoup4
 
       - name: Run script
         env:
@@ -30,8 +31,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git commit -m "Update news $(date)" || exit 0
+          git commit -m "自動更新環境新聞: $(date)" || echo "沒有檔案需要更新"
           git push
