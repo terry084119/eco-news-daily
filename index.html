@@ -4,154 +4,151 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>EcoNews | 每日環境新聞摘要</title>
+        <title>EcoNews | 環境新聞摘要</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
         <style>
-            :root { --main-green: #2e7d32; --bg-gray: #f0f2f0; }
-            body { max-width: 800px; background-color: var(--bg-gray); font-family: "PingFang TC", sans-serif; }
-            header { text-align: center; padding: 50px 20px; background: white; border-radius: 0 0 30px 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-            h1 { color: var(--main-green); font-size: 2.8em; margin: 0; }
-            .subtitle { color: #666; margin-top: 10px; }
-            .news-grid { margin-top: 30px; }
-            .news-card { background: white; padding: 25px; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: 0.3s; border: 1px solid #eee; }
-            .news-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-            .card-tag { background: var(--main-green); color: white; display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.7em; margin-bottom: 10px; }
-            h3 { margin: 0 0 15px 0; color: #1a1a1a; line-height: 1.4; }
-            p { color: #444; font-size: 1.05em; line-height: 1.7; }
-            .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; border-top: 1px solid #f0f0f0; padding-top: 15px; }
-            .read-more { color: var(--main-green); font-weight: bold; text-decoration: none; }
-            .save-btn { background: #fff8e1; color: #f57f17; border: 1px solid #ffe082; padding: 6px 15px; cursor: pointer; border-radius: 8px; font-weight: bold; }
-            .save-btn:hover { background: #fff176; }
-            footer { text-align: center; padding: 40px; color: #888; font-size: 0.8em; }
+            :root { --main-green: #2e7d32; --accent: #f57f17; }
+            body { max-width: 1200px; background-color: #f5f7f5; }
+            header { text-align: center; padding: 30px; background: white; border-radius: 15px; margin-bottom: 20px; }
+            h1 { color: var(--main-green); font-size: 2.5em; }
+            
+            h2 { border-left: 8px solid var(--main-green); padding-left: 15px; margin: 40px 0 20px; color: #333; }
+            
+            /* 關鍵：網格佈局 */
+            .news-grid { 
+                display: grid; 
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+                gap: 20px; 
+            }
+            
+            .news-card { 
+                background: white; padding: 20px; border-radius: 12px; 
+                display: flex; flex-direction: column; justify-content: space-between;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.06); height: 100%;
+            }
+            .news-card h3 { font-size: 1.15em; margin-bottom: 10px; line-height: 1.4; color: #111; }
+            .news-card p { font-size: 0.95em; color: #555; line-height: 1.6; flex-grow: 1; }
+            
+            .card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee; }
+            .read-more { font-size: 0.9em; font-weight: bold; color: var(--main-green); text-decoration: none; }
+            .save-btn { background: #fff8e1; color: var(--accent); border: 1px solid #ffe082; padding: 4px 10px; border-radius: 6px; font-size: 0.85em; cursor: pointer; }
+            
+            footer { text-align: center; margin-top: 50px; padding: 20px; color: #888; }
+
+            @media (max-width: 600px) {
+                .news-grid { grid-template-columns: 1fr; }
+            }
         </style>
     </head>
     <body>
         <header>
-            <h1>🌱 EcoNews</h1>
-            <p class="subtitle">為您守護地球的每一份資訊</p>
-            <p><small>更新時間：2026-05-07 09:50 (每 12 小時自動更新)</small></p>
+            <h1>🌱 EcoNews 環境全球報</h1>
+            <p>自動化搜集關鍵字：環境、能源、永續 | 更新時間：2026-05-07 09:54</p>
         </header>
 
+        <h2>📍 台灣環境新聞</h2>
         <div class="news-grid">
-            
         <div class="news-card" data-title="一週內2起瀑布溺斃 瑪家鄉公所擬推申請導覽制" data-link="https://news.pts.org.tw/article/807172">
-            <div class="card-tag">今日精選</div>
             <h3>一週內2起瀑布溺斃 瑪家鄉公所擬推申請導覽制</h3>
-            <p>屏東瑪家鄉的射鹿溪瀑布群被當地原住民部落視為聖地，目前並非開放水域，但因風景優美仍被不少遊客視為秘境，擅自前往戲水，其實這些水域藏有不少暗流，相當危險。昨（6）日在被俗稱為草泥馬峽谷的瀑布水域，就發生一起溺亡事故，1日時也有民眾在達拉邦瀑布不幸溺斃。為此，瑪家鄉公所研議仿效哈尤溪的管制措施，希望從源...</p>
+            <p>屏東瑪家鄉的射鹿溪瀑布群被當地原住民部落視為聖地，目前並非開放水域，但因風景優美仍被不少遊客視為秘境，擅自前往戲水，其實這些水域藏有不少暗流，相當危險。昨（6）日在被俗稱為草泥馬峽谷的瀑布水域，就發生...</p>
             <div class="card-footer">
-                <a href="https://news.pts.org.tw/article/807172" target="_blank" class="read-more">閱讀原文 ↗</a>
-                <button onclick="saveToCloud(0)" class="save-btn">⭐ 雲端收藏</button>
+                <a href="https://news.pts.org.tw/article/807172" target="_blank" class="read-more">閱讀全文</a>
+                <button onclick="saveToCloud('TW_0')" class="save-btn">⭐ 收藏</button>
             </div>
         </div>
         
         <div class="news-card" data-title="西門商圈6/1起全面禁菸 3負壓式吸菸區今啟用" data-link="https://news.pts.org.tw/article/807168">
-            <div class="card-tag">今日精選</div>
             <h3>西門商圈6/1起全面禁菸 3負壓式吸菸區今啟用</h3>
-            <p>打造台北無菸城市，台北市府針對人潮密集的西門商圈，從6月1日開始全面禁菸，宣導吸菸民眾前往指定吸菸區，讓吸菸者和非吸菸者分流；全新設置的3處負壓式吸菸區，也從今（7）日開始啟用。董氏基金會表示，WHO提醒推動無菸環境得由內而外，先做到室內全面禁菸，再推行室外定點吸菸。...</p>
+            <p>打造台北無菸城市，台北市府針對人潮密集的西門商圈，從6月1日開始全面禁菸，宣導吸菸民眾前往指定吸菸區，讓吸菸者和非吸菸者分流；全新設置的3處負壓式吸菸區，也從今（7）日開始啟用。董氏基金會表示，WHO...</p>
             <div class="card-footer">
-                <a href="https://news.pts.org.tw/article/807168" target="_blank" class="read-more">閱讀原文 ↗</a>
-                <button onclick="saveToCloud(1)" class="save-btn">⭐ 雲端收藏</button>
+                <a href="https://news.pts.org.tw/article/807168" target="_blank" class="read-more">閱讀全文</a>
+                <button onclick="saveToCloud('TW_1')" class="save-btn">⭐ 收藏</button>
             </div>
         </div>
         
         <div class="news-card" data-title="民團母親節前夕拋3大訴求 呼籲政府發放「育兒幣」" data-link="https://news.pts.org.tw/article/807166">
-            <div class="card-tag">今日精選</div>
             <h3>民團母親節前夕拋3大訴求 呼籲政府發放「育兒幣」</h3>
-            <p>今（2026）年2月全台新生兒人數跌破7000人，創史上新低，不過3大民間團體公布最新調查結果，有超過5成5家長表示，若政府的支持到位，願意再生一個孩子。民團表示，經濟公平與職場彈性是媽媽的優先需求，並建議比照文化幣發放「育兒幣」。對此勞動部長洪申翰回應強調，會整體檢討法規與制度，讓職場環境更友善勞...</p>
+            <p>今（2026）年2月全台新生兒人數跌破7000人，創史上新低，不過3大民間團體公布最新調查結果，有超過5成5家長表示，若政府的支持到位，願意再生一個孩子。民團表示，經濟公平與職場彈性是媽媽的優先需求，...</p>
             <div class="card-footer">
-                <a href="https://news.pts.org.tw/article/807166" target="_blank" class="read-more">閱讀原文 ↗</a>
-                <button onclick="saveToCloud(2)" class="save-btn">⭐ 雲端收藏</button>
+                <a href="https://news.pts.org.tw/article/807166" target="_blank" class="read-more">閱讀全文</a>
+                <button onclick="saveToCloud('TW_2')" class="save-btn">⭐ 收藏</button>
             </div>
         </div>
         
         <div class="news-card" data-title="無足夠空間、不同物種混雜 台鐵行包車遭控不當運輸動物" data-link="https://news.pts.org.tw/article/807165">
-            <div class="card-tag">今日精選</div>
             <h3>無足夠空間、不同物種混雜 台鐵行包車遭控不當運輸動物</h3>
-            <p>有些民眾選擇透過台鐵行包車來運送動物，動保團體調查發現，現行《動物運送管理辦法》針對犬、貓、鼠、兔等動物並無規範。愛兔協會指出，運輸過程中存在4大亂象，不只罔顧動物福利，甚至還可能大開疫病傳播漏洞，呼籲農業部要積極管理。...</p>
+            <p>有些民眾選擇透過台鐵行包車來運送動物，動保團體調查發現，現行《動物運送管理辦法》針對犬、貓、鼠、兔等動物並無規範。愛兔協會指出，運輸過程中存在4大亂象，不只罔顧動物福利，甚至還可能大開疫病傳播漏洞，呼...</p>
             <div class="card-footer">
-                <a href="https://news.pts.org.tw/article/807165" target="_blank" class="read-more">閱讀原文 ↗</a>
-                <button onclick="saveToCloud(3)" class="save-btn">⭐ 雲端收藏</button>
+                <a href="https://news.pts.org.tw/article/807165" target="_blank" class="read-more">閱讀全文</a>
+                <button onclick="saveToCloud('TW_3')" class="save-btn">⭐ 收藏</button>
             </div>
         </div>
         
         <div class="news-card" data-title="日本 EV 車補助新制，特斯拉維持高檔、比亞迪遭大砍" data-link="https://technews.tw/2026/05/07/japan-new-ev-subsidy-tesla-high-byd-drastically-cut/">
-            <div class="card-tag">今日精選</div>
             <h3>日本 EV 車補助新制，特斯拉維持高檔、比亞迪遭大砍</h3>
             <p>日本 4 月 1 日起正式實施 2026 年度 CEV（潔淨能源車）補助制度新制，電動車（EV）補助評分標準大 [&#8230;]...</p>
             <div class="card-footer">
-                <a href="https://technews.tw/2026/05/07/japan-new-ev-subsidy-tesla-high-byd-drastically-cut/" target="_blank" class="read-more">閱讀原文 ↗</a>
-                <button onclick="saveToCloud(4)" class="save-btn">⭐ 雲端收藏</button>
+                <a href="https://technews.tw/2026/05/07/japan-new-ev-subsidy-tesla-high-byd-drastically-cut/" target="_blank" class="read-more">閱讀全文</a>
+                <button onclick="saveToCloud('TW_4')" class="save-btn">⭐ 收藏</button>
             </div>
         </div>
-        
+        </div>
+
+        <h2>🌐 國際環境視角</h2>
+        <div class="news-grid">
         <div class="news-card" data-title="中東危機對亞洲能源供給衝擊將是菲律賓東盟峰會重要話題" data-link="https://www.rfi.fr/tw/%E4%BA%9E%E6%B4%B2/20260506-%E4%B8%AD%E6%9D%B1%E5%8D%B1%E6%A9%9F%E5%B0%8D%E4%BA%9E%E6%B4%B2%E8%83%BD%E6%BA%90%E4%BE%9B%E7%B5%A6%E8%A1%9D%E6%93%8A%E5%B0%87%E6%98%AF%E8%8F%B2%E5%BE%8B%E8%B3%93%E6%9D%B1%E7%9B%9F%E5%B3%B0%E6%9C%83%E9%87%8D%E8%A6%81%E8%A9%B1%E9%A1%8C">
-            <div class="card-tag">今日精選</div>
             <h3>中東危機對亞洲能源供給衝擊將是菲律賓東盟峰會重要話題</h3>
-            <p>第48屆東南亞國家聯盟領導人峰會5月7日-8日在菲律賓城市宿務市舉行。主辦國自6日起已明顯提升了警力部署。宿務市國際媒體中心附近主要街道和公共街區都有保安人員巡邏、盤查。鑒於持續兩月有餘的中東危機對亞洲地區能源供給帶來的衝擊，預計能源供給安全會是此次會議的重要議題。...</p>
+            <p>第48屆東南亞國家聯盟領導人峰會5月7日-8日在菲律賓城市宿務市舉行。主辦國自6日起已明顯提升了警力部署。宿務市國際媒體中心附近主要街道和公共街區都有保安人員巡邏、盤查。鑒於持續兩月有餘的中東危機對亞...</p>
             <div class="card-footer">
-                <a href="https://www.rfi.fr/tw/%E4%BA%9E%E6%B4%B2/20260506-%E4%B8%AD%E6%9D%B1%E5%8D%B1%E6%A9%9F%E5%B0%8D%E4%BA%9E%E6%B4%B2%E8%83%BD%E6%BA%90%E4%BE%9B%E7%B5%A6%E8%A1%9D%E6%93%8A%E5%B0%87%E6%98%AF%E8%8F%B2%E5%BE%8B%E8%B3%93%E6%9D%B1%E7%9B%9F%E5%B3%B0%E6%9C%83%E9%87%8D%E8%A6%81%E8%A9%B1%E9%A1%8C" target="_blank" class="read-more">閱讀原文 ↗</a>
-                <button onclick="saveToCloud(5)" class="save-btn">⭐ 雲端收藏</button>
+                <a href="https://www.rfi.fr/tw/%E4%BA%9E%E6%B4%B2/20260506-%E4%B8%AD%E6%9D%B1%E5%8D%B1%E6%A9%9F%E5%B0%8D%E4%BA%9E%E6%B4%B2%E8%83%BD%E6%BA%90%E4%BE%9B%E7%B5%A6%E8%A1%9D%E6%93%8A%E5%B0%87%E6%98%AF%E8%8F%B2%E5%BE%8B%E8%B3%93%E6%9D%B1%E7%9B%9F%E5%B3%B0%E6%9C%83%E9%87%8D%E8%A6%81%E8%A9%B1%E9%A1%8C" target="_blank" class="read-more">閱讀全文</a>
+                <button onclick="saveToCloud('INT_0')" class="save-btn">⭐ 收藏</button>
             </div>
         </div>
         
         <div class="news-card" data-title="法國國家稀土計畫有何內容？" data-link="https://www.rfi.fr/tw/%E5%B0%88%E6%AC%84%E6%AA%A2%E7%B4%A2/%E7%92%B0%E4%BF%9D%E5%A4%A9%E5%9C%B0/20260506-%E6%B3%95%E5%9C%8B%E5%9C%8B%E5%AE%B6%E7%A8%80%E5%9C%9F%E8%A8%88%E7%95%AB%E6%9C%89%E4%BD%95%E5%85%A7%E5%AE%B9">
-            <div class="card-tag">今日精選</div>
             <h3>法國國家稀土計畫有何內容？</h3>
-            <p>俄烏戰爭早已使歐洲各國意識到必須在能源領域減低對他國的依賴，伊朗戰爭尤其是弗爾姆茲海峽的封鎖更使能源以及原材料自主成為各國政府的當務之急。除了石油天然氣之外，遭到中國壟斷的稀土早已成為西方國家的一大隱患。在這樣的背景下，法國政府的經濟與工業部長5月5日在訪問法國西南部的比利牛斯大區時宣布了法國的“國...</p>
+            <p>俄烏戰爭早已使歐洲各國意識到必須在能源領域減低對他國的依賴，伊朗戰爭尤其是弗爾姆茲海峽的封鎖更使能源以及原材料自主成為各國政府的當務之急。除了石油天然氣之外，遭到中國壟斷的稀土早已成為西方國家的一大隱...</p>
             <div class="card-footer">
-                <a href="https://www.rfi.fr/tw/%E5%B0%88%E6%AC%84%E6%AA%A2%E7%B4%A2/%E7%92%B0%E4%BF%9D%E5%A4%A9%E5%9C%B0/20260506-%E6%B3%95%E5%9C%8B%E5%9C%8B%E5%AE%B6%E7%A8%80%E5%9C%9F%E8%A8%88%E7%95%AB%E6%9C%89%E4%BD%95%E5%85%A7%E5%AE%B9" target="_blank" class="read-more">閱讀原文 ↗</a>
-                <button onclick="saveToCloud(6)" class="save-btn">⭐ 雲端收藏</button>
+                <a href="https://www.rfi.fr/tw/%E5%B0%88%E6%AC%84%E6%AA%A2%E7%B4%A2/%E7%92%B0%E4%BF%9D%E5%A4%A9%E5%9C%B0/20260506-%E6%B3%95%E5%9C%8B%E5%9C%8B%E5%AE%B6%E7%A8%80%E5%9C%9F%E8%A8%88%E7%95%AB%E6%9C%89%E4%BD%95%E5%85%A7%E5%AE%B9" target="_blank" class="read-more">閱讀全文</a>
+                <button onclick="saveToCloud('INT_1')" class="save-btn">⭐ 收藏</button>
             </div>
         </div>
         
         <div class="news-card" data-title="日本2025年度核電機組運轉率為33.6%" data-link="https://tchina.kyodonews.net/articles/-/7953">
-            <div class="card-tag">今日精選</div>
             <h3>日本2025年度核電機組運轉率為33.6%</h3>
-            <p>								　　【共同社5月7日電】日本原子能產業協會彙總的調查結果6日公佈，全國核電機組2025年度實際發電量與滿負荷運轉情況下的總發電量之比（運轉率）為33.6%。在2011年東京電力福島第一核電站事故之後，自2023年度起連續三年創新高。主要原因是2...</p>
+            <p>								　　【共同社5月7日電】日本原子能產業協會彙總的調查結果6日公佈，全國核電機組2025年度實際發電量與滿負荷運轉情況下的總發電量之比（運轉率）為33.6%。在2011年東京電力福島第一...</p>
             <div class="card-footer">
-                <a href="https://tchina.kyodonews.net/articles/-/7953" target="_blank" class="read-more">閱讀原文 ↗</a>
-                <button onclick="saveToCloud(7)" class="save-btn">⭐ 雲端收藏</button>
+                <a href="https://tchina.kyodonews.net/articles/-/7953" target="_blank" class="read-more">閱讀全文</a>
+                <button onclick="saveToCloud('INT_2')" class="save-btn">⭐ 收藏</button>
             </div>
         </div>
         
         <div class="news-card" data-title="亞行年會閉幕 日本承諾對亞洲加強支援" data-link="https://tchina.kyodonews.net/articles/-/7949">
-            <div class="card-tag">今日精選</div>
             <h3>亞行年會閉幕 日本承諾對亞洲加強支援</h3>
-            <p>　　【共同社撒馬爾罕5月7日電】亞洲開發銀行（ADB）年會6日在烏茲別克斯坦撒馬爾罕閉幕。在荷莫茲海峽事實上被持續封鎖的情況下，對中東石油依賴度較高的亞洲各國均對經濟前景感到擔憂。日本承諾將與亞行合作，為能源結構轉型及中小企業資金周轉提供支援。　　在4日的會議...</p>
+            <p>　　【共同社撒馬爾罕5月7日電】亞洲開發銀行（ADB）年會6日在烏茲別克斯坦撒馬爾罕閉幕。在荷莫茲海峽事實上被持續封鎖的情況下，對中東石油依賴度較高的亞洲各國均對經濟前景感到擔憂。日本承諾將與亞行合作...</p>
             <div class="card-footer">
-                <a href="https://tchina.kyodonews.net/articles/-/7949" target="_blank" class="read-more">閱讀原文 ↗</a>
-                <button onclick="saveToCloud(8)" class="save-btn">⭐ 雲端收藏</button>
+                <a href="https://tchina.kyodonews.net/articles/-/7949" target="_blank" class="read-more">閱讀全文</a>
+                <button onclick="saveToCloud('INT_3')" class="save-btn">⭐ 收藏</button>
             </div>
         </div>
-        
         </div>
 
         <footer>
-            <p>本站由 GitHub Actions 與 Google Gemini AI 自動驅動</p>
-            <p>收藏之內容將儲存於專案 Issue 雲端資料庫</p>
+            <p>© 2026 由 Gemini AI 與 GitHub Actions 自動驅動</p>
         </footer>
 
         <script>
-            function saveToCloud(idx) {
-                const card = document.querySelectorAll('.news-card')[idx];
+            function saveToCloud(id) {
+                const card = document.querySelectorAll('.news-card')[parseInt(id.split('_')[1]) + (id.split('_')[0] === 'INT' ? 5 : 0)];
                 const title = card.getAttribute('data-title');
                 const link = card.getAttribute('data-link');
-                const tag = prompt("請輸入收藏標籤（例如：能源、減碳、重要）：", "一般");
-                
+                const tag = prompt("請輸入標籤：", id.split('_')[0] === 'TW' ? "台灣" : "國際");
                 if (tag) {
-                    // 自動抓取目前的網址來判斷 Repo 路徑
-                    const pathParts = window.location.pathname.split('/');
-                    const repoName = pathParts[1] || "eco-news-daily"; 
                     const repoOwner = window.location.hostname.split('.')[0];
-
+                    const repoName = window.location.pathname.split('/')[1] || "eco-news-daily";
                     const issueTitle = encodeURIComponent("[收藏] " + title);
-                    const issueBody = encodeURIComponent("### 🍀 收藏新聞\n**標題**： " + title + "\n\n**分類標籤**： #" + tag + "\n**原始連結**： " + link + "\n\n--- \n> 來自我的 EcoNews 自動化摘要站");
-                    
-                    const githubUrl = `https://github.com/${repoOwner}/${repoName}/issues/new?title=${issueTitle}&body=${issueBody}&labels=${encodeURIComponent(tag)}`;
-                    
-                    if(confirm("將前往 GitHub 建立雲端 Issue 存檔。請點擊新分頁中的『Submit new issue』按鈕。")) {
-                        window.open(githubUrl, '_blank');
-                    }
+                    const issueBody = encodeURIComponent("### 🍀 收藏內容\n**標題**： " + title + "\n**來源**： " + (id.split('_')[0] === 'TW' ? "台灣" : "國際") + "\n**連結**： " + link);
+                    window.open(`https://github.com/${repoOwner}/${repoName}/issues/new?title=${issueTitle}&body=${issueBody}&labels=${encodeURIComponent(tag)}`, '_blank');
                 }
             }
         </script>
