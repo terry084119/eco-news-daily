@@ -1,134 +1,61 @@
-import feedparser
-import google.generativeai as genai
-import os
-from datetime import datetime
-import time
+# (前面 fetch_news 和 AI 摘要的部分保持不變，我們重點修改 HTML 裡的 JavaScript)
 
-# 1. AI 模型設定 - 修正 404 問題
-try:
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        raise ValueError("找不到 GEMINI_API_KEY，請檢查 GitHub Secrets")
-    
-    genai.configure(api_key=api_key)
-    
-    # 嘗試多種可能的模型名稱，增加穩定性
-    model_names = ['gemini-1.5-flash', 'gemini-pro', 'gemini-1.0-pro']
-    model = None
-    for name in model_names:
-        try:
-            model = genai.GenerativeModel(name)
-            # 測試一下模型是否可用
-            model.generate_content("test")
-            print(f"成功使用模型: {name}")
-            break
-        except:
-            continue
-    
-    if not model:
-        raise Exception("無法載入任何 Gemini 模型")
+    # ... (前面的程式碼)
 
-except Exception as e:
-    print(f"AI 設定初始錯誤: {e}")
-
-# 2. 新聞來源列表 (RSS 連結)
-RSS_SOURCES = [
-    "https://www.cna.com.tw/rss/aall.aspx",         # 中央社
-    "https://news.pts.org.tw/xml/newsfeed.xml",     # 公視
-    "https://technews.tw/feed/",                   # 科技新報
-    "https://www.rfi.fr/tw/rss",                   # 法廣
-    "https://tchina.kyodonews.net/rss/news.xml",    # 共同社
-    "https://feeds.feedburner.com/EnvironmentalNewsNetwork", # ENN
-    "https://e-info.org.tw/rss.xml"                # 環境資訊中心 (額外增加)
-]
-
-# 3. 關鍵字過濾
-KEYWORDS = ["環境", "碳排放", "減碳", "永續", "氣候", "生態", "開發", "野生動物", "循環", "動物", "能源", "電力", "核能", "太陽能", "地熱", "水力發電", "風力發電", "減塑", "汙染"]
-
-def fetch_news():
-    print("正在抓取新聞來源...")
-    filtered_news = []
-    seen_links = set()
-
-    for url in RSS_SOURCES:
-        try:
-            feed = feedparser.parse(url)
-            for entry in feed.entries:
-                title = entry.title
-                link = entry.link
-                desc = getattr(entry, 'summary', '') + getattr(entry, 'description', '')
-                
-                # 關鍵字比對
-                if any(k in title or k in desc for k in KEYWORDS):
-                    if link not in seen_links:
-                        filtered_news.append(f"標題：{title}\n連結：{link}")
-                        seen_links.add(link)
-        except Exception as e:
-            print(f"抓取失敗 {url}: {e}")
-            continue
-            
-    print(f"篩選完成，共 {len(filtered_news)} 則新聞")
-    return filtered_news[:20] # 限制 20 則交給 AI 摘要
-
-def main():
-    news_data = fetch_news()
-    now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
-    
-    if not news_data:
-        summary_result = "今日暫無偵測到相關關鍵字的新聞更新。"
-    else:
-        news_combined = "\n\n".join(news_data)
-        prompt = f"""
-        你是一位環境科學與能源政策專家。請根據以下新聞列表，為我製作一份「每日環境新聞摘錄」。
-        要求：
-        1. 使用繁體中文。
-        2. 給這份日報一個亮點標題。
-        3. 將新聞分類（例如：氣候變遷、能源轉型、生態保育）。
-        4. 每則新聞請提供 1-2 句的重點摘要 + 原始連結。
-        5. 最後加上一段專業的今日評論。
-        
-        新聞內容：
-        {news_combined}
-        """
-        try:
-            response = model.generate_content(prompt)
-            summary_result = response.text
-        except Exception as e:
-            print(f"AI 生成失敗: {e}")
-            summary_result = f"摘要生成時發生錯誤，請直接參考以下原始連結：\n\n{news_combined}"
-
-    # 4. 產生 HTML 網頁 (使用 Water.css 讓排版變漂亮)
-    html_content = f"""
+    # 最終網頁模板
+    html_template = f"""
     <!DOCTYPE html>
     <html lang="zh-Hant">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>每日環境新聞摘要</title>
+        <title>EcoNews 雲端收藏版</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
         <style>
-            body {{ font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; }}
-            .news-box {{ background: #f9f9f9; padding: 20px; border-left: 5px solid #2e7d32; border-radius: 5px; }}
-            .time {{ color: #666; font-size: 0.9em; }}
-            pre {{ white-space: pre-wrap; word-wrap: break-word; font-family: inherit; font-size: 1.1em; background: none; border: none; padding: 0; }}
+            :root {{ --main-color: #2e7d32; }}
+            body {{ max-width: 900px; background-color: #f4f7f4; }}
+            header {{ text-align: center; padding: 40px 0; background: white; }}
+            .news-card {{ background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }}
+            .save-btn {{ background: #2e7d32; color: white; border: none; padding: 8px 15px; cursor: pointer; border-radius: 5px; }}
+            .cloud-note {{ background: #e8f5e9; padding: 10px; border-radius: 5px; font-size: 0.9em; margin-bottom: 20px; color: #2e7d32; border: 1px solid #c8e6c9; }}
         </style>
     </head>
     <body>
-        <h1>🌱 每日環境新聞摘要</h1>
-        <p class="time">🕒 最後更新時間：{now_str} (每 12 小時自動更新)</p>
-        <hr>
-        <div class="news-box">
-            <pre>{summary_result}</pre>
-        </div>
-        <footer>
-            <p><small>來源：中央社、公視、科技新報、共同社、RFI等。AI 技術支持：Google Gemini。</small></p>
-        </body>
+        <header>
+            <h1>🌱 EcoNews 環境日報</h1>
+            <div class="cloud-note">☁️ 本版本支援「GitHub Issue 雲端存檔」，收藏將永久儲存於您的專案中。</div>
+        </header>
+
+        <main>
+            <div class="news-grid">{cards_html}</div>
+        </main>
+
+        <script>
+            // 修改後的雲端收藏邏輯
+            function saveArticle(idx) {{
+                const card = document.querySelectorAll('.news-card')[idx];
+                const title = card.getAttribute('data-title');
+                const link = card.getAttribute('data-link');
+                const tag = prompt("請輸入標籤（例如：能源、減碳）：", "一般");
+                
+                if (tag) {{
+                    // 設定你的 GitHub Repository 資訊
+                    const repoOwner = "你的GitHub帳號"; // 這裡要改寫成你的帳號
+                    const repoName = "eco-news-daily"; // 這裡改為你的專案名
+                    
+                    // 構建 GitHub Issue 的 URL
+                    // 這會自動幫你填好標題、標籤和內容
+                    const issueTitle = encodeURIComponent("[收藏] " + title);
+                    const issueBody = encodeURIComponent("### 新聞標題\\n" + title + "\\n\\n### 標籤\\n" + tag + "\\n\\n### 連結\\n" + link + "\\n\\n--- \\n來自 EcoNews 自動化收藏");
+                    const githubUrl = `https://github.com/${{repoOwner}}/${{repoName}}/issues/new?title=${{issueTitle}}&body=${{issueBody}}&labels=${{encodeURIComponent(tag)}}`;
+                    
+                    // 引導使用者去 GitHub 存檔
+                    if(confirm("即將前往 GitHub 建立雲端存檔（Issue），請點擊『Submit new issue』完成收藏。")) {{
+                        window.open(githubUrl, '_blank');
+                    }}
+                }}
+            }}
+        </script>
+    </body>
     </html>
     """
-    
-    with open("index.html", "w", encoding="utf-8") as f:
-        f.write(html_content)
-    print("index.html 已成功更新")
-
-if __name__ == "__main__":
-    main()
