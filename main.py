@@ -18,93 +18,43 @@ def get_ai_model():
 
 model = get_ai_model()
 
-# 2. 定義新聞源（混合所有來源，由程式後續判斷內容分類）
-ALL_SOURCES = [
-    "https://www.cna.com.tw/rss/aall.aspx",         # 中央社
-    "https://news.pts.org.tw/xml/newsfeed.xml",     # 公視
-    "https://technews.tw/feed/",                   # 科技新報
-    "https://www.rfi.fr/tw/rss",                   # 法廣
-    "https://tchina.kyodonews.net/rss/news.xml",    # 共同社
-    "https://e-info.org.tw/rss.xml",                # 環境資訊中心
-    "https://feeds.feedburner.com/EnvironmentalNewsNetwork" # ENN
+# 2. 新聞來源與關鍵字 (回歸統一抓取)
+RSS_SOURCES = [
+    "https://www.cna.com.tw/rss/aall.aspx",
+    "https://news.pts.org.tw/xml/newsfeed.xml",
+    "https://technews.tw/feed/",
+    "https://www.rfi.fr/tw/rss",
+    "https://tchina.kyodonews.net/rss/news.xml",
+    "https://e-info.org.tw/rss.xml",
+    "https://feeds.feedburner.com/EnvironmentalNewsNetwork"
 ]
 
-# 環境與能源相關關鍵字
 KEYWORDS = ["環境", "碳排放", "減碳", "永續", "氣候", "生態", "開發", "野生動物", "循環", "動物", "能源", "電力", "核能", "太陽能", "地熱", "水力發電", "風力發電", "減塑", "海廢"]
 
-# 台灣相關特徵詞 (用於輔助分類)
-TW_KEYWORDS = ["台灣", "台北", "台中", "台南", "高雄", "台電", "中油", "環保署", "環境部", "行政院", "經濟部"]
-
-def fetch_and_classify():
-    tw_list = []
-    int_list = []
+def fetch_all_news():
+    news_list = []
     seen = set()
-
-    for url in ALL_SOURCES:
+    for url in RSS_SOURCES:
         try:
             feed = feedparser.parse(url)
             for entry in feed.entries:
                 title = entry.title
                 link = entry.link
                 desc = getattr(entry, 'summary', '') or getattr(entry, 'description', '')
-                full_text = title + desc
-
-                # 先判斷是否符合環境/能源關鍵字
-                if any(k in full_text for k in KEYWORDS) and link not in seen:
-                    news_item = {
-                        "title": title,
-                        "link": link,
-                        "fallback": desc.replace('<p>', '').replace('</p>', '')[:100] + "..."
-                    }
-                    
-                    # 分類邏輯：如果標題或內容提到台灣關鍵字，歸類為台灣；其餘歸類為國際
-                    # 法廣、共同社、ENN 預設優先歸類為國際
-                    is_int_source = any(domain in link for domain in ["rfi.fr", "kyodonews", "feedburner"])
-                    has_tw_keyword = any(twk in full_text for twk in TW_KEYWORDS)
-                    
-                    if has_tw_keyword and not is_int_source:
-                        tw_list.append(news_item)
-                    else:
-                        int_list.append(news_item)
-                    
+                if any(k in title or k in desc for k in KEYWORDS) and link not in seen:
+                    fallback = desc.replace('<p>', '').replace('</p>', '')[:120] + "..."
+                    news_list.append({"title": title, "link": link, "desc": fallback})
                     seen.add(link)
         except: continue
-    
-    return tw_list[:15], int_list[:15] # 個別取最多 15 則
-
-def generate_card_html(news_data, section_id):
-    html = ""
-    for idx, item in enumerate(news_data):
-        summary = ""
-        if model:
-            try:
-                # 讓 AI 針對內容進行超短摘要
-                prompt = f"摘要這則新聞（30字內）：{item['title']} {item['fallback']}"
-                summary = model.generate_content(prompt).text.strip()
-            except: summary = item['fallback']
-        else: summary = item['fallback']
-        
-        unique_idx = f"{section_id}_{idx}"
-        html += f"""
-        <div class="news-card" data-title="{item['title']}" data-link="{item['link']}">
-            <div class="card-content">
-                <h3>{item['title']}</h3>
-                <p>{summary}</p>
-            </div>
-            <div class="card-footer">
-                <a href="{item['link']}" target="_blank" class="read-more">閱讀全文 ↗</a>
-                <button onclick="saveToCloud('{section_id}', '{idx}')" class="save-btn">⭐ 收藏</button>
-            </div>
-        </div>
-        """
-    return html
+    return news_list[:30] # 增加顯示數量至 30 則
 
 def main():
-    tw_news, int_news = fetch_and_classify()
+    all_news = fetch_all_news()
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
     
-    tw_html = generate_card_html(tw_news, "TW")
-    int_html = generate_card_html(int_news, "INT")
+    # 產生新聞卡片的 HTML (由 JavaScript 動態控制顯示)
+    import json
+    news_json = json.dumps(all_news, ensure_ascii=False)
 
     html_template = f"""
     <!DOCTYPE html>
@@ -112,71 +62,114 @@ def main():
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>EcoNews | 環境永續日報</title>
+        <title>EcoNews | 環境能源摘錄</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
         <style>
-            :root {{ --main-green: #2e7d32; --bg: #f8faf8; }}
-            body {{ max-width: 1300px; background-color: var(--bg); font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; }}
-            header {{ text-align: center; padding: 40px 20px; background: white; border-bottom: 5px solid var(--main-green); }}
-            h1 {{ color: var(--main-green); font-size: 2.8em; margin: 0; }}
+            :root {{ --main-color: #2e7d32; --bg: #f4f4f4; }}
+            body {{ max-width: 1100px; background: var(--bg); font-family: sans-serif; }}
+            header {{ text-align: center; padding: 30px; background: white; border-radius: 10px; margin-bottom: 20px; }}
             
-            section {{ padding: 20px 0; }}
-            h2 {{ background: var(--main-green); color: white; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-bottom: 25px; }}
+            /* 分頁按鈕 */
+            .nav-tabs {{ display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }}
+            .nav-tabs button {{ background: #ddd; color: #333; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-weight: bold; }}
+            .nav-tabs button.active {{ background: var(--main-color); color: white; }}
+
+            .news-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }}
+            .news-card {{ background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; flex-direction: column; }}
+            .news-card h3 {{ font-size: 1.1em; margin: 0 0 10px; color: #111; line-height: 1.4; }}
+            .news-card p {{ font-size: 0.9em; color: #555; flex-grow: 1; }}
             
-            .news-grid {{ 
-                display: grid; 
-                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
-                gap: 25px; 
-                margin-bottom: 40px;
-            }}
+            .card-footer {{ display: flex; justify-content: space-between; margin-top: 15px; padding-top: 10px; border-top: 1px solid #eee; }}
+            .save-btn {{ background: #fff3e0; color: #e65100; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }}
             
-            .news-card {{ 
-                background: white; border-radius: 12px; display: flex; flex-direction: column;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #eee; overflow: hidden;
-            }}
-            .card-content {{ padding: 20px; flex-grow: 1; }}
-            .news-card h3 {{ font-size: 1.1em; margin-bottom: 12px; color: #1a1a1a; min-height: 2.8em; }}
-            .news-card p {{ font-size: 0.95em; color: #666; line-height: 1.6; margin: 0; }}
-            
-            .card-footer {{ background: #fafafa; padding: 15px 20px; display: flex; justify-content: space-between; border-top: 1px solid #eee; }}
-            .read-more {{ font-size: 0.85em; font-weight: bold; color: var(--main-green); }}
-            .save-btn {{ background: white; border: 1px solid #ddd; padding: 4px 12px; border-radius: 4px; font-size: 0.8em; cursor: pointer; }}
-            
-            @media (max-width: 600px) {{ .news-grid {{ grid-template-columns: 1fr; }} }}
+            #favorites-list .tag-badge {{ background: #e8f5e9; color: #2e7d32; font-size: 0.8em; padding: 2px 6px; border-radius: 4px; }}
+            .hidden {{ display: none !important; }}
         </style>
     </head>
     <body>
         <header>
-            <h1>🌱 EcoNews 環境快報</h1>
-            <p>每 12 小時自動更新全球與台灣環境資訊 | {now_str}</p>
+            <h1>🌱 EcoNews 每日摘要</h1>
+            <p>最後更新：{now_str}</p>
         </header>
 
-        <section>
-            <h2>📍 台灣在地脈動</h2>
-            <div class="news-grid">{tw_html}</div>
-        </section>
+        <div class="nav-tabs">
+            <button id="tab-all" class="active" onclick="showPage('all')">最新新聞</button>
+            <button id="tab-fav" onclick="showPage('fav')">我的收藏</button>
+        </div>
 
-        <section>
-            <h2>🌐 國際環境視野</h2>
-            <div class="news-grid">{int_html}</div>
-        </section>
+        <div id="page-all" class="news-grid">
+            </div>
+
+        <div id="page-fav" class="news-grid hidden">
+            </div>
 
         <script>
-            function saveToCloud(section, idx) {{
-                const selector = `.news-grid:nth-of-type(${{section === 'TW' ? 1 : 2}}) .news-card`;
-                const cards = document.querySelectorAll(selector);
-                const card = cards[idx];
-                const title = card.getAttribute('data-title');
-                const link = card.getAttribute('data-link');
-                const tag = prompt("請輸入收藏標籤：", section === 'TW' ? "台灣新聞" : "國際新聞");
-                
+            const newsData = {news_json};
+            let favorites = JSON.parse(localStorage.getItem('eco_favorites')) || [];
+
+            function renderNews() {{
+                const container = document.getElementById('page-all');
+                container.innerHTML = newsData.map((item, idx) => `
+                    <div class="news-card">
+                        <h3>${{item.title}}</h3>
+                        <p>${{item.desc}}</p>
+                        <div class="card-footer">
+                            <a href="${{item.link}}" target="_blank">原文 ↗</a>
+                            <button onclick="saveItem(${{idx}})" class="save-btn">⭐ 收藏</button>
+                        </div>
+                    </div>
+                `).join('');
+            }}
+
+            function renderFavorites() {{
+                const container = document.getElementById('page-fav');
+                if (favorites.length === 0) {{
+                    container.innerHTML = "<p style='grid-column: 1/-1; text-align: center;'>目前還沒有收藏文章喔！</p>";
+                    return;
+                }}
+                container.innerHTML = favorites.map((item, idx) => `
+                    <div class="news-card">
+                        <h3>${{item.title}} <span class="tag-badge">#${{item.tag}}</span></h3>
+                        <div class="card-footer">
+                            <a href="${{item.link}}" target="_blank">原文 ↗</a>
+                            <button onclick="deleteItem(${{idx}})" style="background:#ffebee; color:#c62828; border:none; border-radius:4px; cursor:pointer;">刪除</button>
+                        </div>
+                    </div>
+                `).join('');
+            }}
+
+            function saveItem(idx) {{
+                const item = newsData[idx];
+                const tag = prompt("請輸入分類標籤（例如：能源、減碳）：", "一般");
                 if (tag) {{
+                    favorites.push({{ ...item, tag }});
+                    localStorage.setItem('eco_favorites', JSON.stringify(favorites));
+                    alert("已加入收藏！");
+                    
+                    // 同步到 GitHub Issue (雲端備份)
                     const repoOwner = window.location.hostname.split('.')[0];
                     const repoName = window.location.pathname.split('/')[1] || "eco-news-daily";
-                    const body = "### 🍀 收藏紀錄\\n- **標題**: " + title + "\\n- **分類**: " + (section === 'TW' ? "台灣" : "國際") + "\\n- **網址**: " + link;
-                    window.open(`https://github.com/${{repoOwner}}/${{repoName}}/issues/new?title=${{encodeURIComponent("[收藏] " + title)}}&body=${{encodeURIComponent(body)}}&labels=${{encodeURIComponent(tag)}}`, '_blank');
+                    window.open(`https://github.com/${{repoOwner}}/${{repoName}}/issues/new?title=${{encodeURIComponent("[收藏] "+item.title)}}&body=${{encodeURIComponent(item.link)}}&labels=${{encodeURIComponent(tag)}}`, '_blank');
                 }}
             }}
+
+            function deleteItem(idx) {{
+                if (confirm("確定要刪除這筆收藏嗎？")) {{
+                    favorites.splice(idx, 1);
+                    localStorage.setItem('eco_favorites', JSON.stringify(favorites));
+                    renderFavorites();
+                }}
+            }}
+
+            function showPage(page) {{
+                document.getElementById('page-all').classList.toggle('hidden', page !== 'all');
+                document.getElementById('page-fav').classList.toggle('hidden', page !== 'fav');
+                document.getElementById('tab-all').classList.toggle('active', page === 'all');
+                document.getElementById('tab-fav').classList.toggle('active', page === 'fav');
+                if (page === 'fav') renderFavorites();
+            }}
+
+            window.onload = renderNews;
         </script>
     </body>
     </html>
