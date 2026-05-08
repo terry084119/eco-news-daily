@@ -4,37 +4,45 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>EcoNews 30 | 環境能源摘要</title>
+        <title>EcoNews | 28H 環境摘要</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
         <style>
             :root { --main: #2e7d32; --bg: #f0f2f0; }
-            body { max-width: 1200px; background: var(--bg); font-family: "PingFang TC", sans-serif; }
-            header { text-align: center; padding: 40px 20px; background: white; border-bottom: 5px solid var(--main); }
-            .nav-tabs { display: flex; justify-content: center; gap: 10px; margin: 25px 0; }
+            body { max-width: 1200px; background: var(--bg); font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; }
+            header { text-align: center; padding: 40px 20px; background: white; border-bottom: 5px solid var(--main); border-radius: 0 0 15px 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+            h1 { margin: 0; color: var(--main); font-size: 2.2em; }
+            .update-info { color: #666; margin-top: 10px; font-size: 0.85em; }
+            
+            .nav-tabs { display: flex; justify-content: center; gap: 15px; margin: 30px 0; }
             .nav-tabs button { background: #fff; border: 1px solid #ddd; padding: 10px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; transition: 0.3s; }
-            .nav-tabs button.active { background: var(--main); color: white; border-color: var(--main); }
-            .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; padding: 10px; }
+            .nav-tabs button.active { background: var(--main); color: white; border-color: var(--main); box-shadow: 0 4px 8px rgba(46,125,50,0.3); }
+
+            .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
             .news-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column; border: 1px solid #eee; }
-            .news-card h3 { font-size: 1.1em; line-height: 1.4; margin-bottom: 12px; color: #111; }
-            .news-card p { font-size: 0.95em; color: #444; flex-grow: 1; }
-            .card-footer { display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 15px; margin-top: 10px; }
-            .save-btn { background: #e8f5e9; color: var(--main); border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+            .news-card h3 { font-size: 1.1em; line-height: 1.5; margin: 0 0 15px 0; color: #111; min-height: 3em; }
+            .news-card p { font-size: 0.92em; color: #444; line-height: 1.7; flex-grow: 1; margin-bottom: 15px; }
+            
+            .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f0f0f0; padding-top: 15px; }
+            .read-link { font-weight: bold; color: var(--main); text-decoration: none; }
+            .save-btn { background: #e8f5e9; color: var(--main); border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold; }
+            
             .folder-section { background: white; margin-bottom: 15px; border-radius: 10px; border: 1px solid #ddd; overflow: hidden; }
-            .folder-header { padding: 15px 20px; background: #fff; cursor: pointer; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
-            .folder-content { padding: 15px; display: none; background: #fafafa; }
+            .folder-header { padding: 18px 25px; background: #fff; cursor: pointer; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+            .folder-content { padding: 20px; display: none; background: #fafafa; border-top: 1px solid #eee; }
             .folder-content.open { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; }
+            
             .hidden { display: none !important; }
-            footer { text-align: center; padding: 30px; color: #888; font-size: 0.8em; }
+            footer { text-align: center; padding: 50px; color: #888; font-size: 0.8em; }
         </style>
     </head>
     <body>
         <header>
-            <h1>🌱 EcoNews 每日摘要</h1>
-            <p>48H 產經與環境趨勢全收錄 | 更新時間：2026-05-08 11:42</p>
+            <h1>🌱 EcoNews</h1>
+            <p class="update-info">28H 緩衝過濾 | 更新時間：2026-05-08 11:47</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (${all_news.__len__()})</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (6)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -46,17 +54,21 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "一週內2起瀑布溺斃 瑪家鄉公所擬推申請導覽制", "link": "https://news.pts.org.tw/article/807172", "summary": "屏東瑪家鄉的射鹿溪瀑布群被當地原住民部落視為聖地，目前並非開放水域，但因風景優美仍被不少遊客視為秘境，擅自前往戲水，其實這些水域藏有不少暗流，相當危險。昨（6）日在被俗稱為草泥馬峽谷的瀑布水域，就發生一起溺亡事故，1日時也有民眾在達拉邦瀑布..."}, {"title": "西門商圈6/1起全面禁菸 3負壓式吸菸區今啟用", "link": "https://news.pts.org.tw/article/807168", "summary": "打造台北無菸城市，台北市府針對人潮密集的西門商圈，從6月1日開始全面禁菸，宣導吸菸民眾前往指定吸菸區，讓吸菸者和非吸菸者分流；全新設置的3處負壓式吸菸區，也從今（7）日開始啟用。董氏基金會表示，WHO提醒推動無菸環境得由內而外，先做到室內全..."}, {"title": "電動車充電困擾多，充電基礎建設卡在哪？【獨立特派員】", "link": "https://news.pts.org.tw/article/807148", "summary": "面對全球淨零排放趨勢，政府制定2040年運具全電動化目標，電動車產業邁入爆發期。據統計，國內純電動車普及率在2025年底已攀升至1.7%，登記數突破12萬輛，顯見消費市場轉型。然而，基礎設施建置速度仍跟不上車輛增長。除了既有社區內部的充電樁..."}, {"title": "車用鋰電池退役潮來襲，台灣該如何應對？【獨立特派員】", "link": "https://news.pts.org.tw/article/807147", "summary": "隨著全球交通載具電動化的趨勢不可逆轉，我國電動車市場正迎來爆發式成長。根據官方統計，台灣自2022年起每年穩定增加至少3萬輛電動車，預計至2030年上路總數將突破50萬輛。但隨之而來的，是首波長達8至15年壽命的電池退役潮，環境部預估203..."}, {"title": "日本2025年度核電機組運轉率為33.6%", "link": "https://tchina.kyodonews.net/articles/-/7953", "summary": "<p>\t\t\t\t\t\t\t\t　　【共同社5月7日電】日本原子能產業協會彙總的調查結果6日公佈，全國核電機組2025年度實際發電量與滿負荷運轉情況下的總發電量之比（運轉率）為33.6%。在2011年東京電力福島第一核電站事故之後，自2023年度起連..."}, {"title": "亞行年會閉幕 日本承諾對亞洲加強支援", "link": "https://tchina.kyodonews.net/articles/-/7949", "summary": "<p>　　【共同社撒馬爾罕5月7日電】亞洲開發銀行（ADB）年會6日在烏茲別克斯坦撒馬爾罕閉幕。在荷莫茲海峽事實上被持續封鎖的情況下，對中東石油依賴度較高的亞洲各國均對經濟前景感到擔憂。日本承諾將與亞行合作，為能源結構轉型及中小企業資金周轉..."}];
+            const newsData = [{"title": "一週內2起瀑布溺斃 瑪家鄉公所擬推申請導覽制", "link": "https://news.pts.org.tw/article/807172", "summary": "屏東瑪家鄉的射鹿溪瀑布群被當地原住民部落視為聖地，目前並非開放水域，但因風景優美仍被不少遊客視為秘境，擅自前往戲水，其實這些水域藏有不少暗流，相當危險。昨（6）日在被俗稱為草泥馬峽谷的瀑布水域，就發生一起溺亡事故，1日時也有民眾在達拉邦瀑布..."}, {"title": "西門商圈6/1起全面禁菸 3負壓式吸菸區今啟用", "link": "https://news.pts.org.tw/article/807168", "summary": "打造台北無菸城市，台北市府針對人潮密集的西門商圈，從6月1日開始全面禁菸，宣導吸菸民眾前往指定吸菸區，讓吸菸者和非吸菸者分流；全新設置的3處負壓式吸菸區，也從今（7）日開始啟用。董氏基金會表示，WHO提醒推動無菸環境得由內而外，先做到室內全..."}, {"title": "電動車充電困擾多，充電基礎建設卡在哪？【獨立特派員】", "link": "https://news.pts.org.tw/article/807148", "summary": "面對全球淨零排放趨勢，政府制定2040年運具全電動化目標，電動車產業邁入爆發期。據統計，國內純電動車普及率在2025年底已攀升至1.7%，登記數突破12萬輛，顯見消費市場轉型。然而，基礎設施建置速度仍跟不上車輛增長。除了既有社區內部的充電樁..."}, {"title": "車用鋰電池退役潮來襲，台灣該如何應對？【獨立特派員】", "link": "https://news.pts.org.tw/article/807147", "summary": "隨著全球交通載具電動化的趨勢不可逆轉，我國電動車市場正迎來爆發式成長。根據官方統計，台灣自2022年起每年穩定增加至少3萬輛電動車，預計至2030年上路總數將突破50萬輛。但隨之而來的，是首波長達8至15年壽命的電池退役潮，環境部預估203..."}, {"title": "日本2025年度核電機組運轉率為33.6%", "link": "https://tchina.kyodonews.net/articles/-/7953", "summary": "\t\t\t\t\t\t\t\t　　【共同社5月7日電】日本原子能產業協會彙總的調查結果6日公佈，全國核電機組2025年度實際發電量與滿負荷運轉情況下的總發電量之比（運轉率）為33.6%。在2011年東京電力福島第一核電站事故之後，自2023年度起連續三年..."}, {"title": "亞行年會閉幕 日本承諾對亞洲加強支援", "link": "https://tchina.kyodonews.net/articles/-/7949", "summary": "　　【共同社撒馬爾罕5月7日電】亞洲開發銀行（ADB）年會6日在烏茲別克斯坦撒馬爾罕閉幕。在荷莫茲海峽事實上被持續封鎖的情況下，對中東石油依賴度較高的亞洲各國均對經濟前景感到擔憂。日本承諾將與亞行合作，為能源結構轉型及中小企業資金周轉提供支..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v3')) || [];
 
             function renderNews() {
                 const container = document.getElementById('page-all');
+                if (newsData.length === 0) {
+                    container.innerHTML = "<p style='grid-column:1/-1; text-align:center; padding: 50px;'>28小時內暫無新消息，請稍後再試。</p>";
+                    return;
+                }
                 container.innerHTML = newsData.map((item, idx) => `
                     <div class="news-card">
                         <h3>${item.title}</h3>
                         <p>${item.summary}</p>
                         <div class="card-footer">
-                            <a href="${item.link}" target="_blank">閱讀原文 ↗</a>
+                            <a href="${item.link}" target="_blank" class="read-link">閱讀原文 ↗</a>
                             <button onclick="saveItem(${idx})" class="save-btn">⭐ 收藏</button>
                         </div>
                     </div>
@@ -65,12 +77,12 @@
 
             function saveItem(idx) {
                 const item = newsData[idx];
-                const tagInput = prompt("請輸入分類標籤（多個用逗號隔開）：", "能源");
+                const tagInput = prompt("請輸入分類標籤（多個請用逗號隔開）：", "能源");
                 if (tagInput) {
                     const tags = tagInput.split(/[,，]/).map(t => t.trim()).filter(t => t !== "");
                     favorites.push({ ...item, tags });
                     localStorage.setItem('eco_favs_v3', JSON.stringify(favorites));
-                    alert("收藏成功！");
+                    alert("已加入收藏！");
                 }
             }
 
@@ -81,7 +93,7 @@
                 favorites.forEach(f => f.tags.forEach(t => allTags.add(t)));
                 
                 if (allTags.size === 0) {
-                    container.innerHTML = "<p style='text-align:center; padding: 30px;'>目前沒有收藏。</p>";
+                    container.innerHTML = "<p style='text-align:center; padding: 50px;'>目前沒有收藏。</p>";
                     return;
                 }
 
@@ -91,7 +103,7 @@
                     const filtered = favorites.filter(f => f.tags.includes(tag));
                     folder.innerHTML = `
                         <div class="folder-header" onclick="this.nextElementSibling.classList.toggle('open')">
-                            <span>📁 ${tag} (${filtered.length})</span>
+                            <span>📁 ${tag} (${filtered.length} 則)</span>
                             <span>展開/收合</span>
                         </div>
                         <div class="folder-content">
@@ -99,8 +111,8 @@
                                 <div class="news-card">
                                     <h4>${n.title}</h4>
                                     <div class="card-footer">
-                                        <a href="${n.link}" target="_blank">原文</a>
-                                        <button onclick="deleteItem(${favorites.indexOf(n)})" style="background:none; color:red; border:none; cursor:pointer;">移除</button>
+                                        <a href="${n.link}" target="_blank" class="read-link">原文</a>
+                                        <button onclick="deleteItem(${favorites.indexOf(n)})" style="background:none; color:red; border:none; cursor:pointer; font-weight:bold;">移除</button>
                                     </div>
                                 </div>
                             `).join('')}
@@ -111,7 +123,7 @@
             }
 
             function deleteItem(idx) {
-                if (confirm("確定移除？")) {
+                if (confirm("移除這則新聞？")) {
                     favorites.splice(idx, 1);
                     localStorage.setItem('eco_favs_v3', JSON.stringify(favorites));
                     renderFolders();
