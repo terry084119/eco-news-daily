@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-05-09 00:53</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-05-09 15:23</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (5)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (7)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "【綠盟】線上講座｜德國非核轉型之路 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9RU25lVFlxODlrWDZROF9sOW1MTG1iRkVPM1lIYnMyZ1ZGdkpuRmF0c1dHUl9oNndVZVoxQWZTMjU2aUlqOF9wUkhn?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSkFVX3lxTE9RU25lVFlxODlrWDZROF9sOW1MTG1iRkVPM1lIYnMyZ1ZGdkpuRmF0c1dHUl..."}, {"title": "【2026 國際永續峰會】從合規承諾到策略資產：跨越 2026 永續臨界點的「自然正向」實戰路徑 - CSRone 永續智庫", "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE8xdWdfb2xZcjhMYkVrQlpZb1g4MGQwWGY0YXZiVko3NUkyV1Fya0N4cWZycmxkNVg2QWM2Sy00TW0wS3NX?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiREFVX3lxTE8xdWdfb2xZcjhMYkVrQlpZb1g4MGQwWGY0YXZiVko3NUkyV1Fya0N4cWZycm..."}, {"title": "鄭曉光 - 由太空「落地」的氫能 | 能源Don家 - 星島頭條", "link": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQVlp2cWZLWUVOaGNsT096WU5BbzAtb1FGN3RHWDNSMFpEWG5tYU9taXVJZlAyS0hIN1dPbG82a3FLSXh6dUVqbWEzRmIxQWVzYmpuTlhHbDM3S1ZvdGx2SUFzbF9LamdGbHR4YnQzNlZvSnpMdUl1RExUQnVEYWt2Zlh5cG9KQ0Y5d0pLQWV2TFl2eGRMaDZDNFAwTzdPZDlieWJISEdXVmtuTmduM3IxLXo4RmZva3pKQm5kTmV0bXZwRU8xcVpYVlE2eEppZmhJLWtyVG15TmZ5Y0Zza1RCR1k3MUxfSkljSlFRT2lxNHU5N3huRFhuNVdjTFJvN25kOVczaHBBMDdGVVlOMlEtYjZjNFNGdw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMilgJBVV95cUxQVlp2cWZLWUVOaGNsT096WU5BbzAtb1FGN3RHWDNSMFpEWG5tYU9taXVJZl..."}, {"title": "泰曼谷整頓市容與衛生 路邊攤遭取締4年少6成", "link": "https://news.pts.org.tw/article/807409", "summary": "泰國的街頭小吃相當著名，地方特色的平價美食，反映當地的飲食日常和城市魅力，是國際觀光客造訪的必遊行程。但這幾年曼谷市府積極整頓市容與公共衛生，除了加強取締，也將攤販集中在特定的街攤中心，短短4年攤商數量減少6成。部分攤販對新環境表示歡迎，但..."}, {"title": "美國3月消費者信貸增幅創2022年以來最大 超出所有預期值", "link": "https://money.udn.com/money/story/10511/9489624", "summary": "【彭博】-- 美國消費者借貸3月錄得2022年末以來最大增幅，反映非循環信貸大幅成長，同時信用卡餘額上升。 聯準會周四公布的數據顯示，3月未償信貸總額增加249億美元，2月數據經修正為增加88億美元。..."}];
+            const newsData = [{"title": "【綠盟】線上講座｜德國非核轉型之路 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9RU25lVFlxODlrWDZROF9sOW1MTG1iRkVPM1lIYnMyZ1ZGdkpuRmF0c1dHUl9oNndVZVoxQWZTMjU2aUlqOF9wUkhn?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSkFVX3lxTE9RU25lVFlxODlrWDZROF9sOW1MTG1iRkVPM1lIYnMyZ1ZGdkpuRmF0c1dHUl..."}, {"title": "環境部聯手海委會推減塑 「蝠形網」追蹤海洋塑膠微粒", "link": "https://news.pts.org.tw/article/807490", "summary": "塑膠微粒無所不在，造成污染與人體危害，環境部表示，目前進一步透過環循雙法修正，由過去的「禁限用」轉向從源頭決定產品的循環潛力，推動重複使用模式。今（8）日更宣布將和海委會聯手，構築「由陸向海」的監測與管制，共同減少塑膠微粒。..."}, {"title": "《水・不水之間》紀錄片首映 呈現台灣20年水環境變化【涉己新聞】", "link": "https://news.pts.org.tw/article/807487", "summary": "台灣正面臨75年來全台最乾冬季，公視團隊花3年時間製作《水・不水之間》紀錄片，呈現過去20年來水環境的變化，而58分鐘的紀錄片沒有敘事性旁白，透過水的生態循環再到反思風災的肆虐，要用影像、聲音與音樂3條軸線，引領觀眾反思人與水之間的關係。..."}, {"title": "憂求學環境高壓、競爭激烈 中國家庭掀攜子赴泰就讀潮", "link": "https://news.pts.org.tw/article/807413", "summary": "在中國，不論是職場工作還是就學讀書，競爭都相當激烈。有家長發現小孩在高壓求學環境中開始拒絕與人溝通，越來越像繭居族，也有家長憂心小孩在高壓、制式的教育環境下成長，會養成不思考、不反抗的個性。於是經濟條件較好的家長就開始「潤」，也就是帶小孩前..."}, {"title": "法國推對抗通膨新措施 1歐元學餐擴大適用全體大學生", "link": "https://news.pts.org.tw/article/807411", "summary": "法國因應通膨與生活壓力推出新措施，這禮拜起，境內所有大學生都可在半官方的大學福利餐廳享用每餐1歐元、約台幣40元的學生餐。菜色包含了前菜、主菜、甜點，一整套的法餐，還針對不同的飲食習慣提供素食、清真餐點，學生們普遍認為CP值無敵。這項措施原..."}, {"title": "泰曼谷整頓市容與衛生 路邊攤遭取締4年少6成", "link": "https://news.pts.org.tw/article/807409", "summary": "泰國的街頭小吃相當著名，地方特色的平價美食，反映當地的飲食日常和城市魅力，是國際觀光客造訪的必遊行程。但這幾年曼谷市府積極整頓市容與公共衛生，除了加強取締，也將攤販集中在特定的街攤中心，短短4年攤商數量減少6成。部分攤販對新環境表示歡迎，但..."}, {"title": "美國3月消費者信貸增幅創2022年以來最大 超出所有預期值", "link": "https://money.udn.com/money/story/10511/9489624", "summary": "【彭博】-- 美國消費者借貸3月錄得2022年末以來最大增幅，反映非循環信貸大幅成長，同時信用卡餘額上升。 聯準會周四公布的數據顯示，3月未償信貸總額增加249億美元，2月數據經修正為增加88億美元。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
