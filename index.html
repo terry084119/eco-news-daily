@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-05-09 23:15</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-05-10 15:49</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "韓氣候大使康錦實：韓國全力向“模范氣候先行國”轉型--韓國頻道--人民網 - 人民网-韩国频道", "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5EcDc0MzV3RlFfaWZ2amxaYWVBcjlkaFlIN3hFMkdVWkhMRXhGVXotYThpN1V1NkVjNk9XanhxQ1VPWVhNZ2l1V3d2RkVqQ0V3azNxNHJnb2oydEs4TE5JYnhLeGV5aldqbDZLbU9SQzZCOVJU?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE5EcDc0MzV3RlFfaWZ2amxaYWVBcjlkaFlIN3hFMkdVWkhMRXhGVXotYThpN1..."}, {"title": "花蓮鯉魚潭水位降至10年新低 管理處：主因降雨量不足", "link": "https://news.pts.org.tw/article/807544", "summary": "花蓮知名的觀光景點壽豐鄉鯉魚潭出現缺水疑慮，因為近期水位已經下降到3公尺以下，引起關注，在地村長認為，已經半年沒有下雨，才導致水量不足，也非常擔心對生態與營生會有影響，因為這是近10年來水位降到最低的一次。..."}];
+            const newsData = [{"title": "能源危機未平 厄爾尼諾又來？亞洲今夏面臨考驗 - DW.com", "link": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxOWEV4WGxjZVdvVGRJcnlYbXdEWDNCc29EdmtZb01qTHNPWXFGSkVQcFlzQWZIOU9vQnd6bk5oVi1uRWs3U29zNFJWSUdYUU9OTzJNLU1XR0h3YUFZUnBEcUFBN09DTzNkZUtMNzB4OG1lMEdneVJ6RjdBUlhMRUJBQUZkWGpRNS13RUNZenpfLXJYRlNqZE91SXlXYXA4Uy1ydm4wM0NUa0JDaFlyRTFWQjRELWZoZklBQnJLc3YxNmlBdk9Zd2RhMkdnNUh5WEJITzdLQ2RSUGJDNmoycXpPcXdrT0tObGtodDRHZEVzN0RCakFtenZNQlhIMjNlZFA5SG1wd1MyOVhTNjEzSElhSEVzS1E2aWw2RTcyVjcxZTJLbXdDR3c4OF9xN3JqUWdudlhjZUdQRW43XzNySUJucdIBwAJBVV95cUxON2dHNTgzWlJGZFJ2a1JRcDBtb0xtaS1aaFlqU1NvZlVwXzdOZmNZWUt0UTBKX2VobTQwMHR5SHlqT09PR0UtMk5ULURlQ2RENGl1OC01c0ZUZVlWdUJlWFpkdDRBLWxQZXZQTTduYU9NbTVvRlJ2OGlybzljSXNsdDdscTRTX0Z0R0M3VnhYNWt1LVRmNGs5dEQ2XzdYcDZwazdYcmJqN2haSVRBUi1ENS1zS1JJSUNiN2NETmVZYi1iaWtSdzdaTW1WeF93OFRxRmhQc3ZmVW1hendjMTJIWW1Xall2NE5BR1ZYcXozSVg1eTVUVDZRdTJPVjk2RGFodFpuamI3VXE2YkhXMGRHU3VtbmsyMG44bE9lRG5KYU9WRjU1c2RMRjIwUXg5bDA1aTFwNFIyaVlHRXg5bkZPSQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwAJBVV95cUxOWEV4WGxjZVdvVGRJcnlYbXdEWDNCc29EdmtZb01qTHNPWXFGSkVQcFlzQW..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
