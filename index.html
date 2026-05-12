@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-05-12 02:23</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-05-12 17:50</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "【綠盟】線上講座｜德國非核轉型之路 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9RU25lVFlxODlrWDZROF9sOW1MTG1iRkVPM1lIYnMyZ1ZGdkpuRmF0c1dHUl9oNndVZVoxQWZTMjU2aUlqOF9wUkhn?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSkFVX3lxTE9RU25lVFlxODlrWDZROF9sOW1MTG1iRkVPM1lIYnMyZ1ZGdkpuRmF0c1dHUl..."}, {"title": "美伊戰爭削弱能源牌 特朗普總統訪華籌碼縮水 - Singtaousa", "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQcDEtWEhNRUhQOVZDZ3NNcS15Y2pBQ2x1UkhZZ0lSZU9OY3pHeXJsWFZ1cV9mV1hEaENNRUxrYUpkd2hsTGpOenVRUE1mc1hZX2FEenpJRmFOVW9PWXdLV2wxS1dIVnNPczEtOE9Mdk1pV1ZVMzA4YnhQTE1yVDFRbHozYVl4UlJwQkdscHptcHROYi0yZnc5S0V2cGQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQcDEtWEhNRUhQOVZDZ3NNcS15Y2pBQ2x1UkhZZ0lSZU9OY3pHeXJsWFZ1cV..."}, {"title": "在野提修空污法限燃料用量 經濟部憂影響供電穩定", "link": "https://news.pts.org.tw/article/807809", "summary": "在野黨提案修正《空氣污染防制法》，下午公聽會前場外有民間團體陳抗，呼籲環境部應該管控燃煤排放，才不會影響人民健康。經濟部指出，整體已減少空污排放將近7成，而《空污法》修正條文恐怕會讓領有固定污染源、操作許可的8000家廠商，面臨許可證未完成..."}];
+            const newsData = [{"title": "真冰變塑膠 「沒有冰的溜冰場」能拯救冰上曲棍球與花滑？ - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1VZVR6OWdhbFMzUmEyanYtRjhzN1NnMmk4c1ViZ3EtcTZnaUlXMng4Zzd3MHBoZzNVZTdvZkFHQ3VWMmVleUpkSA?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE1VZVR6OWdhbFMzUmEyanYtRjhzN1NnMmk4c1ViZ3EtcTZnaUlXMng4Zzd3MH..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
