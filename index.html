@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-05-12 17:50</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-05-13 02:25</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "真冰變塑膠 「沒有冰的溜冰場」能拯救冰上曲棍球與花滑？ - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1VZVR6OWdhbFMzUmEyanYtRjhzN1NnMmk4c1ViZ3EtcTZnaUlXMng4Zzd3MHBoZzNVZTdvZkFHQ3VWMmVleUpkSA?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE1VZVR6OWdhbFMzUmEyanYtRjhzN1NnMmk4c1ViZ3EtcTZnaUlXMng4Zzd3MH..."}];
+            const newsData = [{"title": "不只電動車怕極端氣候！美汽車協會調查：油電車比電動車更怕熱 - 自由電子報汽車頻道", "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBkbURQQnNjTHBPdDhZd1Z6R3ZFd2wyQnRzMUJUMVVZM1NKbDdVOGpmSHlXS2hSaTFXNGhfM0xTSkJpM1hwYkVCWXlXdnU4TE3SAU9BVV95cUxQZG1EUEJzY0xwT3Q4WXdWekd2RXdsMkJ0czFCVDFVWTNTSmw3VThqZkh5V0toUmkxVzRoXzNMU0pCaTNYcGJFQll5V3Z1OExN?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBkbURQQnNjTHBPdDhZd1Z6R3ZFd2wyQnRzMUJUMVVZM1NKbDdVOGpmSHlXS2..."}, {"title": "真冰變塑膠 「沒有冰的溜冰場」能拯救冰上曲棍球與花滑？ - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1VZVR6OWdhbFMzUmEyanYtRjhzN1NnMmk4c1ViZ3EtcTZnaUlXMng4Zzd3MHBoZzNVZTdvZkFHQ3VWMmVleUpkSA?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE1VZVR6OWdhbFMzUmEyanYtRjhzN1NnMmk4c1ViZ3EtcTZnaUlXMng4Zzd3MH..."}, {"title": "2026大師論壇／和碩董事長童子賢：能源、法規、人才 三大挑戰 - 經濟日報", "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE0zbzdpcDlvaWFPa0gzd05uTXo1aTZ1dkNlUFZqSUVzd0I0SldHRFd2dFRGVnJyVU16TERwUl84bmRCa0hZZGRubW1wOEJFRnRfUGtvSjU4YkxGVnVHaXNZVGFENVZGU2w4RkhLd0RDd0luM1BwdFNEVm55NUXSAV9BVV95cUxOanlhZ1JwWUY2R1pIS1BudUp5UERKR2puQ3Y2bHRHVnhOSXdFNEp4NV9LUEpsYXpFZjd2U0M4MW5HREhfNzl1OHJxQV85Q2V5bDhFYlFrVFZaeXdFUmtFaw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE0zbzdpcDlvaWFPa0gzd05uTXo1aTZ1dkNlUFZqSUVzd0I0SldHRFd2dFRGVn..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
