@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-05-23 23:48</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-05-24 17:09</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "〈財經週報-財經焦點〉永續再獲領航肯定 台新新光金CDP蟬聯「A」級最高評級 - 自由時報", "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBqMGgtbnhTenhWTUh3bFdQVWV0RnhWUzBVdWg4TWdOb2V5aVhHTkdvbERhX0RxUk1OTExLeGFxaDh0VVFkNWFhSjE5Z3ptNzJXZFFfYmRyQl8?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFBqMGgtbnhTenhWTUh3bFdQVWV0RnhWUzBVdWg4TWdOb2V5aVhHTkdvbERhX0..."}, {"title": "坎城影展金棕櫚獎明揭曉 是枝裕和、羅泓軫作品呼聲高", "link": "https://news.pts.org.tw/article/809684", "summary": "第79屆坎城影展將於法國時間23日晚間，也就是台灣時間24日凌晨舉行閉幕暨頒獎典禮。最高榮譽「金棕櫚獎」即將揭曉，有許多亞洲作品呼聲高，包括濱口竜介執導的《突如其來》、是枝裕和導演的新作《再生家族》，以及南韓導演羅泓軫執導的科幻驚悚片《Ho..."}];
+            const newsData = [{"title": "小港區大坪里水資源宣導暨能源再利用活動 - 墨新聞-MORE News", "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE44RDBpSlF1d2xIV2FHXzA3Nlk4cmpSRVlERkJNMWhWNktVZm84MWU2UnNncm5URFR0TjBEUVZvTzRlUQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTE44RDBpSlF1d2xIV2FHXzA3Nlk4cmpSRVlERkJNMWhWNktVZm84MWU2UnNncm..."}, {"title": "黃仁勳談新產品Vera Rubin 稱「台灣接下來會非常忙碌」", "link": "https://news.pts.org.tw/article/809758", "summary": "輝達執行長黃仁勳提前來台，行程滿檔的他，除了28日要和供應鏈夥伴吃飯，接下來還要再參加輝達和台北國際電腦展活動。黃仁勳表示，新一代產品Vera Rubin是輝達史上、甚至是台灣史上最大規模的產品導入，需要台灣約150家生態系夥伴一起打造，台..."}, {"title": "高雄街友稱遭辱罵而掌摑3歲童 家長駁無交談將提告傷害", "link": "https://news.pts.org.tw/article/809755", "summary": "高雄前鎮的興仁公園昨（23）日下午發生攻擊事件，一位長期在公園活動的街友，自稱被一名3歲男童出言不遜，讓她憤而揮拳、導致男童從遊具上摔落，警方到場後依法將她移送地檢署。而當地里長及居民也抱怨，公園廁所長期被街友占據，造成環境、噪音等困擾，如..."}, {"title": "坎城影展金棕櫚獎明揭曉 是枝裕和、羅泓軫作品呼聲高", "link": "https://news.pts.org.tw/article/809684", "summary": "第79屆坎城影展將於法國時間23日晚間，也就是台灣時間24日凌晨舉行閉幕暨頒獎典禮。最高榮譽「金棕櫚獎」即將揭曉，有許多亞洲作品呼聲高，包括濱口竜介執導的《突如其來》、是枝裕和導演的新作《再生家族》，以及南韓導演羅泓軫執導的科幻驚悚片《Ho..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
