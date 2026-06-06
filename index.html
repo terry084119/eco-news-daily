@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-06 17:13</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-06 21:21</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (5)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "2026台灣氣候行動週盛大起跑〈世界環境日・地球出紅牌〉 - 國際特赦組織", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9MTl95eEpQSHczLVVOV3huYUZuTGFmaTk3bHoyWHlsMWhGY1YtOFJwenBUV2ZiQmQ2WFJBbFVqNF9MOGxWcVFrSg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE9MTl95eEpQSHczLVVOV3huYUZuTGFmaTk3bHoyWHlsMWhGY1YtOFJwenBUV2..."}, {"title": "響應世界環境日 聚焦AI時代半導體永續轉型 環境部攜手清大合辦論壇共商淨零 - 環境部新聞專區", "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPb0VBeDdlams1ZnVSNmFzOTluaEduNXRlV3J1NnBOOHlQM0N3Wkx5dmpqcXdlQndXeVVNUy1Ib3VlYzFGNHZ1cE5qMm9KaVhVV2dIYWdZd1V2eTFVU0pseVBHZGNpTVE2cXl2NjRTcnlrZWZweFJfYm9pWFdUVGVVeW1wdHoxRmRYTlpQOTNR?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPb0VBeDdlams1ZnVSNmFzOTluaEduNXRlV3J1NnBOOHlQM0N3Wkx5dmpqcX..."}, {"title": "台灣之光！「2026 KidWind風力能源世界賽」 台中學子勇奪世界冠軍 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5RNjlEYnNvQ29oZzlIQWxFRWkyLWVFRGFuZU5HUGtnaDZZQldqOVU5b3JzVERXeGh1R2RhX0tKV3MzY1pJLUxwWnlTWlF6TmNjTGc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5RNjlEYnNvQ29oZzlIQWxFRWkyLWVFRGFuZU5HUGtnaDZZQldqOVU5b3JzVE..."}, {"title": "河內整頓市容取締攤販、違停 隨興街頭文化或受衝擊", "link": "https://news.pts.org.tw/article/811777", "summary": "提到越南河內的街頭風情，許多人腦海中浮現的，就是民眾擠在人行道上、坐在小塑膠椅上喝咖啡、吃美食的畫面。但這樣的隨興街景可能成為歷史。河內市府近來大動作整頓市容，嚴厲取締佔用人行道的攤販與違規停車，甚至研擬提高罰款，引發兩極反應。..."}, {"title": "賴清德邀參訪發電廠 黃仁勳：台灣經濟起飛需能源", "link": "https://news.pts.org.tw/article/811768", "summary": "總統賴清德接受專訪時表示，想邀請輝達執行長黃仁勳參訪台灣發電廠。黃仁勳離台前表示，這是很大的榮幸，更說台灣第一季GDP成長率達14%，為了台灣的繁榮和經濟起飛，台灣需要「能源」。不過，受到美股博通展望不如預期影響，亞股今（5）日遭到血洗，韓..."}];
+            const newsData = [{"title": "台灣之光！「2026 KidWind風力能源世界賽」 台中學子勇奪世界冠軍 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5RNjlEYnNvQ29oZzlIQWxFRWkyLWVFRGFuZU5HUGtnaDZZQldqOVU5b3JzVERXeGh1R2RhX0tKV3MzY1pJLUxwWnlTWlF6TmNjTGc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5RNjlEYnNvQ29oZzlIQWxFRWkyLWVFRGFuZU5HUGtnaDZZQldqOVU5b3JzVE..."}, {"title": "阿爾巴尼亞爆示威︱特朗普女婿建度假村涉破壞生態 民眾怒吼總理下台 - singtao.ca", "link": "https://news.google.com/rss/articles/CBMi0gNBVV95cUxPQkN3eU5mNjViZm8tVG5oWjZmVXpobjlRSUdGMERvb1hiYktHUk85QW5FLVJkS0NnSHdhM0lMRGFMd214R0JGeEppakxoSFNud0hLVUdvT2RXeDdzckphNnpybU82b3dBY0lHN0djRWQxX25PTTZmME5mV3I1Rnp1Zk1QYjRpNmlsbThsQ3ZMZFBKZk04c1BHMk82bWd1dm51Rnd6YjMtLXdZWmJ2cHlSUzBlZWhTM1lDUElwQm1Pd2RPZUd2SXpWWkdGVUFpOGhZZ0h0V2RaWWQ0N0JoZ2FTSTNBd1hmNGxJWjJzeGZRbEF6eDd3Y18wVjQ1U0R4SkhSanBBR09tRTRRdmFMbk9DYldsVjROcTRrQ1lhWkVjSDJKQW81VTVfQTc2YUo4YmhwWTRyWmFzWEktVjNRNG1NU3JnTjlEUWoyX3F0T2s0TldkbGY4NVVjUnVETEhBc0tvTDRyWjBmNGZzV0JfMEd3Y25oUV9HS25xeDRuMXRKdUJDdm9RbEtpc2Vxci1VZkZ5b1FtTzZIX0E2VU9fT2hKb2F5VE1qSS01OUxNUU1IWXd3bDZ5aFBNczlBQmJmd0hHZ1NRcDlNUTk5cTdFQ1lydWpn0gGMAUFVX3lxTFAtZUNVZFhRZzBkRTNKbnFJSHFUM2JTbzBWb3FiblBaZEZCVlVDUU9BSmhYT2dZMHFRRGM2d0lDSHNQMDNqcC1iUFhBNG1XTWxwMzkyUnFaRGVsUnNrdFJfYWwxSEp3ckZWM3BOYW5ZQk0yaUZrS0N5cUtLcWFWMGYtcEpVOVByT3lXbnBE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0gNBVV95cUxPQkN3eU5mNjViZm8tVG5oWjZmVXpobjlRSUdGMERvb1hiYktHUk85QW5FLV..."}, {"title": "河內整頓市容取締攤販、違停 隨興街頭文化或受衝擊", "link": "https://news.pts.org.tw/article/811777", "summary": "提到越南河內的街頭風情，許多人腦海中浮現的，就是民眾擠在人行道上、坐在小塑膠椅上喝咖啡、吃美食的畫面。但這樣的隨興街景可能成為歷史。河內市府近來大動作整頓市容，嚴厲取締佔用人行道的攤販與違規停車，甚至研擬提高罰款，引發兩極反應。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
