@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-07 10:59</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-07 21:41</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (0)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [];
+            const newsData = [{"title": "美國Q1潔淨能源版圖生變 太陽能首超風力躍居主導 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5lbW9VaG9xMk1NMHlnN3UyalY4dXZOVlBkWS01YUprOWszbmZ3OVhQM0xidENUeEhlZ21pRUMyVnhnRWVLZnVjc2hDWGNxLW9XaVE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5lbW9VaG9xMk1NMHlnN3UyalY4dXZOVlBkWS01YUprOWszbmZ3OVhQM0xidE..."}, {"title": "邀蕭美琴浮潛、與海龜共游 惠恕仁強調帛琉與台友誼不變", "link": "https://news.pts.org.tw/article/811872", "summary": "副總統蕭美琴出訪帛琉，第2日行程由帛琉總統惠恕仁親自帶路，前往洛克群島浮潛跟泛舟，展現共同推廣永續觀光的願景。由於觀光業是帛琉最重要經濟命脈，但中國2017年開始就把旅遊業當成政治武器，施壓帛琉，試圖影響台帛邦誼，但惠恕仁多次強調，帛琉不會..."}, {"title": "受低壓帶、梅雨鋒面影響 未來一週全台大範圍降雨", "link": "https://news.pts.org.tw/article/811864", "summary": "把握今（7）日陽光露臉的好天氣，因為明日開始受到低壓帶和梅雨鋒面的影響，未來一個禮拜台灣將迎來大範圍的降雨，尤其是以9日、10日這兩天雨勢最為劇烈，務必留意。至於這波降雨是否對中南部的水庫水情有所幫助，水利署也嚴陣以待，除了和農水署確認二期..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
