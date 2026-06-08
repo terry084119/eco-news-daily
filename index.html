@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-07 21:41</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-08 11:29</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (8)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "美國Q1潔淨能源版圖生變 太陽能首超風力躍居主導 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5lbW9VaG9xMk1NMHlnN3UyalY4dXZOVlBkWS01YUprOWszbmZ3OVhQM0xidENUeEhlZ21pRUMyVnhnRWVLZnVjc2hDWGNxLW9XaVE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5lbW9VaG9xMk1NMHlnN3UyalY4dXZOVlBkWS01YUprOWszbmZ3OVhQM0xidE..."}, {"title": "邀蕭美琴浮潛、與海龜共游 惠恕仁強調帛琉與台友誼不變", "link": "https://news.pts.org.tw/article/811872", "summary": "副總統蕭美琴出訪帛琉，第2日行程由帛琉總統惠恕仁親自帶路，前往洛克群島浮潛跟泛舟，展現共同推廣永續觀光的願景。由於觀光業是帛琉最重要經濟命脈，但中國2017年開始就把旅遊業當成政治武器，施壓帛琉，試圖影響台帛邦誼，但惠恕仁多次強調，帛琉不會..."}, {"title": "受低壓帶、梅雨鋒面影響 未來一週全台大範圍降雨", "link": "https://news.pts.org.tw/article/811864", "summary": "把握今（7）日陽光露臉的好天氣，因為明日開始受到低壓帶和梅雨鋒面的影響，未來一個禮拜台灣將迎來大範圍的降雨，尤其是以9日、10日這兩天雨勢最為劇烈，務必留意。至於這波降雨是否對中南部的水庫水情有所幫助，水利署也嚴陣以待，除了和農水署確認二期..."}];
+            const newsData = [{"title": "民團發起「台灣氣候行動週」 向高碳排發出「紅牌警告」 - Newtalk新聞", "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5kRHRXXzRROHdfNG1lM1duQWYxQlhPMjVLX1VFR3BpdTBrUUx2NnhNWm0wTkIyT19LMGF5Z2tXUnFoZVdmcTRiYm1ZOGJ5dzFiODRfQjBYNkZsMDg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE5kRHRXXzRROHdfNG1lM1duQWYxQlhPMjVLX1VFR3BpdTBrUUx2NnhNWm0wTk..."}, {"title": "借鏡世足賽高溫風險！ 環團亮紅牌警告氣候危機 首屆氣候行動週即將登場 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE40YjhCZFpVc1ZLMmxtM1REd1g4S2IxTDYzZzhHWWNRclhfcXExZUJHanhmcU9IS2RVbHk2eGR5SC1zZC1IaW5pOQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE40YjhCZFpVc1ZLMmxtM1REd1g4S2IxTDYzZzhHWWNRclhfcXExZUJHanhmcU..."}, {"title": "BLACKYAK舉辦「2026喜馬拉雅氣候憲章：南池峰會」，推動全球氣候行動 - PR Newswire", "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQWFAtZ191ckxWVENhRlJiSFJIbG5CQTZvR0xIMy1vTHlJNHlHLVhzZUl1S2kzUkdqZGlKZXYxZ0RNRGg0YzExVnNqLTNoOVBXTXBYTjctTmNwQUNubElmZkxhb2hIc2JHTFR1TWRNN01ybkNPSy16bVU1QlVyczdLVHVn?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxQWFAtZ191ckxWVENhRlJiSFJIbG5CQTZvR0xIMy1vTHlJNHlHLVhzZUl1S2..."}, {"title": "台灣之光！「2026 KidWind風力能源世界賽」 台中學子勇奪世界冠軍 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5RNjlEYnNvQ29oZzlIQWxFRWkyLWVFRGFuZU5HUGtnaDZZQldqOVU5b3JzVERXeGh1R2RhX0tKV3MzY1pJLUxwWnlTWlF6TmNjTGc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5RNjlEYnNvQ29oZzlIQWxFRWkyLWVFRGFuZU5HUGtnaDZZQldqOVU5b3JzVE..."}, {"title": "荷寶：電價決定AI價格 再生能源添機遇 - 香港經濟日報HKET", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9YX09qUXZaZEl3VHRJY0RONTFNUV9FSU01RFJ4dDQ2RVhfNlUtMnFBYmlFRkpIay1iejlYRGdxVnh4ak1EQTI3WXhvZFAzUUJOQkE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE9YX09qUXZaZEl3VHRJY0RONTFNUV9FSU01RFJ4dDQ2RVhfNlUtMnFBYmlFRk..."}, {"title": "美國Q1潔淨能源版圖生變 太陽能首超風力躍居主導 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5lbW9VaG9xMk1NMHlnN3UyalY4dXZOVlBkWS01YUprOWszbmZ3OVhQM0xidENUeEhlZ21pRUMyVnhnRWVLZnVjc2hDWGNxLW9XaVE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5lbW9VaG9xMk1NMHlnN3UyalY4dXZOVlBkWS01YUprOWszbmZ3OVhQM0xidE..."}, {"title": "邀蕭美琴浮潛、與海龜共游 惠恕仁強調帛琉與台友誼不變", "link": "https://news.pts.org.tw/article/811872", "summary": "副總統蕭美琴出訪帛琉，第2日行程由帛琉總統惠恕仁親自帶路，前往洛克群島浮潛跟泛舟，展現共同推廣永續觀光的願景。由於觀光業是帛琉最重要經濟命脈，但中國2017年開始就把旅遊業當成政治武器，施壓帛琉，試圖影響台帛邦誼，但惠恕仁多次強調，帛琉不會..."}, {"title": "受低壓帶、梅雨鋒面影響 未來一週全台大範圍降雨", "link": "https://news.pts.org.tw/article/811864", "summary": "把握今（7）日陽光露臉的好天氣，因為明日開始受到低壓帶和梅雨鋒面的影響，未來一個禮拜台灣將迎來大範圍的降雨，尤其是以9日、10日這兩天雨勢最為劇烈，務必留意。至於這波降雨是否對中南部的水庫水情有所幫助，水利署也嚴陣以待，除了和農水署確認二期..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
