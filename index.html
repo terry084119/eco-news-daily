@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-14 11:30</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-14 21:51</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "永續經營．綠色前行 花蓮縣府多元強化城市韌性 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HUmtmMmdEZ2h0a1Y1aEVnaHQ5YjFBV2tNX2tqb2NSYmktY3hlYmhaLTdZVURWRUhJc2ZSTnRhOWRtNzFlVUNDY25FWmVTMFRCRnc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HUmtmMmdEZ2h0a1Y1aEVnaHQ5YjFBV2tNX2tqb2NSYmktY3hlYmhaLTdZVU..."}, {"title": "高雄本洲廢棄物處理廠火警 遭依空污法罰500萬、勒令停工", "link": "https://news.pts.org.tw/article/812868", "summary": "高雄本洲工業區一間廢棄物處理廠，12日晚間發生火警，還有連續爆炸聲，消防局出動大批人車以及消防機器人滅火，直到13日清晨4時許將火勢完全撲滅。環保局除了針對影響區域發布空污警示，依《空污法》裁處最高罰鍰500萬元，並勒令停工。..."}];
+            const newsData = [{"title": "永續經營．綠色前行 花蓮縣府多元強化城市韌性 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HUmtmMmdEZ2h0a1Y1aEVnaHQ5YjFBV2tNX2tqb2NSYmktY3hlYmhaLTdZVURWRUhJc2ZSTnRhOWRtNzFlVUNDY25FWmVTMFRCRnc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HUmtmMmdEZ2h0a1Y1aEVnaHQ5YjFBV2tNX2tqb2NSYmktY3hlYmhaLTdZVU..."}, {"title": "AECOM強化環境能源領導團隊 兩位資深主管獲晉升 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE55LVdhTUNNMnNfZW5hWWNPRHd1TW8tLWdTNzNZTTZrYjQ5S0tpWmNlOGZxanBlYmJjWE8wN3BtOWtUaFR5V2NFYkh3ZEZyTmZTQUE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE55LVdhTUNNMnNfZW5hWWNPRHd1TW8tLWdTNzNZTTZrYjQ5S0tpWmNlOGZxan..."}, {"title": "中臺科大攜手TAISE簽署倡議 實踐永續發展與創新轉型教育決心 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1ka1pGVWhfQnVCYXd6T25pcGZkM01IVWhXYUFEc0pRX0E4d1gzeDNMWWpIRUN2NmNhUUhnVURMYTgxdDJueHV2ckhaMDMyZ21uUHc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE1ka1pGVWhfQnVCYXd6T25pcGZkM01IVWhXYUFEc0pRX0E4d1gzeDNMWWpIRU..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
