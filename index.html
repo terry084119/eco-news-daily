@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-15 11:39</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-16 01:07</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (5)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "AECOM強化環境能源領導團隊 兩位資深主管獲晉升 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE55LVdhTUNNMnNfZW5hWWNPRHd1TW8tLWdTNzNZTTZrYjQ5S0tpWmNlOGZxanBlYmJjWE8wN3BtOWtUaFR5V2NFYkh3ZEZyTmZTQUE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE55LVdhTUNNMnNfZW5hWWNPRHd1TW8tLWdTNzNZTTZrYjQ5S0tpWmNlOGZxan..."}, {"title": "永續經營．綠色前行 花蓮縣府多元強化城市韌性 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HUmtmMmdEZ2h0a1Y1aEVnaHQ5YjFBV2tNX2tqb2NSYmktY3hlYmhaLTdZVURWRUhJc2ZSTnRhOWRtNzFlVUNDY25FWmVTMFRCRnc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HUmtmMmdEZ2h0a1Y1aEVnaHQ5YjFBV2tNX2tqb2NSYmktY3hlYmhaLTdZVU..."}, {"title": "中臺科大攜手TAISE簽署倡議 實踐永續發展與創新轉型教育決心 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1ka1pGVWhfQnVCYXd6T25pcGZkM01IVWhXYUFEc0pRX0E4d1gzeDNMWWpIRUN2NmNhUUhnVURMYTgxdDJueHV2ckhaMDMyZ21uUHc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE1ka1pGVWhfQnVCYXd6T25pcGZkM01IVWhXYUFEc0pRX0E4d1gzeDNMWWpIRU..."}];
+            const newsData = [{"title": "台灣2025減碳9%、差1%達目標...學者：僅收小額碳費 成高排碳企業保護傘 - 倡議家", "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1QWC1FMFNnMHZuQlFHWVVSRUt3eGFGTVJ4T2tuUW40em1EcEpRT1M0Q0JpdkIwWERKREJyNHMtM28wRy1HVTdURWNIalZ0Qm5rWGxPMU5HajNpQW9JeEFv0gFkQVVfeXFMUHBza0dzQzhOaklsVkFhUFRxS01iM3RHcEdlMGFicF8yai1iSXlGZi1WUHN1NlhwS1RnS0hzUDdyNVA4RzdjMnE2bGVCdUhaRTN2ZWFtUkt2RkF0bnMzYTZCZUZ0bw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE1QWC1FMFNnMHZuQlFHWVVSRUt3eGFGTVJ4T2tuUW40em1EcEpRT1M0Q0Jpdk..."}, {"title": "AECOM強化環境能源領導團隊 兩位資深主管獲晉升 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE55LVdhTUNNMnNfZW5hWWNPRHd1TW8tLWdTNzNZTTZrYjQ5S0tpWmNlOGZxanBlYmJjWE8wN3BtOWtUaFR5V2NFYkh3ZEZyTmZTQUE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE55LVdhTUNNMnNfZW5hWWNPRHd1TW8tLWdTNzNZTTZrYjQ5S0tpWmNlOGZxan..."}, {"title": "守住溫控1.5度C 凱基金控展現氣候治理能力- 上市櫃 - 旺得富理財網", "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE8ySVJVejBXbjRrS01GSGllTFp2RUswQ29LNTAwNkpIUEh5RFRyaS1uak9xX1hIN1lWWEpFbEpTeG5vdldvNzVuOTNEejJlTUZHSm91eklpb3BUY2RqZWQ5R3FWandwRWw3QXc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE8ySVJVejBXbjRrS01GSGllTFp2RUswQ29LNTAwNkpIUEh5RFRyaS1uak9xX1..."}, {"title": "唐獎永續發展獎得主蘇珊索羅門：AI發展須納入永續治理 - 自由時報", "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tcWhQdTI3NzhiNE1hblpVOGdfMkloV0tXMm9ic0h4RmVkeEhtcjZLcERQX2Q1SUtUOXE4S041UGN0LUhLdWNuUmRFZjJ2M1ppWlBjN1Yzc2hHbGs5ZjlBYy03czlqMm45cHfSAWpBVV95cUxObXFoUHUyNzc4YjRNYW5aVThnXzJJaFdLVzJvYnNIeEZlZHhIbXI2S3BEUF9kNUlLVDlxOEtONVBjdC1IS3VjblJkRWYydjNaaVpQYzdWM3NoR2xrOWY5QWMtN3M5ajJuOXB3?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE5tcWhQdTI3NzhiNE1hblpVOGdfMkloV0tXMm9ic0h4RmVkeEhtcjZLcERQX2..."}, {"title": "凱基金控守住溫控1.5°C 集團4公司展現減碳真功夫 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tUU4yNnVRYVZxRkRJZHI3Rno0aldjTzRPa0JMQzNtWGxIUlFwV1AxV1FVR01DcUdZWmxlZVhrM2Vhako1bFdSZ2d2RVRlUTlvX2c?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tUU4yNnVRYVZxRkRJZHI3Rno0aldjTzRPa0JMQzNtWGxIUlFwV1AxV1FVR0..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
