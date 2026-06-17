@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-17 00:41</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-17 11:33</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (6)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "AECOM強化環境能源領導團隊 兩位資深主管獲晉升 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE55LVdhTUNNMnNfZW5hWWNPRHd1TW8tLWdTNzNZTTZrYjQ5S0tpWmNlOGZxanBlYmJjWE8wN3BtOWtUaFR5V2NFYkh3ZEZyTmZTQUE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE55LVdhTUNNMnNfZW5hWWNPRHd1TW8tLWdTNzNZTTZrYjQ5S0tpWmNlOGZxan..."}, {"title": "台灣首件氣候訴訟：「用電大戶條款」 最高行政法院判綠色和平確定敗訴 - 倡議家", "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAzYTZIX2xYUm5pbVlnbEUyY2hiWWlQcmZpdFVrMnpxLTVxU2xUcXdEZ2habmFCb3pMMHBsSzhwamFndGlILUxLSnl1N25EQ1JKNVdIUHpfMWdLMXJRNDEw0gFkQVVfeXFMUFZZajRxVGdwQ3dNbkd5TFFyV3RpUWFZVDFsNTNqRUhVWnl6MWpxc1UxVk90bkdxbEQxZ2kwa011NG1wSURDLWg0YTNHbkFYUS1wNXFERlNTSHh3bjNBNkRqYXNCdQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTFAzYTZIX2xYUm5pbVlnbEUyY2hiWWlQcmZpdFVrMnpxLTVxU2xUcXdEZ2habm..."}, {"title": "非法棄置廢棄物最重可關7年 廢清法三讀納管再生能源設備", "link": "https://news.pts.org.tw/article/813233", "summary": "立法院今（16）日三讀通過《廢棄物清理法》修正草案，除將太陽光電板、風機葉片等再生能源發電設備納入管理外，也將亂丟一般廢棄物罰鍰上限由現行6000元提高至10萬元；非法棄置事業廢棄物刑責則提高至7年以下有期徒刑、得併科罰金1500萬元。..."}, {"title": "美國商會發布2026台灣白皮書 聚焦提升能源韌性等4領域", "link": "https://news.pts.org.tw/article/813211", "summary": "台灣美國商會16日發布「2026年台灣白皮書」，建議台美之間應該優先合作4大領域，包括強化經濟安全、優化法規吸引投資，以及建議台灣應該將能源韌性與電網安全提升至國家安全層級。..."}];
+            const newsData = [{"title": "凱基金控守住溫控1.5°C 集團4公司展現減碳真功夫 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tUU4yNnVRYVZxRkRJZHI3Rno0aldjTzRPa0JMQzNtWGxIUlFwV1AxV1FVR01DcUdZWmxlZVhrM2Vhako1bFdSZ2d2RVRlUTlvX2c?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tUU4yNnVRYVZxRkRJZHI3Rno0aldjTzRPa0JMQzNtWGxIUlFwV1AxV1FVR0..."}, {"title": "AECOM強化環境能源領導團隊 兩位資深主管獲晉升 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE55LVdhTUNNMnNfZW5hWWNPRHd1TW8tLWdTNzNZTTZrYjQ5S0tpWmNlOGZxanBlYmJjWE8wN3BtOWtUaFR5V2NFYkh3ZEZyTmZTQUE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE55LVdhTUNNMnNfZW5hWWNPRHd1TW8tLWdTNzNZTTZrYjQ5S0tpWmNlOGZxan..."}, {"title": "俄烏戰爭成G7峰會首要議程 與會國對俄能源制裁達共識", "link": "https://news.pts.org.tw/article/813370", "summary": "在法國舉行的G7七大國峰會16日進入第2天，把俄烏戰爭列為首要議程。美國總統川普（Donald Trump）要求俄國必須跟烏克蘭成協議，7國領袖也同意針對俄國展開新一輪制裁。烏克蘭總統澤倫斯基（Volodymyr Zelenskyy）表示，..."}, {"title": "日央行宣布升息1碼 基準利率升至1%創31年新高", "link": "https://news.pts.org.tw/article/813332", "summary": "日本央行今（16）日宣布升息1碼，基準利率從0.75%調升至1%，創下1995年以來新高，符合市場預期，日股盤中更首度衝破7萬點大關，終場小漲87點，收在6萬9千404點。台股歷經早盤震盪後，加權指數也不斷上攻，收在4萬5千809點。另一方..."}, {"title": "主辦國肯亞拒我參與OOC 外交部批淪為中國政治打手", "link": "https://news.pts.org.tw/article/813330", "summary": "我們的海洋大會（OOC）2014年開始舉辦，推動全球海洋保護及永續發展，我國2015年起就受邀參與，今（2026）年輪到非洲國家肯亞主辦，但我方代表團與學者出席，卻遭到肯亞政府阻撓，創下被拒於門外的首例。海委會批評肯亞政府扈從中國，外交部也..."}, {"title": "廢清法修正三讀提高刑責 非法棄置廢棄物最重可判7年", "link": "https://news.pts.org.tw/article/813324", "summary": "今（16）日《廢棄物清理法》修正三讀通過，未來將導入智慧監控與電子圍籬，掌握廢棄物流向，並且提高非法棄置的刑責，從最高5年提高到7年有期徒刑，若在環境敏感區犯罪，刑期可再加重到二分之一。另外也將太陽光電板、風機葉片納入管理，業者要負擔回收清..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
