@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-18 11:25</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-18 22:57</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (5)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "氣候目標與經濟公平不必二選一，最新研究指出兩者可以互相成就 - CSRone 永續智庫", "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1XWW94U2dZSDhYLWhoaG14bHZkc1BFekRCZDRBbEM5WXd2YlktdzdkVEx5R3Btb3hvVGpHRUN6dWY1XzhB?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiREFVX3lxTE1XWW94U2dZSDhYLWhoaG14bHZkc1BFekRCZDRBbEM5WXd2YlktdzdkVEx5R3..."}, {"title": "臺南召開氣候變遷因應推動會 減碳調適成果穩步推進 - 台灣好新聞", "link": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxNWlZPQS1kMkw5RnJDbVBqVDFiYjdkaEhMbC1Mcmt4bVJtWTQ3RWtaZXlPay1WMHVCX3E4em1vM1dUQnlrTDBzZmVSRVBxdjhqQkYyX3lDQ0FqREFYZVdSZXZSdlhtM0pMSVBNVEUyVlVWNWlMcm4yVGFaS2dGd1dCR29KVk54OHJmVUhlSGRwdDRZSFFWMm5wRHY3TVYySWZYaUtOMmxyUTJDUE9MVG5Ka0RuRGI5c0kxUFhkLWNPV3Y4d2lZZklxMXBLMzg2Q0tKNHFHZHJjNlZsZVBMOGZJM0VXTEdmQXVWaXhSRUJQR0xYbXZFd0lMVXg5YXNtYkNYSEViWjNVTnRWZldMbWdqZzliV0w3Q1E3cEVveEE5Q2x4SmJmWXFXMERHdzZWNF8zdE9zM1NrU1JuWjNvdGdyWFFwY0ZtUGZRdkhHNXNnYUh0NjlzaE14Xzl6Y2dxNEFKZEJVdHJ3?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMi5gJBVV95cUxNWlZPQS1kMkw5RnJDbVBqVDFiYjdkaEhMbC1Mcmt4bVJtWTQ3RWtaZXlPay..."}, {"title": "澳洲北領地政府公布新氣候韌性計劃 環保團體批變相增加碳排放 - TVB", "link": "https://news.google.com/rss/articles/CBMilwNBVV95cUxQdDV5aElMNlhfU18xSkJBQ3Y2eG9vM3RDM2V3TVVpNm8zTFEtQ2tNckNyTjY2cWFGSkFWTndRbzl0ZU9SS05QUUNxOFBrMVZCQVJiUFA1bEdZTFY1dEgxNDdFWnZNWVk0SG0wUEZ6a2lXY3hiWmNXdUk0TWhuUW5HQ0RXLUViUGU5cVFOTnZtNy1waDF4VmF2amUtWGx4LWdoUVctaGxRQ0p0bmp0Wi03cWJBS0x2MC1jN2tINEhwY0ptTE9kcHhOZUxlclNTTEF3enVGZzh4QkZGUExCdWdyWHRuVnd3M19YRldNczBOMmxtUWhMQ1BRRzZuemRiSXhJLW9kc2pEaDhVTDZhVUJTcVZ4OG05YTVtQ08yOXh3aE52dHJaUDdUY0liaFcxQUNxaEc0UGZEQVMxbURYMkpDY3hCamtWZ2lFTzFzUm5KZ25ySXRLaWJ5N1hoZkh3c2IxcWsyTk1SUWFaS1NjNnduaW4wc3BqUFlzNURxcEVITU1lQW9FYUZjN2trN2RlMnhfZVJPblVVRQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMilwNBVV95cUxQdDV5aElMNlhfU18xSkJBQ3Y2eG9vM3RDM2V3TVVpNm8zTFEtQ2tNckNyTj..."}, {"title": "大林慈院首辦永續醫療高階主管班 攜手雲嘉醫療院所共學 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE90RDZKa3hHNmV5T0RudF9XejA4SDd5SVc2R1hYMEpMNDh0UlRyX0ZSZ3czSmRueVRPTzRCRS10VlRWRDhDWlIxSFltOGUyVzBKZkE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE90RDZKa3hHNmV5T0RudF9XejA4SDd5SVc2R1hYMEpMNDh0UlRyX0ZSZ3czSm..."}, {"title": "環團批污染遭罰企業仍獲永續獎 環境部推「反漂綠指引」防誤導", "link": "https://news.pts.org.tw/article/813490", "summary": "坊間有大大小小的永續獎項，不過有環團數次舉行記者會批評，獲頒永續獎的企業，不乏有污染違規遭開罰的業者，質疑獎項可信度，環境部也發現類似現象，決定推動相關獎項與標章的「反漂綠指引」，防範誤導消費者與投資人。..."}];
+            const newsData = [{"title": "氣候目標與經濟公平不必二選一，最新研究指出兩者可以互相成就 - CSRone 永續智庫", "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1XWW94U2dZSDhYLWhoaG14bHZkc1BFekRCZDRBbEM5WXd2YlktdzdkVEx5R3Btb3hvVGpHRUN6dWY1XzhB?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiREFVX3lxTE1XWW94U2dZSDhYLWhoaG14bHZkc1BFekRCZDRBbEM5WXd2YlktdzdkVEx5R3..."}, {"title": "臺南召開氣候變遷因應推動會 減碳調適成果穩步推進 | 台灣好新聞 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBGc3NJTEhnZlgtWWh4R2lGWndVb3ltSEJIOUc2cTdTWU5FUDdKUnhzTjdGVzhac1R4VThSWjdfbDAxTDUtb0JLWnRNMWlFbmo4MVRJMHZR?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBGc3NJTEhnZlgtWWh4R2lGWndVb3ltSEJIOUc2cTdTWU5FUDdKUnhzTjdGVz..."}, {"title": "循環經濟概念創商機 日本二手商品受海外市場歡迎", "link": "https://news.pts.org.tw/article/813706", "summary": "近年來循環經濟概念受到重視，不少人選擇購買二手商品。在泰國，就有許多業者專門從日本進口大量的二手貨，受到消費者歡迎。在過去16年間，日本二手市場的產值已經翻了一倍。..."}, {"title": "AI爆發及極端高溫影響 估未來10年用電年均成長2.5%", "link": "https://news.pts.org.tw/article/813697", "summary": "經濟部公布最新「全國電力資源供需報告」，受AI爆發、半導體產業暢旺以及極端氣候導致高溫天數增加，未來10年用電需求，年均將從去（2025）年預估的成長1.7%提高到2.5%，比日韓都還要高。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
