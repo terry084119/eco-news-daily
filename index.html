@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-18 22:57</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-19 11:48</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "氣候目標與經濟公平不必二選一，最新研究指出兩者可以互相成就 - CSRone 永續智庫", "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1XWW94U2dZSDhYLWhoaG14bHZkc1BFekRCZDRBbEM5WXd2YlktdzdkVEx5R3Btb3hvVGpHRUN6dWY1XzhB?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiREFVX3lxTE1XWW94U2dZSDhYLWhoaG14bHZkc1BFekRCZDRBbEM5WXd2YlktdzdkVEx5R3..."}, {"title": "臺南召開氣候變遷因應推動會 減碳調適成果穩步推進 | 台灣好新聞 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBGc3NJTEhnZlgtWWh4R2lGWndVb3ltSEJIOUc2cTdTWU5FUDdKUnhzTjdGVzhac1R4VThSWjdfbDAxTDUtb0JLWnRNMWlFbmo4MVRJMHZR?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBGc3NJTEhnZlgtWWh4R2lGWndVb3ltSEJIOUc2cTdTWU5FUDdKUnhzTjdGVz..."}, {"title": "循環經濟概念創商機 日本二手商品受海外市場歡迎", "link": "https://news.pts.org.tw/article/813706", "summary": "近年來循環經濟概念受到重視，不少人選擇購買二手商品。在泰國，就有許多業者專門從日本進口大量的二手貨，受到消費者歡迎。在過去16年間，日本二手市場的產值已經翻了一倍。..."}, {"title": "AI爆發及極端高溫影響 估未來10年用電年均成長2.5%", "link": "https://news.pts.org.tw/article/813697", "summary": "經濟部公布最新「全國電力資源供需報告」，受AI爆發、半導體產業暢旺以及極端氣候導致高溫天數增加，未來10年用電需求，年均將從去（2025）年預估的成長1.7%提高到2.5%，比日韓都還要高。..."}];
+            const newsData = [{"title": "循環經濟概念創商機 日本二手商品受海外市場歡迎", "link": "https://news.pts.org.tw/article/813706", "summary": "近年來循環經濟概念受到重視，不少人選擇購買二手商品。在泰國，就有許多業者專門從日本進口大量的二手貨，受到消費者歡迎。在過去16年間，日本二手市場的產值已經翻了一倍。..."}, {"title": "AI爆發及極端高溫影響 估未來10年用電年均成長2.5%", "link": "https://news.pts.org.tw/article/813697", "summary": "經濟部公布最新「全國電力資源供需報告」，受AI爆發、半導體產業暢旺以及極端氣候導致高溫天數增加，未來10年用電需求，年均將從去（2025）年預估的成長1.7%提高到2.5%，比日韓都還要高。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
