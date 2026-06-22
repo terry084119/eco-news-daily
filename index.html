@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-21 21:58</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-22 11:40</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "2050淨零不是口號!金控減碳成績單出爐 守住溫控1.5°C認證 - MSN", "link": "https://news.google.com/rss/articles/CBMiqgRBVV95cUxOUXVKWTcxdGxham5oWl9PNEdNeVpNOEQ1NDJHOTN6ZFpPdlp5eVN3X0pWTzk0MUs0alhwcDM5WFNsMF9mbE1lWGM0cDlWNmlCbVpERURNaE9BUTd6VzdhVnBiRHZVcjcxcW93OVJRaWprTi14ZGxWOTNaLVB4RG1QUlpqT2J6S2xxaHhseW9NNVZON1JMcW9KbmhkX1ZjSmdZQ3gtMkU1dWlqZHl3MzBlTjNLS3B2NmRDTmNhaVZpb290MmN4U1JyMDFNQmptQkVoSm9KTlpDTDF5SW11Z1I2cXE5YWVqa1BOWmFlamlKYW9TNGR1NWs0dldKcHc0amxCakUxTmtIQ2FoQ1JJUXRQaGFjU1lHMi1xVFdpY2lDWXRqQjBCTExyRlZCdDdWZGdPTmhkaGVMQk54LXA0R2RQS3VMbVN0MXVXa0xNR1BpZElOeFNlMVpYT283X3ZmeURqdXRLRk5xRkpUeEoxZGJ3ekM5Y2dGTDVDZXYyQVVIenB5Yk85UVAxUmZmNUx0TGJudXhONjlUWUJYUzNfbGdMamlpb0dvR2RWUEt6dDlGaWY3Z01KOEhaSy1VRmd4bl96QWhZTUs0cmdTQm5raVhRUzVuVkFpRmdQWnhQOF9tMWRWeTlKTktIOGNCU3lfWjdGTHdJdUdQRHdqUGsxNTZ3U3B5bXlMVnU5ODdfVXNJdFQ1c09zUmI0bzRQUEZJOERDT3hZWGN5cGM2UQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiqgRBVV95cUxOUXVKWTcxdGxham5oWl9PNEdNeVpNOEQ1NDJHOTN6ZFpPdlp5eVN3X0pWTz..."}];
+            const newsData = [{"title": "歐洲智慧能源展聚焦「24/7 再生能源」，展示儲能、電動車與綠氫整合應用 - 三嘻行動哇 Yipee!", "link": "https://news.google.com/rss/articles/CBMixAJBVV95cUxQcjNZS19xOVFiYmRhaHV1QVJTXzBoSmp4Nm9sejJBdFk1MGd4SWhrZHhyVUp1MTQ0TlNOSnN3X2pZckN1dldHNEZWVWZWUXIyY05yNzlRU21aN1UycndXT3pjOERCb2M5c0dOTXpWYWRUaXRjZndDVzRZNUc4QzdXajBaMGFvTDl3b2R6YTdNQWFKX29NQ1AwY3dlRXBQVTdTZ05McmVrLVdTVEhlZzZ2OEZPOHFsVU9idWZHWjVWWVBlb2hXRDlBUzM1Q01ocTFtTWJocklieTZwSkpwODRMcmMtb1hHQ1dpZE8zRVZPYk5SZ2Njd2NvWERyNkhxY1pNdVNKRFRzS19MNW9GYTl2bUZMeERTYjNIOWM4ck92TkdVZ0U1TUREMlFmeURKcHB0VVlYVGstN0J6TXl4QzQ2VkRyOW8?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMixAJBVV95cUxQcjNZS19xOVFiYmRhaHV1QVJTXzBoSmp4Nm9sejJBdFk1MGd4SWhrZHhyVU..."}, {"title": "中研院團隊監測7年 嘉義熱傷害風險全台最高", "link": "https://news.pts.org.tw/article/814014", "summary": "氣候變遷加劇讓極端高溫逐漸成為常態，中研院研究團隊在台灣各地架設即時觀測站，歷經7年觀測，發現綜合溫度熱指數超過36℃比例最高的觀測站第1名是嘉義，分析可能是因為北回歸線通過及太陽直射關係，而台北盆地則因為地形加上雙北都市化影響，位居第2。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
