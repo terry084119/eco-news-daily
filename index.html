@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-27 10:41</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-06-27 21:22</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (6)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "【新聞稿】台灣氣候行動週15場精彩活動串連從足球熱潮、國際論壇、拾荒體驗到戶外健行邀請大眾第一手體驗！ - 公民行動影音紀錄資料庫", "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB0bksxMmZ6S2RYcXNhVHJBZk1oM1hYeEIyc2NpaHBHSU5ad09BNkVnc0pPYmZtdGpwSmxibUFsNERBZ3VBMHRxV3gxUHZWZmhXbEZB?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTFB0bksxMmZ6S2RYcXNhVHJBZk1oM1hYeEIyc2NpaHBHSU5ad09BNkVnc0pPYm..."}, {"title": "1. 微軟宣布 2025 年達成用水補償目標，朝 2030 年「水資源正效益」邁進 - CSRone 永續智庫", "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE00MWEyZnM2SE9GdzNGN2lfRWZRR2YteGlwOHZXUE5ScFNfcFJieDJweW1RYkgtYkRMa0Q3enFHMV9KUQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTE00MWEyZnM2SE9GdzNGN2lfRWZRR2YteGlwOHZXUE5ScFNfcFJieDJweW1RYk..."}, {"title": "百年大金 全球獎不完 榮獲日本省能源大賞 節能創新 - 台灣民眾電子報", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE8tZ0gxWGEwZkhsWFJhQnk4Z3p0WHJoaGpoWDMxUml1VmpiVmFVTUxEWHQwTm5kQmllMjZORkhZbmtDVW5YNVVIeQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE8tZ0gxWGEwZkhsWFJhQnk4Z3p0WHJoaGpoWDMxUml1VmpiVmFVTUxEWHQwTm..."}, {"title": "聖荷西頒氣候智慧英雄獎 表彰永續貢獻 - Singtaousa", "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVUNZODBweDlPVmVrcU45c0h4RTY5b2VzVFloamZocWd5a1ZXeV95cmpzVTVjRmF5NUZ4TGEtSXF6MVZ4REJxNFJ3LTN0dFZ1N3RRT3oxUTRIWS1wS3lITmprZlUxQWFYM3lNSklTU19uVzVEZ3VHRkI3aXBTWGZaRm5B?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxNVUNZODBweDlPVmVrcU45c0h4RTY5b2VzVFloamZocWd5a1ZXeV95cmpzVT..."}, {"title": "建築物將被強制光電? 業者：隔熱防水還有「這超強功能」 - MSN", "link": "https://news.google.com/rss/articles/CBMihwRBVV95cUxOdmpEYzlrZGxQSTNhb0VBZG5XdHNhVW9Lc1BJcndmeWRKdzNNMGFZaTBSZE5NMGlHWjZBMlhJNHl2MFloRTFRdVdhNHk1WS1tVVJFN2g5SHpRSlZ6dkZUd19qZ0cwOXFPR3oyX1VJSno0VEd1WkZ2UjJYSFg3eUprempPdExMQ2RTQjc4bmRCYWJkTGFUbWd6Z3Nqa1NRSlY0ei1lSGpSRzFaWHVBSUZfYm1yRWhxbHE1b1U2OGFwMm8ta0pSdkJ3dXk1RXc0SXFOLXdPNlZFN3VvN0h2eFFMV0I1T0NIR0wwUktDMDk1UGZ6eG1oSWFyanJKRnhsYlhzcWJxejFiY21kcTVPczQ0andOdmtISlYxNzNuZ0txNWVVYktyM3ZMNDFuM085ektPRllHUzk2S1FXd04yTmkyRHBBdWdPajhoeDh6QUx2MXprallrOFppMmMxeUxobWwtQXBzQmc3V0ZGNHI1UGtMTFhKckJkZFFIZzRHYVhjQ3duaHJmaGtKU2JaZWhNZG5HR3ptVUJHaEtuVGFiZGFUb2wxZTNLRjJIaUc1cThRSkdkUU45c1BtUGZsUFBQY2JIVGpjMmxzeHBoNWpyeUw2VG50dzV3SldMdXc2QmluZG9kc3RtcnRtNmFPV1prZkEzc2NrUGpBZWZpMkVoZ09jQ0MtYXh1bzQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMihwRBVV95cUxOdmpEYzlrZGxQSTNhb0VBZG5XdHNhVW9Lc1BJcndmeWRKdzNNMGFZaTBSZE..."}, {"title": "南高屏今停班停課 台南公寓地下室淹水機車滅頂", "link": "https://news.pts.org.tw/article/814815", "summary": "第7號颱風米克拉一路北上，受到鋒面接近和西南風增強影響，南台灣昨（25）日晚上大雨不斷，包括屏東縣、高雄市、台南市都緊急宣布今（26）日停班停課一天。台鐵公告今日清晨5時25分起，因為受到豪大雨影響水淹鐵軌，所以台南永康到高雄岡山雙線都暫時..."}];
+            const newsData = [{"title": "暨大躍上世界永續舞台 THE世界大學影響力 兩項SDGs躋身全球201–300名 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE92UWE1ZThnaGJZYndFWkpUT2IyWi1GczlDTHNzZ3k4WlE1M29nSGpvOGlCU05WOHA4UWNqdVo2bW9PWG5NQ3drVG53QWhzdllBNVE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE92UWE1ZThnaGJZYndFWkpUT2IyWi1GczlDTHNzZ3k4WlE1M29nSGpvOGlCU0..."}, {"title": "桃園龍山埤塘改建為滯洪池 改善過往排水不及問題", "link": "https://news.pts.org.tw/article/815065", "summary": "米克拉颱風外圍環流作用，桃園這幾天也大雨不斷、多處淹水，部分行政區一度被氣象單位發布豪雨以上等級。過去逢大雨必淹的桃園、中壢、八德交界，自從有了地下宮殿「龍山埤塘生態公園」後防洪效果顯著，意外成為熱門討論話題。..."}, {"title": "西螺日累積雨量全國最高 彰化員林一度水淹及腰", "link": "https://news.pts.org.tw/article/815019", "summary": "持續受到鋒面影響，今（27）日清晨到白天大雨集中在中南部地區，水利署也對5個縣市發布一、二級淹水警戒。在彰化、雲林多個地區今日累積雨量超過200毫米，西螺是全國最高，果菜市場周邊道路淹水嚴重。而員林市的信義巷則一度水淹及腰，住戶得搭乘橡皮艇..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
