@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-05 10:36</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-05 21:20</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "彭啟明指「種傘」為短期做法 高市、北市回應提升綠覆率優先", "link": "https://news.pts.org.tw/article/816130", "summary": "雙北及高雄近期都在轄內路口或人行道試辦遮陽設備，避免行人曝曬，不過環境部長彭啟明認為，種樹才是真正改善高溫環境。高市府回應，持續擴展都市綠蔭；北市府也強調，以種樹優先，但不適合種樹等地點，適度導入遮陽設施。..."}, {"title": "秘魯總統大選結果確定 藤森惠子得票過半險勝對手", "link": "https://news.pts.org.tw/article/816111", "summary": "在歷經長達1個月的選票爭議與漫長計票，秘魯終於在3日確定總統大選結果，已故政治強人總統藤森的女兒藤森惠子，以50.135%的些微過半得票率、約5萬票的差距險勝對手，當選新任總統，也是秘魯首位日裔女性總統。藤森惠子表示將兌現競選承諾，強力整頓..."}, {"title": "3D列印「砂砱生態礁」 研究團隊助澎湖石滬文化再復興", "link": "https://news.pts.org.tw/article/816104", "summary": "國立成功大學建築系團隊，日前在歐洲比利時發表研究成果，師生們利用澎湖的牡蠣殼和死亡珊瑚礁碎屑等循環材料，建置人工魚礁，推動棲地復育，建立兼具生態產業與地方治理的創新模式。比利時和丹麥的產官學界對於此項創新研發，有簽署合作備忘錄的計畫，並將組..."}];
+            const newsData = [{"title": "瞄準氣候科技新藍海 睿田能源布局彩繪光電打造建築降溫新解方 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBmMkd3aV9fTEpjMFc5b0d4SXZKTTkwYVJHRVNOTW03TW9EbF9FWVJvZWpRUHRmeFI4ZDNZX3ROMGdKd040SlJqVjJKYWxBcVJORVE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFBmMkd3aV9fTEpjMFc5b0d4SXZKTTkwYVJHRVNOTW03TW9EbF9FWVJvZWpRUH..."}, {"title": "台中衛生局2度稽查中聯油脂 初判問題出在巴西黃豆原料", "link": "https://news.pts.org.tw/article/816192", "summary": "問題油品事件，台中市衛生局今（5）日第二度前往中聯稽查，初步判定，跟中央專家學者會議看法一致，不排除問題是出在巴西黃豆原料，可能跟含水量較高，或是烘烤過程受到污染有關。至於外傳中聯延遲通報，市府表示，如果確實有相關情事，將依法重懲。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
