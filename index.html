@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-05 21:20</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-06 10:40</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "瞄準氣候科技新藍海 睿田能源布局彩繪光電打造建築降溫新解方 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBmMkd3aV9fTEpjMFc5b0d4SXZKTTkwYVJHRVNOTW03TW9EbF9FWVJvZWpRUHRmeFI4ZDNZX3ROMGdKd040SlJqVjJKYWxBcVJORVE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFBmMkd3aV9fTEpjMFc5b0d4SXZKTTkwYVJHRVNOTW03TW9EbF9FWVJvZWpRUH..."}, {"title": "台中衛生局2度稽查中聯油脂 初判問題出在巴西黃豆原料", "link": "https://news.pts.org.tw/article/816192", "summary": "問題油品事件，台中市衛生局今（5）日第二度前往中聯稽查，初步判定，跟中央專家學者會議看法一致，不排除問題是出在巴西黃豆原料，可能跟含水量較高，或是烘烤過程受到污染有關。至於外傳中聯延遲通報，市府表示，如果確實有相關情事，將依法重懲。..."}];
+            const newsData = [{"title": "高溫調適成氣候科技新賽道睿田能源布局立面彩繪光電與淨零建築資產化建築外牆可望成為下一波城市能源資產 - 峰山社區", "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBpNDBuRnVfZmlKNDYzaGc5aGxTSGFvUHpiMWJIOEZhUXZ2SjFmMWJfQVphcWFqNnVqOGNRS1pDaWZ6RWRCS3RlU283VHpKRGtmcHJ2SEFkSHZlX3pIc1ZTTHZ3?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTFBpNDBuRnVfZmlKNDYzaGc5aGxTSGFvUHpiMWJIOEZhUXZ2SjFmMWJfQVphcW..."}, {"title": "韓政府探討追加建設核電站第12次電力供需基本計劃須明確實施方案| 東亞日報 - 동아일보", "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EN1gwYXFBeDc3T09SUWZsVlM3bnFuU01rbUtOLUJ3eERwM3pRcUVhc2hSNlgyOVNSU3EzenU4T3M3bUR1MWN1LVdMZlZSaGVqX2pNZ2ducWN5MGhiQ1R2cEJiWjR0Zw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EN1gwYXFBeDc3T09SUWZsVlM3bnFuU01rbUtOLUJ3eERwM3pRcUVhc2hSNl..."}, {"title": "台中衛生局2度稽查中聯油脂 初判問題出在巴西黃豆原料", "link": "https://news.pts.org.tw/article/816192", "summary": "問題油品事件，台中市衛生局今（5）日第二度前往中聯稽查，初步判定，跟中央專家學者會議看法一致，不排除問題是出在巴西黃豆原料，可能跟含水量較高，或是烘烤過程受到污染有關。至於外傳中聯延遲通報，市府表示，如果確實有相關情事，將依法重懲。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
