@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-06 10:40</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-06 23:20</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (7)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "高溫調適成氣候科技新賽道睿田能源布局立面彩繪光電與淨零建築資產化建築外牆可望成為下一波城市能源資產 - 峰山社區", "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBpNDBuRnVfZmlKNDYzaGc5aGxTSGFvUHpiMWJIOEZhUXZ2SjFmMWJfQVphcWFqNnVqOGNRS1pDaWZ6RWRCS3RlU283VHpKRGtmcHJ2SEFkSHZlX3pIc1ZTTHZ3?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTFBpNDBuRnVfZmlKNDYzaGc5aGxTSGFvUHpiMWJIOEZhUXZ2SjFmMWJfQVphcW..."}, {"title": "韓政府探討追加建設核電站第12次電力供需基本計劃須明確實施方案| 東亞日報 - 동아일보", "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EN1gwYXFBeDc3T09SUWZsVlM3bnFuU01rbUtOLUJ3eERwM3pRcUVhc2hSNlgyOVNSU3EzenU4T3M3bUR1MWN1LVdMZlZSaGVqX2pNZ2ducWN5MGhiQ1R2cEJiWjR0Zw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EN1gwYXFBeDc3T09SUWZsVlM3bnFuU01rbUtOLUJ3eERwM3pRcUVhc2hSNl..."}, {"title": "台中衛生局2度稽查中聯油脂 初判問題出在巴西黃豆原料", "link": "https://news.pts.org.tw/article/816192", "summary": "問題油品事件，台中市衛生局今（5）日第二度前往中聯稽查，初步判定，跟中央專家學者會議看法一致，不排除問題是出在巴西黃豆原料，可能跟含水量較高，或是烘烤過程受到污染有關。至於外傳中聯延遲通報，市府表示，如果確實有相關情事，將依法重懲。..."}];
+            const newsData = [{"title": "太陽能光電發展與土地利用：能源轉型下如何兼顧環境永續？ - peopo.org", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5fZm1ITHktUmRIWHdoM0pwQ01jR2FSeVptdFVKY0I2R2lwWEswRGNvLUdZVW1ibE9kdTFwVUVEaWNHQWhwaWwySQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE5fZm1ITHktUmRIWHdoM0pwQ01jR2FSeVptdFVKY0I2R2lwWEswRGNvLUdZVW..."}, {"title": "橋頭糖廠森林保衛戰！環團籲保留百頃都市林 環境部回應了 - 翻爆", "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9rSUdWdk04ZlF3dmlkYWIxbV81SVRxbERnSkdZZXRNQ3N1ejBiMl9MSm84c0hLemJ5cDJ0amRKSFI4akJHMTdmcm1CSkFneTkzN016Yk1ySDl4dVp2T0lXV3BSVnRVaEpKZHkw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE9rSUdWdk04ZlF3dmlkYWIxbV81SVRxbERnSkdZZXRNQ3N1ejBiMl9MSm84c0..."}, {"title": "2027第3屆台灣建築永續獎開放徵件 - 中央社 CNA", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBGTG5GQ3RiT3JhM1pfcW9zNHpJaDhqWHM0TWp3Nzd4YS1IQ3NkMTYtY0VjazF1TzIwMk04c0o0d0RQUUl1WjZMNFlMWjlXOXNPZzZyMEhn?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBGTG5GQ3RiT3JhM1pfcW9zNHpJaDhqWHM0TWp3Nzd4YS1IQ3NkMTYtY0Vjaz..."}, {"title": "高中生走進大學研究室 薇閣學生探究航空燃料與資料中心減碳議題 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE52WURXeHhpYS1IVWF4NVJFRU0wOGZlM1lucm5IckRjZVdkZG5sSExMRWdvdTJ4SUM4VFNIdjM0UUxlenFDTW15ak5qRFBrUVNiUmc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE52WURXeHhpYS1IVWF4NVJFRU0wOGZlM1lucm5IckRjZVdkZG5sSExMRWdvdT..."}, {"title": "韓政府探討追加建設核電站第12次電力供需基本計劃須明確實施方案| 東亞日報 - 동아일보", "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EN1gwYXFBeDc3T09SUWZsVlM3bnFuU01rbUtOLUJ3eERwM3pRcUVhc2hSNlgyOVNSU3EzenU4T3M3bUR1MWN1LVdMZlZSaGVqX2pNZ2ducWN5MGhiQ1R2cEJiWjR0Zw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE5EN1gwYXFBeDc3T09SUWZsVlM3bnFuU01rbUtOLUJ3eERwM3pRcUVhc2hSNl..."}, {"title": "橋頭糖廠180公頃森林納開發案 環團籲勿砍樹強調都市林重要性", "link": "https://news.pts.org.tw/article/816374", "summary": "高雄橋頭糖廠有約180公頃的森林地被畫入「高雄新市鎮第三期」開發案，擬變更為住商建地，百公頃的樹木可能因此被全數剷平，引發爭議。環保團體今（6）日藉著環境部長彭啟明南下高雄參加溝通說明會時，遞交信函，邀請賴總統和彭啟明一同到橋頭糖廠騎單車，..."}, {"title": "大坑獨角仙疑遭濫捕 繁殖期不見蹤跡", "link": "https://news.pts.org.tw/article/816369", "summary": "每年這個時候，在台中大坑九號步道的光蠟樹上，總能看到許多獨角仙的蹤跡，但今（2026）年遊客卻發現，光蠟樹上看不見獨角仙，疑似是被有心人士抓光。長期觀察的自然老師表示，因為人為因素，連帶使得生態受到影響，觀旅局強調，一旦被巡查人員發現勸導不..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
