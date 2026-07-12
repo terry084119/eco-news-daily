@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-11 21:06</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-12 10:11</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "教育部協助37師取得環教認證 淨零排放融入課程|藝文臺灣 - OCACnews", "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5tM1d1U0NoQkdVeVRIaUJCVVZZTmR3Q2t4THkwZlBmT2V3V1owSy1pLXIxUnFSY0ZCajlaRkN2TnBQQ2JlRHVXTFdRNA?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTE5tM1d1U0NoQkdVeVRIaUJCVVZZTmR3Q2t4THkwZlBmT2V3V1owSy1pLXIxUn..."}, {"title": "科工館暑假邀你玩出海洋力與氣候韌性 - 【飛揚新聞】", "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFA0NjZXejRaRGdQc1BMb29BNzBLa2djYUg1S1UwM2xoM2dsR2hOUEFndmxmRWppRVF1dDUwcnZCYkUxNkYzQ29MUGx3eGhnNV9PYWlOZw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTFA0NjZXejRaRGdQc1BMb29BNzBLa2djYUg1S1UwM2xoM2dsR2hOUEFndmxmRW..."}, {"title": "颱風外圍環流帶來風雨 台中西屯路樹傾倒壓毀機車", "link": "https://news.pts.org.tw/article/817178", "summary": "隨著巴威暴風圈靠近，台中市從凌晨起風勢變強。西屯區一棵超過一樓高的路樹不敵強風吹襲，連根拔起，傾倒砸到7輛機車，石岡區同樣有路樹倒塌，枝幹橫躺一度讓全線交通中斷。還有4人因騎車跌倒或遭飛來磚塊打中等情況受傷，颱風也影響電力正常供應，全台停電..."}, {"title": "日本為降低對進口稀土依賴 積極研發自電動車廢棄馬達提取", "link": "https://news.pts.org.tw/article/817146", "summary": "日本為了降低對進口稀土的依賴，正在積極研發從電動車的廢棄馬達回收稀土元素。但也有專家認為，電動車報廢周期要等待15年以上，恐怕遠水救不了近火。..."}];
+            const newsData = [{"title": "陸部署碳達峰行動 減碳攻堅2030年前進入關鍵期 - 翻爆", "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBqMnVBWEZiM0VpYTRuTVFRTzVXbnBvMjR4dkhDMm55SlRfQkJ5LWhaLU1QamZvZ2ZlU0FVWjhvaUNjRDVOdlhIaDZtSUg3YVhzVV9EQzk5ODc0ZXZMWnE3bXBteWYwQnlDNmx6VEp1MA?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTFBqMnVBWEZiM0VpYTRuTVFRTzVXbnBvMjR4dkhDMm55SlRfQkJ5LWhaLU1Qam..."}, {"title": "教育部協助37師取得環教認證 淨零排放融入課程|藝文臺灣 - OCACnews", "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5tM1d1U0NoQkdVeVRIaUJCVVZZTmR3Q2t4THkwZlBmT2V3V1owSy1pLXIxUnFSY0ZCajlaRkN2TnBQQ2JlRHVXTFdRNA?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTE5tM1d1U0NoQkdVeVRIaUJCVVZZTmR3Q2t4THkwZlBmT2V3V1owSy1pLXIxUn..."}, {"title": "颱風外圍環流帶來風雨 台中西屯路樹傾倒壓毀機車", "link": "https://news.pts.org.tw/article/817178", "summary": "隨著巴威暴風圈靠近，台中市從凌晨起風勢變強。西屯區一棵超過一樓高的路樹不敵強風吹襲，連根拔起，傾倒砸到7輛機車，石岡區同樣有路樹倒塌，枝幹橫躺一度讓全線交通中斷。還有4人因騎車跌倒或遭飛來磚塊打中等情況受傷，颱風也影響電力正常供應，全台停電..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
