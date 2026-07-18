@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-18 09:58</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-18 21:02</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "大葉展出環教和綠能成果。（照片大葉提供） - 台灣華報", "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBLa3pnOUtoYTlqQWUtZ0VEMkhwZEtMYUFXZjBrRVdvX1F6WExsaUlfeUZxYjBYWXVhNWFJVUxJeEtFckNYMjJJZDg3LVh5aFhKQW16N09XVE9VTi1Hdjd4ZXFBRjZVcFdZaFlMNzRCNUlSQQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFBLa3pnOUtoYTlqQWUtZ0VEMkhwZEtMYUFXZjBrRVdvX1F6WExsaUlfeUZxYj..."}, {"title": "古巴遭美制裁物資缺乏 醫療量能瀕崩潰、醫界掀出走潮", "link": "https://news.pts.org.tw/article/818203", "summary": "古巴雖然還沒有捲入戰火，但是因為遭到美國封鎖，陷入嚴重的能源危機。原本在國際間屬於高水準的古巴醫療體系，現在設備壞了沒得修，又經常停電，醫生醫術再好也束手無策。..."}, {"title": "美軍連6天空襲已釀7死 伊朗：必要時封鎖曼德海峽", "link": "https://news.pts.org.tw/article/818188", "summary": "美伊衝突持續，美軍連續第6晚向伊朗發動空襲，造成至少7人死亡。對此，伊朗也繼續攻擊在中東地區的美軍基地，宣稱是「報復反擊」；同時也要求葉門「青年運動」做好準備，一旦美國攻擊伊朗的供電設施，就要「青年運動」關閉封鎖曼德海峽，相當於封鎖紅海的石..."}, {"title": "日近5年中暑死亡數建築業最多 業者工地設冷氣休息區", "link": "https://news.pts.org.tw/article/818184", "summary": "受到全球暖化的影響，日本近年來不斷出現極端高溫，北海道今（17）日還出現今（2026）年首度突破35℃的「猛暑日」，下週名古屋更預估，將有40℃的極端高溫。這讓建築工地現場的工作環境越來越嚴峻。根據統計，近5年來，因為中暑死亡的人數，累計最..."}];
+            const newsData = [{"title": "綠能轉型如何克服氣候與空間限制？剖析德國能源配置的務實路徑 - 倡議家", "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE43Tzc5VVBJRWQ1MkZNSldibnV3WjhaVU5PaWFsTVVpOF9tOVA3V1RHSFRWa0dfUU14MVJGMzk3aTVTVVdkTXhSNzZmaUNqYnVZRzlyUmxxS1Y4d09yRUF3RS05c3DSAWRBVV95cUxON083OVVQSUVkNTJGTUpXYm51d1o4WlVOT2lhbE1VaThfbTlQN1dUR0hUVmtHX1FNeDFSRjM5N2k1U1VXZE14Ujc2ZmlDamJ1WUc5clJscUtWOHdPckVBd0UtOXNw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE43Tzc5VVBJRWQ1MkZNSldibnV3WjhaVU5PaWFsTVVpOF9tOVA3V1RHSFRWa0..."}, {"title": "美伊荷姆茲海峽衝突再起 全球能源咽喉面臨封鎖危機", "link": "https://news.pts.org.tw/article/818089", "summary": "中東情勢再度延燒。由於美伊兩國在停火協議備忘錄上，並沒有針對荷姆茲海峽的通行規範，做出明確界定，以至於連日來，幾艘商船遭到伊朗革命衛隊開火，美軍也因此對伊朗發動連續攻擊，並再次對伊朗海上封鎖。這個期間，美國總統川普也一度表示，要對往來商船和..."}, {"title": "烏軍續攻煉油廠等能源設施 俄進口汽油、禁柴油出口應急", "link": "https://news.pts.org.tw/article/818087", "summary": "烏克蘭近期持續以無人機攻擊俄羅斯煉油廠、油輪等能源命脈，導致部分地區供應吃緊，不少民眾得跑十幾座加油站才能加到油，戰火燒進日常生活。俄羅斯政府已經禁止柴油出口，並尋求進口來源以解燃眉之急。當地6月份電動車與油電混合車的銷售出現顯著成長，經濟..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
