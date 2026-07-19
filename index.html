@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-18 21:02</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-19 10:09</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "綠能轉型如何克服氣候與空間限制？剖析德國能源配置的務實路徑 - 倡議家", "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE43Tzc5VVBJRWQ1MkZNSldibnV3WjhaVU5PaWFsTVVpOF9tOVA3V1RHSFRWa0dfUU14MVJGMzk3aTVTVVdkTXhSNzZmaUNqYnVZRzlyUmxxS1Y4d09yRUF3RS05c3DSAWRBVV95cUxON083OVVQSUVkNTJGTUpXYm51d1o4WlVOT2lhbE1VaThfbTlQN1dUR0hUVmtHX1FNeDFSRjM5N2k1U1VXZE14Ujc2ZmlDamJ1WUc5clJscUtWOHdPckVBd0UtOXNw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE43Tzc5VVBJRWQ1MkZNSldibnV3WjhaVU5PaWFsTVVpOF9tOVA3V1RHSFRWa0..."}, {"title": "美伊荷姆茲海峽衝突再起 全球能源咽喉面臨封鎖危機", "link": "https://news.pts.org.tw/article/818089", "summary": "中東情勢再度延燒。由於美伊兩國在停火協議備忘錄上，並沒有針對荷姆茲海峽的通行規範，做出明確界定，以至於連日來，幾艘商船遭到伊朗革命衛隊開火，美軍也因此對伊朗發動連續攻擊，並再次對伊朗海上封鎖。這個期間，美國總統川普也一度表示，要對往來商船和..."}, {"title": "烏軍續攻煉油廠等能源設施 俄進口汽油、禁柴油出口應急", "link": "https://news.pts.org.tw/article/818087", "summary": "烏克蘭近期持續以無人機攻擊俄羅斯煉油廠、油輪等能源命脈，導致部分地區供應吃緊，不少民眾得跑十幾座加油站才能加到油，戰火燒進日常生活。俄羅斯政府已經禁止柴油出口，並尋求進口來源以解燃眉之急。當地6月份電動車與油電混合車的銷售出現顯著成長，經濟..."}];
+            const newsData = [{"title": "大文集團展位舉行「氣候變化與可持續發展」對談- 文化 - 大公文匯網", "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14T0c5MTVqcTRHcnExSG9TUUVTckRDOGhqSzJmUXh2LWNnQWFZM3pLVjZGNVQwNTE0VGU5UFpZYmc1b0dzTl9faXgzZGZXam55VG9TbGwtM3BTMmpEVFNKcmNyVFdSSVdKMGRFSGx5Qm1vZC12?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE14T0c5MTVqcTRHcnExSG9TUUVTckRDOGhqSzJmUXh2LWNnQWFZM3pLVjZGNV..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
