@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-20 11:33</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-20 21:54</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (6)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "全台港口典範！ 另類「工業生態」和平產業 - 動腦", "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB3NDA3RWh1ZHo5ekhLRnNDWUh2bjg3LU5PT1V5REdDZjBLZDhqcWxzLVBnaXlYdHlSamI0am9hbUVTSXNzVTFsR0QyMU5NQ0tyZWtFTE1ISEJtTm5ERDFVTVAyVV93QU1CdElN?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFB3NDA3RWh1ZHo5ekhLRnNDWUh2bjg3LU5PT1V5REdDZjBLZDhqcWxzLVBnaX..."}, {"title": "ACoM聚焦氣候變遷與韌性建設 專家：極端天氣將成新常態 - 世界新聞網", "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1kVXVVV0Z6TUU3UzN2X19VM2FObEc2QVlCNFNnakNHZEtfUk8zMHdLRUJyV28wYzczVkhnZXFXbkhSa1hTcjR5a1NMdXRpNnAwcVNfYXJqdnd0MlZJMUdpd2p30gFnQVVfeXFMTzNPME5aRC1lZnRJYk5fRHRBdXNnb05xWUR2eDBQb3l4NEdqQUVhTUhrYjZOUmJXSkNNeHVQZjlCb3djY2hjWVUxRmdOd0o3ZEU2OHU0Z0tyeV9uWnRZTkxOcEVBemtpYw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1kVXVVV0Z6TUU3UzN2X19VM2FObEc2QVlCNFNnakNHZEtfUk8zMHdLRUJyV2..."}];
+            const newsData = [{"title": "專題／室內裝修成淨零關鍵戰場　老宅延壽、太陽光電設備化將是重中之重 - 好房網News", "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBTZzRfdDhkQy1DVUJQdURHZWVvR2t5UzczeExRcDY3eDZQZXBIdTM3dVp0QU43bE1EVDViMXN0SjMxNEVuOFpWNUVzTmtaTGlZRl9BZjc5NHFuR1ZLX1BxcVpVMVcxaW5vTzg4ei12ckvSAXBBVV95cUxQU2c0X3Q4ZEMtQ1VCUHVER2Vlb0dreVM3M3hMUXA2N3g2UGVwSHUzN3VadEFON2xNRFQ1YjFzdEozMTRFbjhaVjVFc05rWkxpWUZfQWY3OTRxbkdWS19QcXFaVTFXMWlub084OHotdnJL?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTFBTZzRfdDhkQy1DVUJQdURHZWVvR2t5UzczeExRcDY3eDZQZXBIdTM3dVp0QU..."}, {"title": "全台港口典範！ 另類「工業生態」和平產業 - 動腦", "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB3NDA3RWh1ZHo5ekhLRnNDWUh2bjg3LU5PT1V5REdDZjBLZDhqcWxzLVBnaXlYdHlSamI0am9hbUVTSXNzVTFsR0QyMU5NQ0tyZWtFTE1ISEJtTm5ERDFVTVAyVV93QU1CdElN?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFB3NDA3RWh1ZHo5ekhLRnNDWUh2bjg3LU5PT1V5REdDZjBLZDhqcWxzLVBnaX..."}, {"title": "台南試辦酷齡氣候關懷行動 達35℃啟動預警訪視獨居長者", "link": "https://news.pts.org.tw/article/818535", "summary": "台灣近期不時出現高溫，為了避免長者在室內，因為沒有開冷氣降溫、高溫中暑，環境部和台南市政府等單位，透過科技預警，一旦室內溫度達到35℃以上，便啟動社福關懷獨居長者，同時推出全台第一張針對氣候保險的保單，提升弱勢族群因應極端高溫的韌性。..."}, {"title": "美連9日襲伊朗波灣城市遭轟 伊朗空襲美軍基地反擊", "link": "https://news.pts.org.tw/article/818532", "summary": "美國與伊朗在停火破裂後，持續相互空襲，伊朗瀕臨波斯灣沿岸有多個港口都市，都遭到美軍轟炸，而伊朗也以空襲美軍基地來反擊。不過卡達《半島電視新聞網》的報導指出，雙方仍舊透過巴基斯坦斡旋持續談判，國際原子能總署（IAEA）則呼籲伊朗，讓檢查人員重..."}, {"title": "美42州串連反興建AI資料中心 控環境成本由居民承擔", "link": "https://news.pts.org.tw/article/818530", "summary": "美國AI產業快速發展，各大科技公司持續擴建資料中心，不過也引發越來越多基層反彈，質疑政府祭出高額租稅優惠吸引企業投資，卻把噪音、用地開發和環境成本留給居民承擔，全美42個州同步爆發反對資料中心的抗爭，這也是美國首次針對AI基礎建設的串聯抗議..."}, {"title": "彰化2鄉鎮選前普發現金逾億元 時間點近選舉民眾看法兩極", "link": "https://news.pts.org.tw/article/818443", "summary": "彰化縣有2鄉鎮，都在今（20）日同步開始發放現金給鄉民，彰化線西鄉結合台電敦親睦鄰基金與綠能回饋金等，以及加上自籌財源，將往年的500元福利金提高到2500元。而花壇鄉因為財政收入豐厚，普發每位鄉民6000元振興金，總發放金額高達2億多元。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
