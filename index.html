@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-19 21:05</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-20 11:33</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "ACoM聚焦氣候變遷與韌性建設 專家：極端天氣將成新常態 - 世界新聞網", "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1kVXVVV0Z6TUU3UzN2X19VM2FObEc2QVlCNFNnakNHZEtfUk8zMHdLRUJyV28wYzczVkhnZXFXbkhSa1hTcjR5a1NMdXRpNnAwcVNfYXJqdnd0MlZJMUdpd2p30gFnQVVfeXFMTzNPME5aRC1lZnRJYk5fRHRBdXNnb05xWUR2eDBQb3l4NEdqQUVhTUhrYjZOUmJXSkNNeHVQZjlCb3djY2hjWVUxRmdOd0o3ZEU2OHU0Z0tyeV9uWnRZTkxOcEVBemtpYw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1kVXVVV0Z6TUU3UzN2X19VM2FObEc2QVlCNFNnakNHZEtfUk8zMHdLRUJyV2..."}, {"title": "大文集團展位舉行「氣候變化與可持續發展」對談- 文化 - 大公文匯網", "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE14T0c5MTVqcTRHcnExSG9TUUVTckRDOGhqSzJmUXh2LWNnQWFZM3pLVjZGNVQwNTE0VGU5UFpZYmc1b0dzTl9faXgzZGZXam55VG9TbGwtM3BTMmpEVFNKcmNyVFdSSVdKMGRFSGx5Qm1vZC12?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE14T0c5MTVqcTRHcnExSG9TUUVTckRDOGhqSzJmUXh2LWNnQWFZM3pLVjZGNV..."}, {"title": "台南透天厝堆滿雜物 動員逾30志工清出27噸", "link": "https://news.pts.org.tw/article/818304", "summary": "台南一名76歲老婦人在丈夫入住安養院後，她就獨居在台南永康的4樓透天厝，但因為持續堆放回收物、造成髒亂，年邁的婦人又無力將回收物變賣，導致愈堆愈多。里長在取得婦人同意後，動員超過30名志工協助清理，清出超過27公噸的雜物。..."}];
+            const newsData = [{"title": "全台港口典範！ 另類「工業生態」和平產業 - 動腦", "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB3NDA3RWh1ZHo5ekhLRnNDWUh2bjg3LU5PT1V5REdDZjBLZDhqcWxzLVBnaXlYdHlSamI0am9hbUVTSXNzVTFsR0QyMU5NQ0tyZWtFTE1ISEJtTm5ERDFVTVAyVV93QU1CdElN?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFB3NDA3RWh1ZHo5ekhLRnNDWUh2bjg3LU5PT1V5REdDZjBLZDhqcWxzLVBnaX..."}, {"title": "ACoM聚焦氣候變遷與韌性建設 專家：極端天氣將成新常態 - 世界新聞網", "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1kVXVVV0Z6TUU3UzN2X19VM2FObEc2QVlCNFNnakNHZEtfUk8zMHdLRUJyV28wYzczVkhnZXFXbkhSa1hTcjR5a1NMdXRpNnAwcVNfYXJqdnd0MlZJMUdpd2p30gFnQVVfeXFMTzNPME5aRC1lZnRJYk5fRHRBdXNnb05xWUR2eDBQb3l4NEdqQUVhTUhrYjZOUmJXSkNNeHVQZjlCb3djY2hjWVUxRmdOd0o3ZEU2OHU0Z0tyeV9uWnRZTkxOcEVBemtpYw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1kVXVVV0Z6TUU3UzN2X19VM2FObEc2QVlCNFNnakNHZEtfUk8zMHdLRUJyV2..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
