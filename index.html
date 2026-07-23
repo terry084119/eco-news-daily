@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-22 21:38</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-23 10:13</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (6)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "韓國碳交易踩過這些坑！韓氣候倡議總監分享K-ETS10年經驗與改革路 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5NMVpER1A1bk9TaThHU0Noa202RUZGRG5qMTV5c3BvNG9OZl9tVVlmOGg5N1N4WmdFaEJqejdhTk5BZDNQTWhPQg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE5NMVpER1A1bk9TaThHU0Noa202RUZGRG5qMTV5c3BvNG9OZl9tVVlmOGg5N1..."}, {"title": "首張高溫微型保險單在台南 中暑住院可獲理賠 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5WY0lraFk2S1NNS04xbDh0aGFTWUFycWhYRDQweXZXT1FTbXVhcXRIc1pyVnJMQnBLeDBBc0VGdjBFY01RWnlheg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE5WY0lraFk2S1NNS04xbDh0aGFTWUFycWhYRDQweXZXT1FTbXVhcXRIc1pyVn..."}, {"title": "北科大深耕生態校園30餘年 成國土綠蔭政策交流重要場域 - 生活新聞 - PChome Online 新聞 - PChome Online 新聞", "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNT3NEZzZ4SkF5SmR2Ul9vV2pKdWthTEhwNGJwa252bXlBWkFta2lLdU5LQ043eExZdzJkckNPb0hkWTBqaS1ORG5YNHhaWHR6bGtoR09GT0dzLXdIelBZbUJXZWt1aVBjUDk2YUVEZmI0aGJodTRQN0dFVEk4ellpaGhGOW9WbllkeWk4?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNT3NEZzZ4SkF5SmR2Ul9vV2pKdWthTEhwNGJwa252bXlBWkFta2lLdU5LQ0..."}];
+            const newsData = [{"title": "外交部辦碳索營促國際減量合作 11友邦官員來台響應|戰略臺灣 - 僑新聞", "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9heC13SGk4eWZJdGdjVktyTEVuODczYVhxa3dzclI1WVpMbk1rTW5GekZFQlo1SDM4Q05UQXdvYVYtTGRNeUNON1ozOA?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTE9heC13SGk4eWZJdGdjVktyTEVuODczYVhxa3dzclI1WVpMbk1rTW5GekZFQl..."}, {"title": "中山大學攜證交所、碳交所辦國際研討會 台日新專家熱議亞太碳市場藍圖 - 中山新聞網", "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBfcW9Yenh2RlNqUERJRjFma0JMZHR6Y1BXZ1Zad1o2R1ZpcWFPTlpqLTdSWk1uTUxXU2NlZzE4QURBSU8yMDlyX2duTUNjSnRSQ1hrTl93RWhpV0JLZXR5T2RWdUtZMGRnSWljZkNsdEJvdw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFBfcW9Yenh2RlNqUERJRjFma0JMZHR6Y1BXZ1Zad1o2R1ZpcWFPTlpqLTdSWk..."}, {"title": "首張高溫微型保險單在台南 中暑住院可獲理賠 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5WY0lraFk2S1NNS04xbDh0aGFTWUFycWhYRDQweXZXT1FTbXVhcXRIc1pyVnJMQnBLeDBBc0VGdjBFY01RWnlheg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE5WY0lraFk2S1NNS04xbDh0aGFTWUFycWhYRDQweXZXT1FTbXVhcXRIc1pyVn..."}, {"title": "經濟成長與環境永續如何共存？人類面臨關鍵發展挑戰 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5meDkzamx5WktWdnhWeGdqRGxncF9ncXAxNG5TcmNiOWVXMmR4ZVVzVWdtcHNHVW1Md3dHRXczQjJ0dEVia1VNWTN6SkEtUC1LU1E?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5meDkzamx5WktWdnhWeGdqRGxncF9ncXAxNG5TcmNiOWVXMmR4ZVVzVWdtcH..."}, {"title": "北科大深耕生態校園30餘年 成國土綠蔭政策交流重要場域 - 生活新聞 - PChome Online 新聞 - PChome Online 新聞", "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNT3NEZzZ4SkF5SmR2Ul9vV2pKdWthTEhwNGJwa252bXlBWkFta2lLdU5LQ043eExZdzJkckNPb0hkWTBqaS1ORG5YNHhaWHR6bGtoR09GT0dzLXdIelBZbUJXZWt1aVBjUDk2YUVEZmI0aGJodTRQN0dFVEk4ellpaGhGOW9WbllkeWk4?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNT3NEZzZ4SkF5SmR2Ul9vV2pKdWthTEhwNGJwa252bXlBWkFta2lLdU5LQ0..."}, {"title": "連淨苦茶油自主通報苯駢芘超標 新北下架回收939罐", "link": "https://news.pts.org.tw/article/818950", "summary": "新北市有苦茶油業者自主通報，產品檢出苯駢芘超標，總共生產5024罐，其中939罐已經流入市面販售。衛生局已要求相關產品全面下架回收，其餘未售產品封存，並勒令業者暫停作業及販售。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
