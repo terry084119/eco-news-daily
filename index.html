@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-27 10:27</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-07-27 22:20</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "中油明起汽油每公升漲0.7元 柴油漲0.5元", "link": "https://news.pts.org.tw/article/819422", "summary": "中東戰爭讓國際油價再有波動，受美伊軍事衝突擴大海峽運輸與能源流通擔憂，國際兩大原油出現週漲10%狀況。布蘭特原油在上週週間更出現，今（2026）年5月以來首次收盤破百美元狀況。中油也宣布，從27日開始國內油價將調漲，分別是汽油每公升漲0.7..."}];
+            const newsData = [{"title": "2026科學探究競賽盛大頒獎！奇鋐永續獎落實SDGs永續思維 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9JT1U1NU9mUGxMeEZDb3FmZUxXdzlIaGIwS3hSd0ZMdFZnTHJoYVR2enpKVklBVVVDV0VaSVc2eU5rSW16TjVlR2N4SGtQcnpqRmc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE9JT1U1NU9mUGxMeEZDb3FmZUxXdzlIaGIwS3hSd0ZMdFZnTHJoYVR2enpKVk..."}, {"title": "中醫大附醫舉辦「院長永續講堂」 數位轉型驅動韌性健康照護 - Life 生活網", "link": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxNT0VhcWhZT0lsSWJnOG5sOHZpaXcwOGlPT193S19RU09scTd2MG0wQlFOOUdkdWtOZmx4Q2lPWFA5MktZdlYzRkozLTZLc2dNSkkxX014MkpJX0xpWGw4b3dMaEdMMDdWVDY3aFV0aU9TRkRNNng5ZVBmZ1otZGpqZkZpZHRkdTNxc1RYdFlBN01UbTJqekwycTYzWTUxQ3o0bXllbUlKZHBfaDdlaUxfTy0ydmtUSTBPeXJzWGJDVmZaaGpYeUcwYm9YNW5tdTVCMmM4aXdNQmR2NFl3Q1AzUDBiODdidWpwOVVCMXFZT185RkllakRkd0Nha0s3R2tHdUp4VFJoN0gyOWJBN29MdXh0bmx1WE9YZlFqaG5DSXdHMDBZXzFOX0RNVUVWU0tVNk1Pa2JIQnJKOHZWWXk2UGFla1B4eG9LTzB0UDgzNmdKcXpzOUFNemNsWVFTS0JRZFpHYVRpRzVPOU1OU2hWTU5VcHBCdw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMi9gJBVV95cUxNT0VhcWhZT0lsSWJnOG5sOHZpaXcwOGlPT193S19RU09scTd2MG0wQlFOOU..."}, {"title": "我出資F-16V關鍵次系統研發 國防部：美已補償79.3億台幣", "link": "https://news.pts.org.tw/article/819611", "summary": "空軍近年透過「鳳展專案」，把F-16A/B機型，構改升級為F-16V，當時因為獨力出資、參與關鍵的先進次系統研發，投資大約103.4億元的研發本金。不過根據審計部報告指出，因為其他國家相繼與美國簽約升級戰機，而換裝的先進次系統，就是台灣當時..."}, {"title": "諾曼第登陸點列世界文化遺產 日宮殿遺址、奧林帕斯山入選", "link": "https://news.pts.org.tw/article/819606", "summary": "2026年的世界遺產大會，在韓國釜山召開，經過多天審核後，決定了新的世界遺產名單，包括日本「飛鳥與藤原宮都」遺跡群，還有二次世界大戰中，扭轉局勢的法國「諾曼第登陸點」等，涵蓋歐、亞各地的歷史與自然遺產，顯示世界遺產的評選，已經從單純的保存古..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
