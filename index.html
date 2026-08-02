@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-02 10:12</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-02 21:08</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "ACOM線上論壇 專家聚焦氣候變遷 - 世界新聞網", "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1zdV85OHVNYlpPcWVoeExiallwUDBNU2d3SDZjWlNFbXVuMW1VMDhMOWp3UlJYN3F3RzFSVDZ2TlpZdWRPa0c1VnktdVJXWTJqczNxeXRRZDlJVmhyeUl6QmNMNDZKTE3SAWdBVV95cUxNc3VfOTh1TWJaT3FlaHhMYmpZcFAwTVNnd0g2Y1pTRW11bjFtVTA4TDlqd1JSWDdxd0cxUlQ2dk5aWXVkT2tHNVZ5LXVSV1kyanMzcXl0UWQ5SVZocnlJekJjTDQ2SkxN?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1zdV85OHVNYlpPcWVoeExiallwUDBNU2d3SDZjWlNFbXVuMW1VMDhMOWp3Ul..."}, {"title": "從一滴海水探索未來淨零綠能 科工館攜手中山大學「2026綠氫生活節」 盛大登場 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1qb0pWRkZ1bjhsRTZnSTFReXdqakhaOXJnb3hhT1MxakZTbUpUdnhVWS1XOVRSemNtdUJWWGZyU0pSNmdYWmhGTWY5alpTcXpnaXc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE1qb0pWRkZ1bjhsRTZnSTFReXdqakhaOXJnb3hhT1MxakZTbUpUdnhVWS1XOV..."}, {"title": "高雄港區新聞網／青年科研力挺進海洋！海委會表揚5件大專優良專題從微塑膠到暖化議題全入列 - 台灣新聞雲報", "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE96bkpUSDVxd1JQV0pDMGc1cTR1WDM0SS1hWGlXQmlCU0Z6OTZRUHBqbFNEaW9RRzNUZ1VDS1ZCejg0M1ltVFE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiRkFVX3lxTE96bkpUSDVxd1JQV0pDMGc1cTR1WDM0SS1hWGlXQmlCU0Z6OTZRUHBqbFNEaW..."}, {"title": "新竹湖口化學工廠大火 消防局提醒周邊民眾緊閉門窗", "link": "https://news.pts.org.tw/article/820405", "summary": "新竹縣湖口鄉互力精密化學工廠今（1）日上午發生火警，火勢由工廠3樓竄出，燃燒塑膠管、矽利康等成品、半成品，冒出大量黑煙。新竹縣消防局指出，現場持續傳出小型爆炸聲，增加救災難度，也提醒鄰近居民緊閉門窗、減少外出。湖口鄉長表示，3名外籍移工已及..."}];
+            const newsData = [{"title": "池上電輔車頻摔田壓損農作物 農民盼直接向遊客索賠", "link": "https://news.pts.org.tw/article/820467", "summary": "台東縣池上景觀稻田區，時常傳出遊客騎慢速電力輔助車，摔進田裡，導致農作物被壓壞；雖然農民可以向鄉公所申請津貼補助，不過部分農民是租地耕作，申請程序繁瑣，希望能讓遊客負起責任賠償。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
