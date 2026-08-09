@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-08 20:35</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-09 09:15</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "東華大學辦理綠色星球淨零能源營 探索陽光、森林與生質能源 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1sUHFaTUZFOHQ2cUl3YjB5RkFoT0Z2RDBHWXpZemVwejRpTTR1OUltY3FDcV80NmJDUnRGTmx3X3lYd0lzOWxhaUx4Y0RIYTV5eXc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE1sUHFaTUZFOHQ2cUl3YjB5RkFoT0Z2RDBHWXpZemVwejRpTTR1OUltY3FDcV..."}, {"title": "白海豚颱風進逼北部、東北部 基隆大武崙沙灘提前封閉", "link": "https://news.pts.org.tw/article/821413", "summary": "白海豚颱風來勢洶洶，北部、東北部沿海首當其衝。基隆正濱漁港7日下午，大批漁船提前返港卸貨、固定船隻防颱。大武崙沙灘也因海況轉差，加上前一天發生溺水意外，市府提前封閉。宜蘭烏石港同樣加強戒備，出動海巡人員勸離岸邊遊客。氣象署提醒，東北部沿海已..."}, {"title": "美禁鎢廢料、電池廢棄物出口", "link": "https://money.udn.com/money/story/10511/9678232", "summary": "美國商務部6日宣布，將禁止鎢廢料及電池廢棄物出口。這是美國推動國內回收產業與關鍵礦物生產計畫的一環。這符合市場預料，是美國降低對中依賴的最新作為之一。..."}];
+            const newsData = [{"title": "東華大學辦理綠色星球淨零能源營 探索陽光、森林與生質能源 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1sUHFaTUZFOHQ2cUl3YjB5RkFoT0Z2RDBHWXpZemVwejRpTTR1OUltY3FDcV80NmJDUnRGTmx3X3lYd0lzOWxhaUx4Y0RIYTV5eXc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE1sUHFaTUZFOHQ2cUl3YjB5RkFoT0Z2RDBHWXpZemVwejRpTTR1OUltY3FDcV..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
