@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-10 09:17</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-10 20:55</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "雲林推聲音照相科技執法 9成告發為機車改裝排氣管", "link": "https://news.pts.org.tw/article/821507", "summary": "雲林加強取締噪音車，3月啟用「類固定式」聲音照相設備，到6月底已開出51張罰單，裁罰金額超過18萬。另外正值二期稻作插秧期，農機具如果夾帶泥土污染道路，也將加強取締，依《廢清法》最高開罰10萬元。..."}];
+            const newsData = [{"title": "以“雙碳”目標為引領 加快建設新型能源體系 - 人民网", "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5VWW1xbEp3d2ZYWVFzUkIxQUtOZzBZNHdGd3FtQXZ2ZmR6TFJoN0Z2dU8yYVJBY056UUdyc2s5REtmZ2tPMkNlbzE2aUhDR1R5UUJsOWJTWGtMNlZuV0lhc3VUSEdsdUFWRkhZZ2ZXYzE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5VWW1xbEp3d2ZYWVFzUkIxQUtOZzBZNHdGd3FtQXZ2ZmR6TFJoN0Z2dU8yYV..."}, {"title": "M1A2T戰車首度參與漢光演習 車身裝迷彩防護網反制無人機", "link": "https://news.pts.org.tw/article/821737", "summary": "漢光演習來到第二週，澎防部出動戰車火砲，執行要域火殲實彈射擊，另外本島操演，納入共軍犯台各種想定，包括化學戰劑污染攻擊、光纖電纜受損，考驗部隊臨戰反應；而陸軍584旅M1A2T戰車首度參與漢光演習，守護桃園機場，第一次對外公開演練野戰加油，..."}, {"title": "卑南溪出海口成國慶焰火施放地 環團憂干擾野鳥重要棲地", "link": "https://news.pts.org.tw/article/821632", "summary": "距離國慶日剩下2個月，今（2026）年國慶焰火施放敲定在台東舉辦，地點還是選在2017年曾施放國慶焰火的卑南溪出海口國家濕地；環保團體表示，前一次放焰火就曾要求改變地點，避免干擾重要野鳥棲地，而且池上鄉公所在大坡池國家級濕地的熱氣球光雕秀，..."}, {"title": "漢光演習「要域」火殲登場 澎防部戰車展現精準火力", "link": "https://news.pts.org.tw/article/821625", "summary": "漢光演習來到第2週，第6日操演，澎防部出動戰車火砲，執行「要域」火殲實彈射擊；另外，本島操演納入共軍犯台各種想定，包括化學戰劑污染攻擊、光纖電纜受損，考驗部隊臨戰反應。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
