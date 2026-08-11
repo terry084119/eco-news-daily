@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-10 20:55</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-11 09:15</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (5)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "以“雙碳”目標為引領 加快建設新型能源體系 - 人民网", "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5VWW1xbEp3d2ZYWVFzUkIxQUtOZzBZNHdGd3FtQXZ2ZmR6TFJoN0Z2dU8yYVJBY056UUdyc2s5REtmZ2tPMkNlbzE2aUhDR1R5UUJsOWJTWGtMNlZuV0lhc3VUSEdsdUFWRkhZZ2ZXYzE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5VWW1xbEp3d2ZYWVFzUkIxQUtOZzBZNHdGd3FtQXZ2ZmR6TFJoN0Z2dU8yYV..."}, {"title": "M1A2T戰車首度參與漢光演習 車身裝迷彩防護網反制無人機", "link": "https://news.pts.org.tw/article/821737", "summary": "漢光演習來到第二週，澎防部出動戰車火砲，執行要域火殲實彈射擊，另外本島操演，納入共軍犯台各種想定，包括化學戰劑污染攻擊、光纖電纜受損，考驗部隊臨戰反應；而陸軍584旅M1A2T戰車首度參與漢光演習，守護桃園機場，第一次對外公開演練野戰加油，..."}, {"title": "卑南溪出海口成國慶焰火施放地 環團憂干擾野鳥重要棲地", "link": "https://news.pts.org.tw/article/821632", "summary": "距離國慶日剩下2個月，今（2026）年國慶焰火施放敲定在台東舉辦，地點還是選在2017年曾施放國慶焰火的卑南溪出海口國家濕地；環保團體表示，前一次放焰火就曾要求改變地點，避免干擾重要野鳥棲地，而且池上鄉公所在大坡池國家級濕地的熱氣球光雕秀，..."}, {"title": "漢光演習「要域」火殲登場 澎防部戰車展現精準火力", "link": "https://news.pts.org.tw/article/821625", "summary": "漢光演習來到第2週，第6日操演，澎防部出動戰車火砲，執行「要域」火殲實彈射擊；另外，本島操演納入共軍犯台各種想定，包括化學戰劑污染攻擊、光纖電纜受損，考驗部隊臨戰反應。..."}];
+            const newsData = [{"title": "2026能源經濟與碳達峰碳中和高質量發展論壇--經濟·科技--人民網 - 人民网", "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBueHRzekhIbDJmQWd6MmZ1WlRURU85YW5RVUk3RzRXeDZRZ0pLU1VfRXpIZ1drZjU5Q2ZQb3hHbXZqZkk4ZlJSR1FXUU04ZEN4bDdZVzNsNk95TkpKNERnQmhHcno1elpXVmtHZjB0N3Y?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTFBueHRzekhIbDJmQWd6MmZ1WlRURU85YW5RVUk3RzRXeDZRZ0pLU1VfRXpIZ1..."}, {"title": "〈財經週報-財經焦點〉永續再獲領航肯定 台新新光金CDP蟬聯「A」級最高評級 - 自由時報", "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBqMGgtbnhTenhWTUh3bFdQVWV0RnhWUzBVdWg4TWdOb2V5aVhHTkdvbERhX0RxUk1OTExLeGFxaDh0VVFkNWFhSjE5Z3ptNzJXZFFfYmRyQl8?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFBqMGgtbnhTenhWTUh3bFdQVWV0RnhWUzBVdWg4TWdOb2V5aVhHTkdvbERhX0..."}, {"title": "哥斯大黎加新物種 「咖啡蛙」 咖啡園施用農藥恐成生存威脅", "link": "https://news.pts.org.tw/article/821739", "summary": "中美洲國家哥斯大黎加發現了一種新的夜行性樹蛙，牠的體長不到4公分，身上帶有深綠色斑點，生長於咖啡園中，因此暱稱為咖啡蛙。不過別誤會，牠不吃咖啡果實，而是以小型昆蟲為食物來源。另外牠也喜歡在溪流泉水源頭繁殖，因此也被稱為「泉水蛙」。研究人員現..."}, {"title": "M1A2T戰車首度參與漢光演習 車身裝迷彩防護網反制無人機", "link": "https://news.pts.org.tw/article/821737", "summary": "漢光演習來到第二週，澎防部出動戰車火砲，執行要域火殲實彈射擊，另外本島操演，納入共軍犯台各種想定，包括化學戰劑污染攻擊、光纖電纜受損，考驗部隊臨戰反應；而陸軍584旅M1A2T戰車首度參與漢光演習，守護桃園機場，第一次對外公開演練野戰加油，..."}, {"title": "美氣候變遷推升高溫　2026年7月創史上最熱紀錄", "link": "https://money.udn.com/money/story/10511/9683312", "summary": "美國國家海洋暨大氣總署（NOAA）今天表示，2026年7月是美國本土有紀錄以來最熱的月份，延續近期由人類造成的氣候變遷所......"}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
