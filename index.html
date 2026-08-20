@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-20 08:55</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-20 20:36</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (7)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "北海油氣鑽探考驗英國氣候承諾 首相面臨兩難抉擇 | 民視新聞網 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBqZllNTTVFRS1tdzFYYTdYVDZGMFZHbElqaXhzYzV1eG9lWnY3QmItQ1pfWFh1eXREdElTUnp2blhnSXp6VHl0Vi1YSG9fLUhwanRZdHJB?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBqZllNTTVFRS1tdzFYYTdYVDZGMFZHbElqaXhzYzV1eG9lWnY3QmItQ1pfWF..."}];
+            const newsData = [{"title": "原民區能源貧窮率逾五成，高溫、老屋與舊家電加重負擔 - CSRone 永續智庫", "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE93TnBFRG53ajBaOVlDZ2IyVHBRc2ttR01kcUJkU0toNGM3VGw0VkpnUG40RVdUV3cxQ1NVWk1pXy1XcVk?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiQ0FVX3lxTE93TnBFRG53ajBaOVlDZ2IyVHBRc2ttR01kcUJkU0toNGM3VGw0VkpnUG40RV..."}, {"title": "北海鑽探案考驗英國氣候承諾 首相面臨兩難抉擇 | 民視新聞網 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAwcXZSd193aHdnelhUSnZENVV2VmhJSG5YOGRraC1OcmpIczl5TUd3RS1YQUNNMU4tbHhIbmZHdVBiV3owUWlaZ0xnZWc1UEJudXktN3NR?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFAwcXZSd193aHdnelhUSnZENVV2VmhJSG5YOGRraC1OcmpIczl5TUd3RS1YQU..."}, {"title": "越窮電費越貴！全台首份原鄉能源報告揭能源使用現況 - 生活新聞 - PChome Online 新聞 - PChome Online 新聞", "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcERJeEVmaDgxaGIybHBLYVBYNy1ERFAzSzR6YWpmSnVpTWxMTmV0SE1ZUDFWTDU0bjE1OFVLM3lFTXk3UFNMQUtnbG5TRmUwdm5PeGxEM2QxcEtmdWpITEZhVHdKRUtJbElTSFBtMjl4WWlRc2J2ejgxWVQyalF2OW5CaUQwM0M0S2c?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxNcERJeEVmaDgxaGIybHBLYVBYNy1ERFAzSzR6YWpmSnVpTWxMTmV0SE1ZUD..."}, {"title": "原住民能源公平調查：近半原民家戶夏季電費過載！各方呼籲拯救能源貧窮 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBiVEpCWEMtOVh6dHhfLVVhNktXX1hjUVktQ2pEXy1fRFVkaTl6ZEVUUHoxZG8xYmhoZDVCbzBPUDVwR25yT3FXQ01WdDc3MXQtalE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFBiVEpCWEMtOVh6dHhfLVVhNktXX1hjUVktQ2pEXy1fRFVkaTl6ZEVUUHoxZG..."}, {"title": "北海油氣鑽探考驗英國氣候承諾 首相面臨兩難抉擇 | 民視新聞網 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBqZllNTTVFRS1tdzFYYTdYVDZGMFZHbElqaXhzYzV1eG9lWnY3QmItQ1pfWFh1eXREdElTUnp2blhnSXp6VHl0Vi1YSG9fLUhwanRZdHJB?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBqZllNTTVFRS1tdzFYYTdYVDZGMFZHbElqaXhzYzV1eG9lWnY3QmItQ1pfWF..."}, {"title": "近5成原住民家庭「能源貧窮」 夏季電費佔收入比率超過一成", "link": "https://news.pts.org.tw/article/823272", "summary": "台大風險中心與台灣世展會今（20）日共同發布，高達48.5%原住民受訪家庭在夏季電價期間，能源支出占工作收入比率超過一成，明顯超過國際認定的能源貧窮，負擔超過警戒線，導致接近6成家戶遲繳過電費，甚至2.9%遭強制斷電。..."}, {"title": "雲林加碼濫倒廢棄物檢舉獎金 最高可領實收罰鍰數額50％", "link": "https://news.pts.org.tw/article/823270", "summary": "許多不法業者心存僥倖，利用清晨、深夜或偏僻地區任意傾倒廢棄物，因此雲林縣府已推動修正《雲林縣違反廢棄物清理法案件檢舉及獎勵辦法》，把檢舉獎勵金發給比例最多提升至50%，希望全面提升整體查緝成效。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
