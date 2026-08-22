@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-21 20:35</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-22 08:55</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (5)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "黃仁勳「AI五層蛋糕」掀電力思考！借鏡Google報告，台灣資料中心如何落實責任用電？ - 今周刊", "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ER2Y3MUZyWnBXYmFjMF9DWkNES1ZINUp1MlFzSmpCWkxrdDEtbkE2U0YtaW93a1JCVHRYUk5kNUFmMTRObUxrRzI4Rl9XNHVOMV9Vbjh6ZktDUmpSbGg1Ym1oSmZ5ZmVnNU9hR1ZSX1EyMm9KMV9ld0E1M0RRRTg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1ER2Y3MUZyWnBXYmFjMF9DWkNES1ZINUp1MlFzSmpCWkxrdDEtbkE2U0YtaW..."}, {"title": "陸軍湖口訓練場遭非法回填 桃檢起訴9人、聲請沒收逾13億元", "link": "https://news.pts.org.tw/article/823539", "summary": "桃園地檢署偵辦陸軍湖口訓練場遭不法業者回填廢棄物案，20日偵結起訴6間公司、9名業者，並向法院聲請沒收不法所得逾13億元，同時要求軍方與涉案業者，須提出廢棄物清除計畫，復原環境。..."}, {"title": "英國熱浪乾旱危及野生動物 旱土讓刺蝟覓食困難陷危機", "link": "https://news.pts.org.tw/article/823490", "summary": "2026年的夏天，英國迎接史上最熱的暑假，持續的乾旱與熱浪，正讓當地的野生動物面臨前所未有的生存危機。例如野生刺蝟，因為土壤乾硬無法挖食蟲子，陷入嚴重脫水與飢餓，不過在倫敦，有保育人員發現新的轉機，數百年前曾滅絕的「河狸」，如今透過築壩能力..."}, {"title": "美國AI資料中心快速擴張 居民控環境汙染帶來健康風險", "link": "https://news.pts.org.tw/article/823485", "summary": "人工智慧競賽推動美國資料中心快速擴張，卻讓弱勢社區承擔環境代價。田納西州的孟菲斯博克斯敦社區居民長年飽受污染所苦，現在又面臨資料中心燃氣渦輪機的廢氣與噪音。當地癌症風險是全美平均4倍，居民擔心AI帶來的經濟利益，最終換來的卻是健康與環境成本..."}];
+            const newsData = [{"title": "2026全球減碳浪潮下的台灣淨零現況 - seftb.org", "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xU3lxaEtRdlRZZllXdUxDaEloTWRDMlU3R2hIbTNLeXRkNGdWQnJJaE9WT0lQWk1TVnhUOFdLU3RkT25kVmFucnFlSlEwZkJQRHNMY2Q4YjY?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xU3lxaEtRdlRZZllXdUxDaEloTWRDMlU3R2hIbTNLeXRkNGdWQnJJaE9WT0..."}, {"title": "全球熱浪持續 環境部月底攜手新北 演練高溫調適行動 - 經濟日報", "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1McDJUc2FRUVNQcUZTQnJtbmRodVBiSE4yZDY3Rk9QamNmbG9jTC1SUDNJcDdYWkdvdVdfSWI1RExFVUxqbmFLUUtpTDd2Q2MzWC1ra2lqMVlkeldvRVBB0gFfQVVfeXFMTUxwMlRzYVFRU1BxRlNCcm1uZGh1UGJITjJkNjdGT1BqY2Zsb2NMLVJQM0lwN1haR291V19JYjVETEVVTGpuYUtRS2lMN3ZDYzNYLWtraWoxWWR6V29FUEE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE1McDJUc2FRUVNQcUZTQnJtbmRodVBiSE4yZDY3Rk9QamNmbG9jTC1SUDNJcD..."}, {"title": "黃仁勳「AI五層蛋糕」掀電力思考！借鏡Google報告，台灣資料中心如何落實責任用電？ - 今周刊", "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ER2Y3MUZyWnBXYmFjMF9DWkNES1ZINUp1MlFzSmpCWkxrdDEtbkE2U0YtaW93a1JCVHRYUk5kNUFmMTRObUxrRzI4Rl9XNHVOMV9Vbjh6ZktDUmpSbGg1Ym1oSmZ5ZmVnNU9hR1ZSX1EyMm9KMV9ld0E1M0RRRTg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1ER2Y3MUZyWnBXYmFjMF9DWkNES1ZINUp1MlFzSmpCWkxrdDEtbkE2U0YtaW..."}, {"title": "北海鑽探案考驗英國氣候承諾 首相面臨兩難抉擇 | 民視新聞網 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAwcXZSd193aHdnelhUSnZENVV2VmhJSG5YOGRraC1OcmpIczl5TUd3RS1YQUNNMU4tbHhIbmZHdVBiV3owUWlaZ0xnZWc1UEJudXktN3NR?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFAwcXZSd193aHdnelhUSnZENVV2VmhJSG5YOGRraC1OcmpIczl5TUd3RS1YQU..."}, {"title": "陸軍湖口訓練場遭非法回填 桃檢起訴9人、聲請沒收逾13億元", "link": "https://news.pts.org.tw/article/823539", "summary": "桃園地檢署偵辦陸軍湖口訓練場遭不法業者回填廢棄物案，20日偵結起訴6間公司、9名業者，並向法院聲請沒收不法所得逾13億元，同時要求軍方與涉案業者，須提出廢棄物清除計畫，復原環境。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
