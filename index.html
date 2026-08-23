@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-23 08:59</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-23 20:28</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "2026全球減碳浪潮下的台灣淨零現況 - seftb.org", "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xU3lxaEtRdlRZZllXdUxDaEloTWRDMlU3R2hIbTNLeXRkNGdWQnJJaE9WT0lQWk1TVnhUOFdLU3RkT25kVmFucnFlSlEwZkJQRHNMY2Q4YjY?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xU3lxaEtRdlRZZllXdUxDaEloTWRDMlU3R2hIbTNLeXRkNGdWQnJJaE9WT0..."}, {"title": "2026年世界環境日 發布亞洲自然解方宣言救森林 - lnanews.com", "link": "https://news.google.com/rss/articles/CBMivwJBVV95cUxPY0FBOXJlYVhkZG95anV2d09Pbmx5REJRbF9fUEFBWHNCQWgwMXhrVTd1a1A5NTJXaXlpVHpFODVPUzRfTGtNS2JpTjhDMzJTbmlQdWRrNjVKdGQ3c2lVb1lsWFU0NkRPcEJCTVJVbkw0WjdaMGNfY3B1U28yR1RDUnJLaHBaQWJCUGZCODdpRlVPT09vajVSQlAzQXRKTlNnbkNxQjIyT0VxR1RGdTF5cUpoOUV6cEtycmhqSExtT0Y3UllZLWlWMW1IQXlfek5YQUpXNTdXTmVsSzBZQUc3SXRUMGJ4VHFQc3F3NU5ydDBNSnFfVVBJbE5ORklpYVRWOWZnNWNFQ1dSeW5qcjZNa1U5NGxiUlU4QU5WdWNNWEh5clRHMHVWOG5td2FWeDJjdkJKbGQzRVAwZFAyWlZr?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwJBVV95cUxPY0FBOXJlYVhkZG95anV2d09Pbmx5REJRbF9fUEFBWHNCQWgwMXhrVTd1a1..."}, {"title": "違法堆含鎂鋁廢棄物致爆炸 台南市府擬發2萬慰問金助求償", "link": "https://news.pts.org.tw/article/823636", "summary": "台南市安南區一處空地，今（22）日凌晨發生火警爆炸，導致消防員在內15個人受傷，68戶民宅被波及，22部車毀損，市府初步調查發現現場違法堆置含鎂鋁的事業廢棄物，將會究責。總統賴清德致電市長黃偉哲表達關心，指示相關部會全力協助。..."}, {"title": "台南安南空地爆炸釀13傷 疑廢棄物摻化學物質引爆", "link": "https://news.pts.org.tw/article/823633", "summary": "台南市安南區巷內一處空地，在今（22）日凌晨1時左右火警，消防員到場滅火，現場卻在2時45分大爆炸，造成消防員在內13人受傷，爆炸引起火災或是震毀家具的民宅68戶，也有22部車毀損，現場一開始通報是堆放工業機械廢油、鋁鎂合金等廢棄物，後來才..."}];
+            const newsData = [{"title": "掌握風險：從氣候走向自然的企業新課題 - ner.gov.tw", "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1uZFNTM2ZPbFZ1QlQ0ZC1YbXVHZm5tT3dLNUdpeVVnWlBMTFhrNkQxMXN0X01fVXNVOWVRWFJzVkxvMjlKRzFXalhpbndJanA2Q2s3QTZmZ3lrbjJ2T3NlODFjVTIyNnQz?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE1uZFNTM2ZPbFZ1QlQ0ZC1YbXVHZm5tT3dLNUdpeVVnWlBMTFhrNkQxMXN0X0..."}, {"title": "廢棄物爆炸釀15傷、波及11戶 南市府：助集體訴訟、代位求償", "link": "https://news.pts.org.tw/article/823712", "summary": "台南安南區空地非法堆置廢棄物爆炸案，導致15人受傷、周邊11戶民宅毀損嚴重。國軍今（23）日到現場，協助受災居民整理家園。市府下午召開記者會，除了要安置受災戶，也將協助受災民眾進行集體訴訟、代位求償。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
