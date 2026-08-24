@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-24 08:57</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-24 20:37</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (9)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "廢棄物爆炸釀15傷、波及11戶 南市府：助集體訴訟、代位求償", "link": "https://news.pts.org.tw/article/823712", "summary": "台南安南區空地非法堆置廢棄物爆炸案，導致15人受傷、周邊11戶民宅毀損嚴重。國軍今（23）日到現場，協助受災居民整理家園。市府下午召開記者會，除了要安置受災戶，也將協助受災民眾進行集體訴訟、代位求償。..."}];
+            const newsData = [{"title": "【聯合新聞稿】邁向2050淨零，地方政策要前行 啟動2026年縣市政府氣候與能源治理評比 - gcaa.org.tw", "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE9HcGtVS2dUYmJWS0s5RWE3MmJhVHotUjVBc0dpWDhGdkRVZW9HeXBvVGNkVEFrQ3RZdTRUaEh5bw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiP0FVX3lxTE9HcGtVS2dUYmJWS0s5RWE3MmJhVHotUjVBc0dpWDhGdkRVZW9HeXBvVGNkVE..."}, {"title": "地方選舉在即環團宣布啟動2026地方氣候與能源治理評比| 2026九合一選舉 - UDN", "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBwcFhIQ3ItRFc5VDdTUnNRZzBJQUlKbjJ4U0J4LWt1Z0xYRDRfNGFmMTYxNHJYcFU2U3hMLUZfWXJDWjhoM2U5a2kybnJWYU9VV0lfLW5YSTA?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFBwcFhIQ3ItRFc5VDdTUnNRZzBJQUlKbjJ4U0J4LWt1Z0xYRDRfNGFmMTYxNH..."}, {"title": "演算法幫你算減碳路徑 「Green AI Taiwan」讓中小企業減碳變簡單 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5JcmVHaUhsRHpVZmgyX3hwNlFnNlN2NWpRd0RlbWIwdnc3UGR0NGxhMnl2WGtjTkJTVzdXcEtoU2p2VWtveE1QMg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE5JcmVHaUhsRHpVZmgyX3hwNlFnNlN2NWpRd0RlbWIwdnc3UGR0NGxhMnl2WG..."}, {"title": "落實永續校園 花蓮辦理能源教育主題研習 - ner.gov.tw", "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB1M1Nqb3F3TzdTZ0g1QlJFWXM0ZWtweXc0QWZKSnBNUHYwYUg1Yml2UmwxcGp4TVNhUHpqQzRiUWhITHRDM3RHYmNJU1R0LVo0a0VYNDVkbE4zNERQQ01hb3RYdHRhRmJlRERDdGtn?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTFB1M1Nqb3F3TzdTZ0g1QlJFWXM0ZWtweXc0QWZKSnBNUHYwYUg1Yml2UmwxcG..."}, {"title": "綠能轉型奪英國未來設計金獎！ 台北廣播電臺打造高韌性智慧發射站 - 台灣好新聞", "link": "https://news.google.com/rss/articles/CBMiugNBVV95cUxOSVNTQTROSW1nSXh3NXRPUFlsNWZfc2t4dWRWTkc3X0h2WWdRdGhtU3NtaTZITVZoaFJvVWUxbjVSV0tad0tNclRMT3NDZHRwT3o0RjQwMVpLNktsVG1FTFhucmVlUWRJV0hXY1FHNlVwRGhEWTNvUW1xek1CR0x1M0FCRDBWZmt5WEJDRlUzNVViMFl4OHN6WlV1NEpVY3dRdUpOTjFnNE9tWm5rc3dWXzFZLTZXTERUMFByWG5JRGFfcHRuN211UnJBVExRbEpydkpvQVJVN3ZLQ2pKS3MtbHJiUjNNel9XdzN3WjRDSm5KSFk0c3pvMTR1NFdpRVMwQTE4ZWhycUMtLVZWdFBnbE02VmdhdFlsLVZMcjlpSzN6YUpEbHdLOGJNQmNFX0k1UHJPX24xZlZOSzh4a0lubHpDTHNmWk5FRnRWcDJmY1BJYUJYSEhEcFg5ejYzUXlPeHR2d3VfMlJHZ1Y1Y0RlOEpNYTI3NnBLVGZBazZXOThieHpHVkVhM3JJNE1lWFhjdFlTdWlzbWY0VE1HWVhxdUF4aTZ0WVl1WWVqXzVlZXF2X3F3ZkZLTGFB?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiugNBVV95cUxOSVNTQTROSW1nSXh3NXRPUFlsNWZfc2t4dWRWTkc3X0h2WWdRdGhtU3NtaT..."}, {"title": "工總白皮書籲加強支持傳產 點名能源韌性列優先議題", "link": "https://news.pts.org.tw/article/823798", "summary": "工總今（24）日發表，2026年對政府建言的白皮書，工總理事長潘俊榮表示，政府應該要加強對傳統產業的支持力道，解決土方之亂。另外，有鑑於美伊戰事，到現在還無法達成停戰協議，美國又將重啟經濟制裁，工總認為能源應該要多元化，同時預先研擬應變機制..."}, {"title": "中小微企業轉型升級條例擬修法 產業界盼提供更適切資源協助", "link": "https://news.pts.org.tw/article/823797", "summary": "經濟部預計在立法院新會期，送交審查中小微企業轉型升級發展條例，今（24）日公聽會中，有產業界人士，希望政府透過沙盒與策略支持方式，幫微型與新創企業量身打造產業環境，也有學者建議，以契作或協作方式，協助中小微企業走向國際市場。..."}, {"title": "南港社宅電梯故障釀2人受困 住戶控半年內已發生近百次", "link": "https://news.pts.org.tw/article/823791", "summary": "北市南港機廠社宅昨（23）日晚間傳出電梯故障受困意外，消防局獲報後順利將2名住戶救出，無人受傷。但這不是第一次出狀況，有議員說，有住戶統計入住半年內故障近百次，甚至有人害怕搭電梯；北市住都中心解釋，這次事件是因為塑膠異物造成，已經加強每日巡..."}, {"title": "民眾控檢舉肥料廠上百次無解 宜縣府籲中央訂異味檢測規範", "link": "https://news.pts.org.tw/article/823789", "summary": "宜蘭縣政府被審計室發現，有些常被民眾陳情空氣污染的位置，周圍500公尺範圍內沒裝設微型空污建感測器，像是冬山鄉大進村，王先生7年來檢舉一家肥料廠產生異味達上百次，但問題都沒解決。縣政府說，微型感測器尚不能監測異味，只能測得pm2.5，希望環..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
