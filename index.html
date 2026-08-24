@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-23 20:28</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-24 08:57</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "掌握風險：從氣候走向自然的企業新課題 - ner.gov.tw", "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1uZFNTM2ZPbFZ1QlQ0ZC1YbXVHZm5tT3dLNUdpeVVnWlBMTFhrNkQxMXN0X01fVXNVOWVRWFJzVkxvMjlKRzFXalhpbndJanA2Q2s3QTZmZ3lrbjJ2T3NlODFjVTIyNnQz?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE1uZFNTM2ZPbFZ1QlQ0ZC1YbXVHZm5tT3dLNUdpeVVnWlBMTFhrNkQxMXN0X0..."}, {"title": "廢棄物爆炸釀15傷、波及11戶 南市府：助集體訴訟、代位求償", "link": "https://news.pts.org.tw/article/823712", "summary": "台南安南區空地非法堆置廢棄物爆炸案，導致15人受傷、周邊11戶民宅毀損嚴重。國軍今（23）日到現場，協助受災居民整理家園。市府下午召開記者會，除了要安置受災戶，也將協助受災民眾進行集體訴訟、代位求償。..."}];
+            const newsData = [{"title": "廢棄物爆炸釀15傷、波及11戶 南市府：助集體訴訟、代位求償", "link": "https://news.pts.org.tw/article/823712", "summary": "台南安南區空地非法堆置廢棄物爆炸案，導致15人受傷、周邊11戶民宅毀損嚴重。國軍今（23）日到現場，協助受災居民整理家園。市府下午召開記者會，除了要安置受災戶，也將協助受災民眾進行集體訴訟、代位求償。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
