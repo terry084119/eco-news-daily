@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-30 23:54</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-08-31 11:03</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (5)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (6)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "海洋生態的「煤礦金絲雀」是牠！澳洲巨型烏賊數量暴跌97%，專家擔憂海洋生態崩潰| BBC News 中文 | 新聞 - Storm.mg", "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1rOHpndXFGYXVrRXhvNW5Gem56QzZjRHdSU3d1Uy1fM3pKSHl2SXhBaHBLdGs0XzNpN3lnR1kwX0xHVWE0R3YxbU9CNVhzQQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTE1rOHpndXFGYXVrRXhvNW5Gem56QzZjRHdSU3d1Uy1fM3pKSHl2SXhBaHBLdG..."}, {"title": "韓國南部工業電價擬降10% 造船業營益率可望提升 - 墨新聞-MORE News", "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1BcDRzeHdJRkp0cGgyUDJfeDFOTnFocW1sWGpnWFkzVU1IbFpfWkxBeUlRN3ZhQXVyN21Db28zQ2hWQQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTE1BcDRzeHdJRkp0cGgyUDJfeDFOTnFocW1sWGpnWFkzVU1IbFpfWkxBeUlRN3..."}, {"title": "美委達成最大規模石油協議 美獲650億桶原油主導權", "link": "https://news.pts.org.tw/article/824748", "summary": "川普宣布與委內瑞拉達成史上最大規模的石油協議，將取得17座油田、共650億桶原油的主導權，規模相當於委內瑞拉總儲量約五分之一。不過委國的石油設施老舊，重建可能耗時多年，因此這項協議在短期內，對於想要壓低油價，可能看不出明顯效果，真正的影響，..."}, {"title": "國衛院研究：配偶若罹失智症 另一半失智風險增7成", "link": "https://news.pts.org.tw/article/824741", "summary": "國衛院研究發現，配偶如果罹患失智症，另一半日後罹患失智的風險，會增加7成左右，原因可能與夫妻共享生活與壓力有關。為了減輕家屬照護負擔，衛福部公布「失智症防治照護政策綱領暨行動方案3.0」，未來在餐飲業、藝文等場域，都將建立失智者服務指引，希..."}, {"title": "尼泊爾山洪致675死 災後重建估需50億美元", "link": "https://news.pts.org.tw/article/824732", "summary": "中國與尼泊爾邊境發生嚴重山洪已經接近一週，官方統計，目前有至少675人罹難、2400多人失蹤。而當地河流佈滿水利設施，許多失蹤者都是正在隧道中作業的人員，因此尼泊爾官方特別請求友邦加強相關協助。..."}];
+            const newsData = [{"title": "南華大學深耕永續 一銀一銅獲台灣永續行動獎 - 生活新聞 - PChome Online 新聞 - PChome Online 新聞", "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSVJpTi1vc3F3VU5LcDJFcGpWRTBEczhPSktzeXZxbUFQMnZJV3BzVUJmSzI1Zk9FblA5NWZtc0U5MjYzZ0NNWDgzTjdrSVlJaU00bzZXb29nUTVrcFpQdDg3WndqX3VOLXNHcUE1RmtOdFU4YjBwZHBqVFd2c2VlZV83OGZfR1BIOW8w?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSVJpTi1vc3F3VU5LcDJFcGpWRTBEczhPSktzeXZxbUFQMnZJV3BzVUJmSz..."}, {"title": "海洋生態的「煤礦金絲雀」是牠！澳洲巨型烏賊數量暴跌97%，專家擔憂海洋生態崩潰| BBC News 中文 | 新聞 - Storm.mg", "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1rOHpndXFGYXVrRXhvNW5Gem56QzZjRHdSU3d1Uy1fM3pKSHl2SXhBaHBLdGs0XzNpN3lnR1kwX0xHVWE0R3YxbU9CNVhzQQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTE1rOHpndXFGYXVrRXhvNW5Gem56QzZjRHdSU3d1Uy1fM3pKSHl2SXhBaHBLdG..."}, {"title": "「唯一地球影像節」匯聚29國58部作品 探索扭轉氣候危機的生存之道 - 씨네플레이", "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBHUDJhb3FZaWQweFk0VEZLdERNOVp6NVlxblRmbC1DU1NFY1hSenUyYXkzeE9Oekd5ejFRSzYtN25zbVF5UFpnakdWb0JMYlVaLXplb2pRTnJ6Tmc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTFBHUDJhb3FZaWQweFk0VEZLdERNOVp6NVlxblRmbC1DU1NFY1hSenUyYXkzeE..."}, {"title": "美委達成最大規模石油協議 美獲650億桶原油主導權", "link": "https://news.pts.org.tw/article/824748", "summary": "川普宣布與委內瑞拉達成史上最大規模的石油協議，將取得17座油田、共650億桶原油的主導權，規模相當於委內瑞拉總儲量約五分之一。不過委國的石油設施老舊，重建可能耗時多年，因此這項協議在短期內，對於想要壓低油價，可能看不出明顯效果，真正的影響，..."}, {"title": "國衛院研究：配偶若罹失智症 另一半失智風險增7成", "link": "https://news.pts.org.tw/article/824741", "summary": "國衛院研究發現，配偶如果罹患失智症，另一半日後罹患失智的風險，會增加7成左右，原因可能與夫妻共享生活與壓力有關。為了減輕家屬照護負擔，衛福部公布「失智症防治照護政策綱領暨行動方案3.0」，未來在餐飲業、藝文等場域，都將建立失智者服務指引，希..."}, {"title": "尼泊爾山洪致675死 災後重建估需50億美元", "link": "https://news.pts.org.tw/article/824732", "summary": "中國與尼泊爾邊境發生嚴重山洪已經接近一週，官方統計，目前有至少675人罹難、2400多人失蹤。而當地河流佈滿水利設施，許多失蹤者都是正在隧道中作業的人員，因此尼泊爾官方特別請求友邦加強相關協助。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
