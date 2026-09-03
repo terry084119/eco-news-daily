@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-09-03 10:36</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-09-03 23:39</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "自由開講》能源爭論別困在核電2選1：台灣真正缺少的是2種能力 - 自由評論網", "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1mc09LYWRUU2l5U3hMeVJRV3ByaHluYUs5cXRLQnVOWTJRZy1CV1ViSlRSS0UzOEhlclZZR1k5VXVxbWRhS0VCZXFQMzc0SllsTWd3a3Y3ZFF0WUNPR2V4Ymxn0gFnQVVfeXFMTVhZZEpJMHl0Wi05UHVnbmtUSUlzVmhZZUNSRy1ORkYxaWFFZkNUd1F4Smc3b2gwQkJVdlp4a3VicHY0MHRQdHFpNUpxZkJQZGxEXzd0aE9aSEc4OTgxOEJLdWhtNXByWQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1mc09LYWRUU2l5U3hMeVJRV3ByaHluYUs5cXRLQnVOWTJRZy1CV1ViSlRSS0..."}, {"title": "2026台灣運動產業永續論壇 跨界攜手創永續新賽道 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBDM1d6Wld4cnFzazhiNmNmZC1oR1NXdEtiMjc2NkVQT0xhMW9La1czVFJXR0JBYlQ5RFlocGMyOS0xR3gyc09WdlZUdlBaUS1qOWc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFBDM1d6Wld4cnFzazhiNmNmZC1oR1NXdEtiMjc2NkVQT0xhMW9La1czVFJXR0..."}, {"title": "宜大團隊研發「濕式造粒」 有望助馬太鞍等崩塌地生態復育", "link": "https://news.pts.org.tw/article/825202", "summary": "宜蘭大學研究團隊近期研發「濕式造粒技術」，利用海藻酸鈉包覆種子提供水分，外觀看起來就像水晶球體，突破過去傳統土球重量過重等限制，近期已在馬太鞍崩塌地等處，以無人機進行實驗性投放，並生長出零星小苗，未來有望成為大型崩塌地生態復育的輔助策略。..."}];
+            const newsData = [{"title": "新北市極端高溫調適行動演練 模擬連3日40℃八大情境", "link": "https://news.pts.org.tw/article/825423", "summary": "極端高溫考驗健康，衝擊供電供水，甚至影響軌道運輸，帶來複合型風險，環境部與新北市政府共50個單位，進行「極端高溫調適行動演練」，模擬北北桃連續3天出現攝氏40℃將出現的八大情境，新北市府表示，有5、600萬市民利用軌道運輸，若遇極端高溫，要..."}, {"title": "新北中學屋頂工程工人未防護 校方獲報已要求停工", "link": "https://news.pts.org.tw/article/825422", "summary": "新北市中和積穗國中近期進行屋頂光電板工程，卻被民眾發現，工人施工時未佩戴安全帶，也沒有加裝防墜纜繩，安全疑慮引發關注。校方獲報後，已要求廠商暫停屋頂施工、加強現場管制；勞檢處也表示，若確認違法，最高可依法開罰300萬元。..."}, {"title": "G20新創會議科技巨頭齊聚美國 場外抗議AI資料中心衝擊環境", "link": "https://news.pts.org.tw/article/825421", "summary": "G20創新部長會議在美國登場，各國政府官員和科技巨頭針對人工智慧AI發展、資源配置與數位監管等議題，展開閉門討論。不過，場外也聚集大批學生與民眾，抗議大型科技公司不斷擴張AI資料中心，對環境、就業與隱私安全帶來巨大衝擊。..."}, {"title": "聯合國估全球碳預算3年內耗盡 升溫幅度突破1.5℃門檻", "link": "https://news.pts.org.tw/article/825335", "summary": "聯合國警告，全球升溫可能在未來3年突破1.5℃門檻，極端氣候恐更加猛烈。而尼泊爾跟西藏的洪災罹難人數已突破1200人，將近4500人持續失聯，救援進入第9天。尼泊爾總理警告，氣候變遷正加劇喜馬拉雅地區災害風險，呼籲全球共同面對氣候危機。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
