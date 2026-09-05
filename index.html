@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-09-05 10:33</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-09-05 22:25</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (6)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "2026全球減碳浪潮下的台灣淨零現況 - seftb.org", "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xU3lxaEtRdlRZZllXdUxDaEloTWRDMlU3R2hIbTNLeXRkNGdWQnJJaE9WT0lQWk1TVnhUOFdLU3RkT25kVmFucnFlSlEwZkJQRHNMY2Q4YjY?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xU3lxaEtRdlRZZllXdUxDaEloTWRDMlU3R2hIbTNLeXRkNGdWQnJJaE9WT0..."}, {"title": "自由開講》能源轉型的真正危機？ - 自由評論網", "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9FM1lGbTlGQ1pFRUNzeGdLaFhFM2hTV0xhMHdKMmZhSEp2RnhncVQxWXVqcnRGa2FscmFHcHF0elRfenVVV3hJaks0ZjA3UV8tZFN4NUhFZUVBTVkzWmVRbS01NDFEeFnSAWdBVV95cUxPRTNZRm05RkNaRUVDc3hnS2hYRTNoU1dMYTB3SjJmYUhKdkZ4Z3FUMVl1anJ0RmthbHJhR3BxdHpUX3p1VVd4SWpLNGYwN1FfLWRTeDVIRWVFQU1ZM1plUW0tNTQxRHhZ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9FM1lGbTlGQ1pFRUNzeGdLaFhFM2hTV0xhMHdKMmZhSEp2RnhncVQxWXVqcn..."}, {"title": "2026台灣運動產業永續論壇 跨界攜手創永續新賽道 - peopo.org", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4yTlJxWTVFMGV3R3hJOGFjVGF1OTEyRjhnWEFkT2JYd3lxSDVDbExmcndhSXljbkJJM1U5Mm1ubXc4dGd3dHBESg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE4yTlJxWTVFMGV3R3hJOGFjVGF1OTEyRjhnWEFkT2JYd3lxSDVDbExmcndhSX..."}, {"title": "美電力公司 Santee Cooper 牽手 Google AI 預測助能源調度年省數百萬美元 - Life 生活網", "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNM0QzbHlweVNKTktGVXNVVE9UNE5VeVhpdHE2MjJWZEpiNWY1WjM3OC1EcllaOVFUVTV4d2s4TUVpTTRQRTd4RUlTUU9nRmRRck5KdHVJYV9jZW4tM2lyTlJxLXB2Mm1VMHBQYkd0b2JWbG53OGVSTVJjOGNkaEQ4TmFmYnV0SmRlRE5GcGs4dWJLNEt4REhWd0RFU1RKV1RlX1Y2TU5qbUt3ci1aUHRqejBSMnpHakJ1?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNM0QzbHlweVNKTktGVXNVVE9UNE5VeVhpdHE2MjJWZEpiNWY1WjM3OC1Ecl..."}, {"title": "埔里鎮清潔隊校園環境教育巡迴宣導 「動手最貼心 環保永存心」 - Life 生活網", "link": "https://news.google.com/rss/articles/CBMiggNBVV95cUxQbzNCUE5DVnJWVjRVYkRyQ29CNHdsQnNQbXVvNlRWSW9qNEZTSV9NVUw1NGtwS2EyOEJLQloxdU5qUE5BUllRQXcwUW1Mbm1BN1U2b1pLd0dvZzA2LWR2YnVoMHRJLTQtVWdjZ3dkdlo3SkJFQklpMDNCOGltTDVOdDZ1dzZ3bWxFS3NiZFgxZGJnTEFmV254TTlOY1ROODN5amxWQjF4VFRZaGFXVGp1Y0Q2X2VoRWxkZ0RNMlhPYUFvcm1ydWEwRjNUN2V2NFRxRkttZlJXelpIZUxWSmprejczUXNEWFZKNkJGRzdBVGNUOUNOTlgyeW95ODRxOUtwNl96M0ZRdDhjQ2RxTXlUSnkxd0VSNjBsQ3VTbzl4NnFWOXhHYUQ3dHVZNmVTb1dNZVBQSENPcFB0ZkxITWFIZDVqTUlMdXZ0NUx6S3Z6cEV1RlBoU1VtSlhob2wxejE1Y3Nwc3RZamdKVUduNVFXc2dLeTVQZEp2VFdzeGNVQzBRdw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggNBVV95cUxQbzNCUE5DVnJWVjRVYkRyQ29CNHdsQnNQbXVvNlRWSW9qNEZTSV9NVUw1NG..."}, {"title": "法國極端野火肆虐 科學家盼「放羊吃草」阻蔓延", "link": "https://news.pts.org.tw/article/825526", "summary": "當人類動用數千名消防員、空中灑水機，甚至啟動歐盟民防機制，都難以克服今（2026）年法國歷史性的極端野火時，科學家正把目光，投向山裡的羊群身上。今年夏天，高溫與乾旱讓法國面臨20年來最慘重的野火災情，但法國中部山區的羊，正用最原始「吃」的方..."}];
+            const newsData = [{"title": "里長稱噪音和安全性問題 水利署不續租虎尾無人機考場", "link": "https://news.pts.org.tw/article/825717", "summary": "位在虎尾的 「台灣福爾摩沙無人飛行器協會術科考場」，是台灣目前唯一可以考二級固定翼的場地，但9月中旬就要關閉，因為在地居民認為，長期有噪音和安全性問題，向民代陳情後，場域的管轄單位水利署決定不再續租，讓許多無人機飛友感到相當錯愕。..."}, {"title": "電子煙回收桶採「只進不出」 9/8起全台431處採不具名投遞", "link": "https://news.pts.org.tw/article/825712", "summary": "俗稱「喪屍煙彈」的「依托咪酯」，經常以電子煙作為載具使用，為全面防堵電子煙，衛福部已提出「菸害防制法」部分條文修正草案，將「持有」電子煙納入罰則，最高可罰10萬元，目前仍待立法院三讀通過。國健署表示，為了讓民眾及早處理手中電子煙，從9月8日..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
