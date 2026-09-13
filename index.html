@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-09-12 22:51</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-09-13 10:43</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (4)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (5)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "2026全球減碳浪潮下的台灣淨零現況 - seftb.org", "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xU3lxaEtRdlRZZllXdUxDaEloTWRDMlU3R2hIbTNLeXRkNGdWQnJJaE9WT0lQWk1TVnhUOFdLU3RkT25kVmFucnFlSlEwZkJQRHNMY2Q4YjY?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xU3lxaEtRdlRZZllXdUxDaEloTWRDMlU3R2hIbTNLeXRkNGdWQnJJaE9WT0..."}, {"title": "AI淨零／ 環境部淨零綠領人才測驗成績公布 及格率6成 - 中央社 CNA", "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE80TVJQQnFkS2ZzMnp6cEpPVnZwUW1wSjY1Z1BudnFiRzRoMWRPei1qYjJ2dDIzZ0RYbkM1U055ZXREaXd5Q1NQOC1LQ3RTWE93ZXFLS3BOSWtMMGF1RU9j?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE80TVJQQnFkS2ZzMnp6cEpPVnZwUW1wSjY1Z1BudnFiRzRoMWRPei1qYjJ2dD..."}, {"title": "葉門青年運動攻占紅海戰略島嶼 國際油價重新突破100美元", "link": "https://news.pts.org.tw/article/826813", "summary": "中東戰火持續外溢，沙烏地阿拉伯關鍵的東西向輸油管遭到無人機攻擊，被迫暫時關閉，另一方面，伊朗支持的「葉門青年運動」又攻占了紅海南端的戰略島嶼，讓荷姆茲和曼德海峽，兩大能源航運的「咽喉」同時拉警報，也導致國際油價重新突破每桶100美元。..."}, {"title": "綠鬣蜥氾濫政府祭高額獎勵 民間獵人獲獎金逾百萬", "link": "https://news.pts.org.tw/article/826811", "summary": "綠鬣蜥氾濫嚴重威脅在地生態與農作物，針對民間獵人的獎勵，有人甚至已經獲得上百萬的獎勵金。林業保育署表示，透過高額的獵捕獎勵機制，綠鬣蜥的數目在未來幾年，會受到有效的控制，減少農業的損失。..."}];
+            const newsData = [{"title": "狂飆的算力與隱形的能源帳單：AI估值有人算，環境成本誰來算？ - TNL The News Lens 關鍵評論網", "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9lczlYNGxHdmktTVN5QWZ0TDFyOFdFN05PVWEzSEdVUTRrelFQdF92XzJuaWZjdjE4UnVZaWMxOUtEbDFTYkY3M1JWdm9sN0Rab0p0Sg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE9lczlYNGxHdmktTVN5QWZ0TDFyOFdFN05PVWEzSEdVUTRrelFQdF92XzJuaW..."}, {"title": "極端天氣衝擊糧食能源體系氣候危機威脅人類生活文化全球變暖生態失衡生存挑戰各國承擔- 要聞 - 香港文匯報", "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5YQkRRcks5UkRNMDJTSVNvZFpicHJqZGx3TnpLVmRHQVl3MmpmODdNWWN6U2otY2ppLXpwLWJmdlBjcWw4d18xdWhrWmVlVXlta1hXZlRJRFNhR2ZfcXY5N3hhVE1sVWQ1bnVlcUJTNVRjWVlQZDAw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE5YQkRRcks5UkRNMDJTSVNvZFpicHJqZGx3TnpLVmRHQVl3MmpmODdNWWN6U2..."}, {"title": "2026年世界環境日 發布亞洲自然解方宣言救森林 - lnanews.com", "link": "https://news.google.com/rss/articles/CBMivwJBVV95cUxPY0FBOXJlYVhkZG95anV2d09Pbmx5REJRbF9fUEFBWHNCQWgwMXhrVTd1a1A5NTJXaXlpVHpFODVPUzRfTGtNS2JpTjhDMzJTbmlQdWRrNjVKdGQ3c2lVb1lsWFU0NkRPcEJCTVJVbkw0WjdaMGNfY3B1U28yR1RDUnJLaHBaQWJCUGZCODdpRlVPT09vajVSQlAzQXRKTlNnbkNxQjIyT0VxR1RGdTF5cUpoOUV6cEtycmhqSExtT0Y3UllZLWlWMW1IQXlfek5YQUpXNTdXTmVsSzBZQUc3SXRUMGJ4VHFQc3F3NU5ydDBNSnFfVVBJbE5ORklpYVRWOWZnNWNFQ1dSeW5qcjZNa1U5NGxiUlU4QU5WdWNNWEh5clRHMHVWOG5td2FWeDJjdkJKbGQzRVAwZFAyWlZr?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwJBVV95cUxPY0FBOXJlYVhkZG95anV2d09Pbmx5REJRbF9fUEFBWHNCQWgwMXhrVTd1a1..."}, {"title": "葉門青年運動攻占紅海戰略島嶼 國際油價重新突破100美元", "link": "https://news.pts.org.tw/article/826813", "summary": "中東戰火持續外溢，沙烏地阿拉伯關鍵的東西向輸油管遭到無人機攻擊，被迫暫時關閉，另一方面，伊朗支持的「葉門青年運動」又攻占了紅海南端的戰略島嶼，讓荷姆茲和曼德海峽，兩大能源航運的「咽喉」同時拉警報，也導致國際油價重新突破每桶100美元。..."}, {"title": "綠鬣蜥氾濫政府祭高額獎勵 民間獵人獲獎金逾百萬", "link": "https://news.pts.org.tw/article/826811", "summary": "綠鬣蜥氾濫嚴重威脅在地生態與農作物，針對民間獵人的獎勵，有人甚至已經獲得上百萬的獎勵金。林業保育署表示，透過高額的獵捕獎勵機制，綠鬣蜥的數目在未來幾年，會受到有效的控制，減少農業的損失。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
