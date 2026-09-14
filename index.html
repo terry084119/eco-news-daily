@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-09-14 10:59</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-09-15 01:28</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (5)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "海洋安全與永續能否兼得？宋承恩、金士懿談台灣海洋治理 - 三立新聞", "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9UQ0F0NEZDQUtPek5ZdE5XNHR4S3k5MUlYRDlLWi1TclZscXc3QWhhRTU0QjEtVUZXSDNIM1ZQWnpSbXZJZmVhRXBNQnjSAUxBVV95cUxPVENBdDRGQ0FLT3pOWXROVzR0eEt5OTFJWEQ5S1otU3JWbHF3N0FoYUU1NEIxLVVGV0gzSDNWUFp6Um12SWZlYUVwTUJ4?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE9UQ0F0NEZDQUtPek5ZdE5XNHR4S3k5MUlYRDlLWi1TclZscXc3QWhhRTU0Qj..."}, {"title": "第18屆金磚峰會閉幕 各國領袖簽署《新德里宣言》", "link": "https://news.pts.org.tw/article/826904", "summary": "第18屆金磚國家高峰會在印度首都新德里落幕。今（2026）年適逢金磚合作機制成立20週年，各國領袖齊聚，共同簽署《新德里宣言》。中國國家主席習近平宣布，中國將在明年接任輪值主席國；印度總理莫迪（Narendra Modi）則強調，金磚國家不..."}, {"title": "虎尾無人機飛行場9/16關閉 水利署指租期已到、勿進入", "link": "https://news.pts.org.tw/article/826835", "summary": "雲林虎尾無人機飛行場，因居民抗議噪音，將在16日關閉，不過場內已放置近40個大型消波塊，影響學生練習，也有人連術科考照都得改到嘉義。管理單位表示，場地原本8月底就到期，只是為了撤場才延到9月16日，這段期間已不能再飛行。後續民航局將朝一縣市..."}];
+            const newsData = [{"title": "氣候團體拋三大政見鎖定候選人 IH爐、電動車、屋頂光電入列 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1EampBYkJ0d29COFFtVkZ5cThra0NlUUFBOGh6WXk5VF83TzFreHFsUmhwUkZqaGMtZ3l0V0lNWTlmZ0RJNkY5eg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE1EampBYkJ0d29COFFtVkZ5cThra0NlUUFBOGh6WXk5VF83TzFreHFsUmhwUk..."}, {"title": "FOCUS全球新聞／對抗氣候變遷！韓修法15年內減碳8成 拚農電共生.水冷解方 - TVBS新聞網", "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBXNG9DaVo0bldMMXlOSGp1TjBkZndvSF9FWWVDTHAyZ0RhZEtid3h2SDVMWnJvODZLdGd2Z21McExjNVlycjlGejdsQmZUSHM?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiT0FVX3lxTFBXNG9DaVo0bldMMXlOSGp1TjBkZndvSF9FWWVDTHAyZ0RhZEtid3h2SDVMWn..."}, {"title": "Kakao Impact與Sopoong Ventures宣布在濟州成立「韓國氣候週」，2027年9月首度登場 - BigGo 財經", "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9zYXlvTnh0eERhQjA3M1QwNE01UW1CN0d1NDVUX0xRaWJiam05elozTk5iUTE4OTVuYmxoLU9GVHU2QXhsQU9JQXQxdkdwdF9QMWtCWmRkcXg0VzI0X1NQVkR5R01ja3lwTFZiWVgzVGhXY1ZCZFpYWnBB?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE9zYXlvTnh0eERhQjA3M1QwNE01UW1CN0d1NDVUX0xRaWJiam05elozTk5iUT..."}, {"title": "川普再開氣候政策倒車　擬廢燃煤燃氣電廠碳排標準 - 經濟日報", "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE43RXI3MFVxVm9LTzZJRVFOUTA0RWV0R0NzS3hJMzdveW9aamlJME51SWtmcXJQeWZNRzNxN2ZEUFJLdVB5SnJrWmJQSHdIRHFkVFZMMFdYd1BCdVY2TDhR0gFfQVVfeXFMTjdFcjcwVXFWb0tPNklFUU5RMDRFZXRHQ3NLeEkzN295b1pqaUkwTnVJa2ZxclB5Zk1HM3E3ZkRQUkt1UHlKcmtaYlBId0hEcWRUVkwwV1h3UEJ1VjZMOFE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE43RXI3MFVxVm9LTzZJRVFOUTA0RWV0R0NzS3hJMzdveW9aamlJME51SWtmcX..."}, {"title": "中東兩大能源管道受阻 布蘭特原油飆破107美元", "link": "https://news.pts.org.tw/article/827028", "summary": "中東局勢升溫，再度推高油價，今（14）日布蘭特原油，一度飆破每桶107美元，這兩天荷姆茲海峽又傳出有商船被攻擊，另一方面，沙烏地阿拉伯的東西向輸油管線，遭到無人機攻擊，暫時關閉，加上葉門武裝組織青年運動，逐步加強對紅海「曼德海峽」的控制，也..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
