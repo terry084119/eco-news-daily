@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-04 11:53</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-05 00:19</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (5)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "走進南臺灣，環境部攜手屏東科技大學編織屏東國土綠網，築起綠林氣候防護罩！ - 環境部新聞專區", "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE81Vl80NWRWQklfYnNzX1ZTTWhicmVDamR5WjJHT0Q5cF9qTUx5dEtYVnNpaUJCQVBqZjRRRHVOMGVwU3RJTE5lSVdqTVhKNzY2d3pQVU1oWlRLRXJUdWh2aTg5Vmc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE81Vl80NWRWQklfYnNzX1ZTTWhicmVDamR5WjJHT0Q5cF9qTUx5dEtYVnNpaU..."}, {"title": "淨零治理匯聚產官學力量TAIWAN COP6高峰論壇聚焦能源韌性與多元創新- 商情 - 工商時報", "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA1dXVVbFJzVzVqU2QweTM5LXE1T24waDk0Z0NWWTlweXJVUzZNbHFxMGhaVnFTQlNSY1JSY3pFQmx6NlVRSXZEZnVmeW1PVURxQ2RfLWZFSVRKUUh6c0Uw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTFA1dXVVbFJzVzVqU2QweTM5LXE1T24waDk0Z0NWWTlweXJVUzZNbHFxMGhaVn..."}, {"title": "宜蘭舉辦環境知識競賽 各組冠軍將代表出賽 | 中華日報 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5CNm4xZGNfdGVBa2dsckE1RGZNSTZEMFdoRk1VcFNWVXhFNWlHMGFIRkIzTlNLalhnRjFLQ0g4cEV6MGo3OEY5OU9UWFlPRUJDQlJXMVBR?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5CNm4xZGNfdGVBa2dsckE1RGZNSTZEMFdoRk1VcFNWVXhFNWlHMGFIRkIzTl..."}];
+            const newsData = [{"title": "讓樹與孩子共同成長！環境部串聯臺東產官學，推動國土綠蔭計畫打造綠色首都 - enews.moenv.gov.tw", "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0tYkp5NmFwdXA1NmFYdklZQ0pPSDJfem96eENyUUpmOVI5UlhZRkpCOGlZbWZmQkI1eHZOMDU4eTRkeXFMM0dBUWRwZ1BQTTY0bjE1RlFyM3dVMFBDU2Nic0xGTl8?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE0tYkp5NmFwdXA1NmFYdklZQ0pPSDJfem96eENyUUpmOVI5UlhZRkpCOGlZbW..."}, {"title": "氣候暖化與超級聖嬰疊加 乾旱成為全球重大威脅 - anntw.com", "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE10SnAzUmM0emR0amNEWG4xOE5aMTNXM0FIU1RQcWJva21TYjZmUmJvRnVHX2lwenhWdUFITWdBWTZvTFRjX0FxRHpjUFVodHFKSTFPcXZscw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE10SnAzUmM0emR0amNEWG4xOE5aMTNXM0FIU1RQcWJva21TYjZmUmJvRnVHX2..."}, {"title": "苗栗山城環保大使選拔賽 400人參加環境知識競賽 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1KZnBzRHZRNU85dkJKNDF3aGZNek5UWTEtTXBZOGVCVktFSlJLdTY5Z2FlQkdTUFlIbS05MnJkcWRUTFlBellxdlFfZWtvR0wtS3c?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE1KZnBzRHZRNU85dkJKNDF3aGZNek5UWTEtTXBZOGVCVktFSlJLdTY5Z2FlQk..."}, {"title": "淨零治理匯聚產官學力量 TAIWAN COP6高峰論壇聚焦能源韌性與多元創新 - ENN台灣電報", "link": "https://news.google.com/rss/articles/CBMiOkFVX3lxTE12cmh4SExaRmdxb0E1aWFsVXR2NzJ5RkcyNmxCVVFPeFdxMWprWjhCRXA1UmlCQ2daUEE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiOkFVX3lxTE12cmh4SExaRmdxb0E1aWFsVXR2NzJ5RkcyNmxCVVFPeFdxMWprWjhCRXA1Um..."}, {"title": "8月來台旅客對比疫情前減35% 觀光署：滾動檢討客源措施", "link": "https://news.pts.org.tw/article/829853", "summary": "根據顯示，今（2026）年8月來台旅客，較去（2025）年同期衰退，甚至對比疫情前，大減35%。學者推估，全年的來台觀光客人次恐怕難以達到900萬人，更與行政院長卓榮泰日前期勉交通部，要「達到千萬人次」的目標有落差。觀光署則表示，會密切觀察..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
