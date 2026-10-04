@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-03 23:35</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-04 11:53</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (6)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "走進南臺灣，環境部攜手屏東科技大學編織屏東國土綠網，築起綠林氣候防護罩！ - 環境部新聞專區", "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE81Vl80NWRWQklfYnNzX1ZTTWhicmVDamR5WjJHT0Q5cF9qTUx5dEtYVnNpaUJCQVBqZjRRRHVOMGVwU3RJTE5lSVdqTVhKNzY2d3pQVU1oWlRLRXJUdWh2aTg5Vmc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE81Vl80NWRWQklfYnNzX1ZTTWhicmVDamR5WjJHT0Q5cF9qTUx5dEtYVnNpaU..."}, {"title": "淨零治理匯聚產官學力量 TAIWAN COP6高峰論壇聚焦能源韌性與多元創新 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8zWmptbFdKbnNIR0VYWHNUSVNQSm0yWTVTb3pQMnRGcFdUaUNzYm1xMkpqdHNQT1E2OWNhRVl2bEJHNWh6OHJWbEc1TDFRN04zeEE?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE8zWmptbFdKbnNIR0VYWHNUSVNQSm0yWTVTb3pQMnRGcFdUaUNzYm1xMkpqdH..."}, {"title": "宜蘭舉辦環境知識競賽 各組冠軍將代表出賽 | 中華日報 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5CNm4xZGNfdGVBa2dsckE1RGZNSTZEMFdoRk1VcFNWVXhFNWlHMGFIRkIzTlNLalhnRjFLQ0g4cEV6MGo3OEY5OU9UWFlPRUJDQlJXMVBR?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5CNm4xZGNfdGVBa2dsckE1RGZNSTZEMFdoRk1VcFNWVXhFNWlHMGFIRkIzTl..."}, {"title": "魏國彥／廿年一覺能源夢 - UDN", "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9KVG9GdjlzLUtZcWlsN1R6dXY4N3BPRW5xaktQUEhLODhObUgzSzBTRWQzM3NHQzRvVmVYM0U5YkZTZnVaQUdSc3pxdlB4MnhG?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTE9KVG9GdjlzLUtZcWlsN1R6dXY4N3BPRW5xaktQUEhLODhObUgzSzBTRWQzM3..."}, {"title": "前進高雄搭建氣候對話平臺 聚焦氣候調適 國泰氣候變遷青年論壇 培力青年打造韌性未來 - 墨新聞-MORE News", "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1ZTVN6aUc5M2lrRzFlbUk0Zm5EX1Q0WW5DMTRseDBhbHVFamFQTWNwRzAzNGgwRnNKZF9WSFZWdWtVZw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTE1ZTVN6aUc5M2lrRzFlbUk0Zm5EX1Q0WW5DMTRseDBhbHVFamFQTWNwRzAzNG..."}, {"title": "邁向淨零共創未來！第六屆臺灣氣候行動博覽會高雄盛大開幕 - marketersgo.com", "link": "https://news.google.com/rss/articles/CBMikwNBVV95cUxOMGxWa0VBUUVnQVFIMlVyUjVocWhRM0Y5Mk8xZkpXeFZkVVVQLXEza0dfOVg5U1VSVWcwU0hfZE1hM05kdEhXWk5zYUJTbGg0cnNRYll4QWFsS2JUX3h6T2tWaTdDdnR2SUd5NXctOUx0NWVDcFJlZElyZTU4LWRVeWJkQ1M0X2xsdDBNcW4tOUEyaGtNOUFuVk82Sll2SGZpWDlPR3R5cFJYTkU5WFppdl9QalJ4WVNGajlkNF9GVFFaY0tFWTFCak1tdjRPbGJHNUhqWlo2cUR5REJBUi1TTUpMbHB2MjMtdEs5Szc1NFdSX2tVWVVMNGlSZDUyZlFVeW5sWFpicUZnUC1ZWWVwYjJkU1pSdUhmU05HQ3RjUG83RUc2NXpqX2pNZTlDd0hLd2pxa3oxMHdxQk9wakdhX2NyR0ZLZkFZU3BhX3RyZkJ6cjhHMExYeV83SXBUdjVVLWNaUkI3U1BOSm9JMFN1cEN5VzB2SDRhZ0psVTM3djhqX1RVOXU2LU1tdEFUYzV3WkJZ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMikwNBVV95cUxOMGxWa0VBUUVnQVFIMlVyUjVocWhRM0Y5Mk8xZkpXeFZkVVVQLXEza0dfOV..."}];
+            const newsData = [{"title": "走進南臺灣，環境部攜手屏東科技大學編織屏東國土綠網，築起綠林氣候防護罩！ - 環境部新聞專區", "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE81Vl80NWRWQklfYnNzX1ZTTWhicmVDamR5WjJHT0Q5cF9qTUx5dEtYVnNpaUJCQVBqZjRRRHVOMGVwU3RJTE5lSVdqTVhKNzY2d3pQVU1oWlRLRXJUdWh2aTg5Vmc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE81Vl80NWRWQklfYnNzX1ZTTWhicmVDamR5WjJHT0Q5cF9qTUx5dEtYVnNpaU..."}, {"title": "淨零治理匯聚產官學力量TAIWAN COP6高峰論壇聚焦能源韌性與多元創新- 商情 - 工商時報", "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA1dXVVbFJzVzVqU2QweTM5LXE1T24waDk0Z0NWWTlweXJVUzZNbHFxMGhaVnFTQlNSY1JSY3pFQmx6NlVRSXZEZnVmeW1PVURxQ2RfLWZFSVRKUUh6c0Uw?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTFA1dXVVbFJzVzVqU2QweTM5LXE1T24waDk0Z0NWWTlweXJVUzZNbHFxMGhaVn..."}, {"title": "宜蘭舉辦環境知識競賽 各組冠軍將代表出賽 | 中華日報 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5CNm4xZGNfdGVBa2dsckE1RGZNSTZEMFdoRk1VcFNWVXhFNWlHMGFIRkIzTlNLalhnRjFLQ0g4cEV6MGo3OEY5OU9UWFlPRUJDQlJXMVBR?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5CNm4xZGNfdGVBa2dsckE1RGZNSTZEMFdoRk1VcFNWVXhFNWlHMGFIRkIzTl..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
