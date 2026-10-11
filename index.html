@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-11 00:49</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-11 11:31</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "竹市推綠能屋頂擴大再生能源應用 串聯能源轉型與資源循環打造永續城市 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE44Vl80Rm5sdkVLNzdCd2s0SWNRMUhwREtNdlJKWDR0ejNHZU1wYWNtSjk5S0xyM25tcElnNEhrZ1ZPU1AwM3hOUG14M0VQQTF2amc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE44Vl80Rm5sdkVLNzdCd2s0SWNRMUhwREtNdlJKWDR0ejNHZU1wYWNtSjk5S0..."}, {"title": "美查封中駭客「亞麻颱風」工具 揭台能源基建與大學都曾遭鎖定", "link": "https://news.pts.org.tw/article/830784", "summary": "美國司法部近期調查發現，與中國政府有往來的駭客組織「亞麻颱風」，鎖定了美國和台灣的能源基礎設施，以及台灣的大學發動網路攻擊、竊取文件。美方查封相關漏洞掃描與釣魚工具，但學者指出，駭客可利用軟體漏洞潛伏，不像過去植入程式，因此難以察覺。專家呼..."}, {"title": "斯洛維尼亞「洞螈」斷肢可重生 學界記錄地下蠑螈10年成長祕辛", "link": "https://news.pts.org.tw/article/830737", "summary": "從破卵而出到斷腿重生，科學家追蹤10年，揭開一種地下蠑螈「洞螈」的成長祕密。斯洛維尼亞2016年孵化的22隻洞螈，如今還有20隻活著。這群傳說中的「小龍」，讓研究人員觀察行為變化，還意外記錄斷肢再生；對壽命可能超過100年的牠們來說，10歲..."}];
+            const newsData = [{"title": "串聯能源轉型與資源循環 新竹市推動綠能屋頂擴大再生能源應用 - 元丰傳媒", "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9lNTQ3MFgtb19VeXhjLTRlcTR1Y0IyOHBDbVl5YkcwRjlOaUthRHVMdmJBdlR1ckUyUk5kNzdOWVFKN3p0ZjBURTF6eTRGeTJKVGRFUGRWN0lrODEyLU16ckU2LU1PaTdZ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE9lNTQ3MFgtb19VeXhjLTRlcTR1Y0IyOHBDbVl5YkcwRjlOaUthRHVMdmJBdl..."}, {"title": "美查封中駭客「亞麻颱風」工具 揭台能源基建與大學都曾遭鎖定", "link": "https://news.pts.org.tw/article/830784", "summary": "美國司法部近期調查發現，與中國政府有往來的駭客組織「亞麻颱風」，鎖定了美國和台灣的能源基礎設施，以及台灣的大學發動網路攻擊、竊取文件。美方查封相關漏洞掃描與釣魚工具，但學者指出，駭客可利用軟體漏洞潛伏，不像過去植入程式，因此難以察覺。專家呼..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
