@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-12 01:13</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-12 11:55</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (7)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "出席北極圈論壇 中國代表呼籲聚焦氣候變遷與國際合作 | 民視新聞網 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA0NGZYdUxNTFA5U1BvSmVuRnlwSFpkSjJmbUNvYXQyR3hkTlZpMkhBVklkLTNYNHphQU9ieE85TzFBYlFiNF9WeEFwZEQxaEVTQ01FOFln?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFA0NGZYdUxNTFA5U1BvSmVuRnlwSFpkSjJmbUNvYXQyR3hkTlZpMkhBVklkLT..."}, {"title": "國慶焰火引卑南溪濕地火警 保育團體憂影響生態", "link": "https://news.pts.org.tw/article/830834", "summary": "今（2026）年國慶焰火在台東市卑南溪出海口施放，吸引全國超過5萬名民眾前往觀賞，不過在過程也發生零星意外，有民眾開車卡在溪床，還有焰火在卑南溪國家級濕地引發火警，保育團體擔心生態受影響。..."}];
+            const newsData = [{"title": "能源轉型必然漫長？ 國際知名學者索法庫：歷史可以啟發，但不必然預測未來 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5kX2ZpU0hDeEhYeG5OUjFGeGFYRUhDckk0V3lIM1R6dFVWMzh4eHhpVWluMzRZdGxlYWRFemxuUS16V0xCeHIyNA?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE5kX2ZpU0hDeEhYeG5OUjFGeGFYRUhDckk0V3lIM1R6dFVWMzh4eHhpVWluMz..."}, {"title": "中火燃氣二期環評遭撤、巴拿馬規模7.7極淺層強震、南極企鵝巢穴因氣候變遷銳減63% - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1oX1ZUWTUtOGpoQVlVYmVENDFYcVpwbUwxaHJVUVpkZFR2Z2ZYWXoxd3NJUlJhMGNMVXBhYnBJcmxURjc2WXRpbQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE1oX1ZUWTUtOGpoQVlVYmVENDFYcVpwbUwxaHJVUVpkZFR2Z2ZYWXoxd3NJUl..."}, {"title": "出席北極圈論壇 中國代表呼籲聚焦氣候變遷與國際合作 | 民視新聞網 - LINE TODAY", "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5aTjN4Vk5kYUIyR05DOWxuNzN0ZHN2bmNTT3JyZ3JGaUk4b1g5MkxxVFpVdXdOZENINlhsaGkzdUtlZWVzbmx5TGdyVWc4bUZZdU1CWG1DVEhranVyVmpDV0hTS2tlWFNxVXk2elpfNWc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5aTjN4Vk5kYUIyR05DOWxuNzN0ZHN2bmNTT3JyZ3JGaUk4b1g5MkxxVFpVdX..."}, {"title": "蟑螂成爬蟲寵物飼料 澳洲查獲史上最大宗10萬隻活體將銷毀 - 環境資訊中心", "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1kLWVNZ2prZkJ4UU03ZkVTUnVCQjVlYjNzWVhwdlhnNDZXTmM5Z1dYOFlKZDlvZzViRkd1VG1ESGE5dTZYcnotcg?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTE1kLWVNZ2prZkJ4UU03ZkVTUnVCQjVlYjNzWVhwdlhnNDZXTmM5Z1dYOFlKZD..."}, {"title": "從產業轉型到綠色生活 雲林智慧淨零共創永續未來 - Life 生活網", "link": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxPT0xKZ0V3Q3c5WVRoanp5SG1iQzlXQ0toSzl6aTVVWmQ1UE1RV0xldHR2WEU4d3g4SGhGV0dUVEJDRlZzWGpoZENMZ2NFaFBIbDhTZVM3cjAxcWlLS25GMmNHbkhpdTFUMWhjZnhBSDhNODFyRnhWT3BqSTJiSDVLSkt6bGdxZmVkVUl2bWx0X3hNeU83blZBSTJWNGwxTUNLNU9EWVh4UEJtNm5PWEZ0Zy1najd1T0NEZHo5d0M2UVVkMW92dEFNeE1ncklLRnFyc1NtclJHMTdLWXFxaGRVTmJMdWVmVGFqZEpJYzdPWWM4VWF2OWJ2RjBRNWd2b2g0ZU5pU0Rpc1llbzlVQlN0OGRSSFJpakNxOV9jcGNsM3pTOWRwUkhGUU9MQ3AySXJVTFJTOWZ4Y3JkZWNYWVNSaXNKS1NPT0lWU0J0MmE0Ulo?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMi0AJBVV95cUxPT0xKZ0V3Q3c5WVRoanp5SG1iQzlXQ0toSzl6aTVVWmQ1UE1RV0xldHR2WE..."}, {"title": "尼泊爾山崩釀洪災已知5人失聯 約40棟房屋遭沖毀", "link": "https://news.pts.org.tw/article/830903", "summary": "全球氣候變遷，災難頻傳。尼泊爾再度爆發嚴重洪災，11日發生大規模山崩引發的山洪，洪水沖毀了大量房舍，目前已知有至少5人失聯，49人獲救。而美國佛州跟墨西哥灣附近，目前遭遇強烈颶風侵襲，至少已有4人罹難，更一度造成近百萬戶斷電。..."}, {"title": "國慶焰火引卑南溪濕地火警 保育團體憂影響生態", "link": "https://news.pts.org.tw/article/830834", "summary": "今（2026）年國慶焰火在台東市卑南溪出海口施放，吸引全國超過5萬名民眾前往觀賞，不過在過程也發生零星意外，有民眾開車卡在溪床，還有焰火在卑南溪國家級濕地引發火警，保育團體擔心生態受影響。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
