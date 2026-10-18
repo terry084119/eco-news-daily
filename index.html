@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-18 10:40</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-18 23:15</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (1)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (6)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "教育部擬修法調升教保員薪資 台教產：私幼將面臨大跳槽", "link": "https://news.pts.org.tw/article/831788", "summary": "配合行政院2027年調升軍公教人員薪資，教育部近日也預告修法，將同步調升公幼教保員、非營利幼兒園教師與教保員的薪資，整體提升約2成。全國幼教產業工會認為，這是遲來的正義，台教產則表示，不反對調薪，但教育部未與幼教界溝通，私幼與準公幼將面臨人..."}];
+            const newsData = [{"title": "2026年世界環境日 發布亞洲自然解方宣言救森林 - 人間通訊社", "link": "https://news.google.com/rss/articles/CBMivwJBVV95cUxPY0FBOXJlYVhkZG95anV2d09Pbmx5REJRbF9fUEFBWHNCQWgwMXhrVTd1a1A5NTJXaXlpVHpFODVPUzRfTGtNS2JpTjhDMzJTbmlQdWRrNjVKdGQ3c2lVb1lsWFU0NkRPcEJCTVJVbkw0WjdaMGNfY3B1U28yR1RDUnJLaHBaQWJCUGZCODdpRlVPT09vajVSQlAzQXRKTlNnbkNxQjIyT0VxR1RGdTF5cUpoOUV6cEtycmhqSExtT0Y3UllZLWlWMW1IQXlfek5YQUpXNTdXTmVsSzBZQUc3SXRUMGJ4VHFQc3F3NU5ydDBNSnFfVVBJbE5ORklpYVRWOWZnNWNFQ1dSeW5qcjZNa1U5NGxiUlU4QU5WdWNNWEh5clRHMHVWOG5td2FWeDJjdkJKbGQzRVAwZFAyWlZr?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMivwJBVV95cUxPY0FBOXJlYVhkZG95anV2d09Pbmx5REJRbF9fUEFBWHNCQWgwMXhrVTd1a1..."}, {"title": "第10屆全球華文永續報導獎／光電風災啟示錄：90天追蹤廢棄物亂象 - TVBS新聞網", "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE52a1J1UjhNM0hySGVDVmFkdkQ5Ti1HemRFekt4d3J0QUtsQ2pTUFJRMExockFxMEh4b01CUHhzeV9ZX21fQXJVWXQ5Y3Y?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE52a1J1UjhNM0hySGVDVmFkdkQ5Ti1HemRFekt4d3J0QUtsQ2pTUFJRMExock..."}, {"title": "聚焦能源韌性與淨零轉型！台灣國際淨零永續展、智慧能源週吸引 1.8 萬人參觀 - 蕃新聞", "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE13RC05bjZaTEpnNHAyZkVkLXVDaC02eDBkaGZaeUQzR3NVTFlfeTRvVlZoZDlBTHkydDQ0SDNJbE5zcVVjT1Qyc1dqVk5Rb0hSc2c?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE13RC05bjZaTEpnNHAyZkVkLXVDaC02eDBkaGZaeUQzR3NVTFlfeTRvVlZoZD..."}, {"title": "立院三讀部分長者免健保費 石崇良：保費恐調漲轉嫁青壯年", "link": "https://news.pts.org.tw/article/831878", "summary": "立法院上週三讀通過《老人福利法》修正案，所得稅率未達20%的長者，將由中央「全額」補助健保費，引發朝野論戰。在野黨強調修法是為了「消弭城鄉落差」，對此，衛福部長石崇良重申，中央政府預算可能無力補足「健保赤字」，勢必面臨調漲保費，並轉嫁給15..."}, {"title": "一週大事／國民黨普發2萬逕付二讀 北市長選戰辯論會敲定（2026.10.12-10.18）", "link": "https://news.pts.org.tw/article/831867", "summary": "《公視新聞網》為您精選一週國內外大事，關注焦點包括：國民黨普發2萬逕付二讀、北市長選戰辯論會敲定10/31、長者有條件免健保費三讀、松山機場遷移爭議、基隆捷運經費通過、法國學運擴散歐洲多國、俄烏能源停火僵局。..."}, {"title": "美國汽油均價逼近拜登時期水平 川普昔日的拉票利器變成政治軟肋", "link": "https://money.udn.com/money/story/10511/9821471", "summary": "【彭博】-- 在2024年總統大選前夕，川普幾乎一直把能源成本掛在嘴邊。他把高能源價格歸咎於時任總統拜登的環保政策，並承諾把汽油價格壓低至每加侖2美元以下。他當時稱，這將開啟一個國內燃料成本低廉、美國在海外實現「能源主導」的經濟黃金時代。時..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
