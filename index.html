@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-24 10:58</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-24 23:15</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (7)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "【永續新聞快訊】全球減碳缺口持續擴大，碳市場改革與 AI 環境衝擊受關注 - CSRone 永續智庫", "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE12YU50Z2s5MzNaY1JkemNvVXU1ZmVqd2pTSnlQOUhfTlJuRktVYzEtLWsxNEJ5TExDazQ0Wm5WXzgtYmc?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiQ0FVX3lxTE12YU50Z2s5MzNaY1JkemNvVXU1ZmVqd2pTSnlQOUhfTlJuRktVYzEtLWsxNE..."}, {"title": "歐洽會成都開幕 拓展中歐互利 聚焦新能源、生物醫藥 - 世界新聞網", "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBudHlleDFNWlgxc2xrRm5UTTRmUEoxelVqaEZXNkRVeURteXRCM1JlUVBockNtYVlmNEJqNFYxR0FwNXZPZjhELXBtbkdFU2FRVktkelF5elJtUm1Od2JKa0g4UHBoenfSAWdBVV95cUxQbnR5ZXgxTVpYMXNsa0ZuVE00ZlBKMXpVamhGVzZEVXlEbXl0QjNSZVFQaHJDbWFZZjRCajRWMUdBcDV2T2Y4RC1wbW5HRVNhUVZLZHpReXpSbVJtTndiSmtIOFBwaHp3?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBudHlleDFNWlgxc2xrRm5UTTRmUEoxelVqaEZXNkRVeURteXRCM1JlUVBock..."}, {"title": "新北國際青年氣候行動論壇登場 國際觀點與台灣青年提案激盪永續解方 - Life 生活網", "link": "https://news.google.com/rss/articles/CBMipANBVV95cUxOdjBLUWNLZGNpQXE3RmpGLW14Q1BkNGFCbWNfdjBJMGhpb2QxYWo0VnNqemNUYjRnMldCeGFGcWt5bzFpVzBPYjZWRnRjUHR4WjZ0RDBXQUhPSkUwVWI4dFVZTG5JbjBOLUk4SzFmZkN0YVZfNEtJZTVscEdtSndyUlUtR1RmN0FLQXhWMkp2U05waDNiZ1RvT2k2N3EyaVNyc3AzMXZJUXE3WnQ4LWw0b2xvTU4ycU80VGZFelkyek5uV0lPOXNwektOM3BKMGw2QjZVUWluVHpDa0pBUERQX2RQZjA3LUZxUGhxSnNwNXdaNC1GTEtrOFJvemRaUkc2dkJMSm9RTXZUdnR1NDl0VmthUHNQVXQzeVowVlFwMkZvUzlLa2Q4dWpnVkNTaE1BbXFoZnRzNWZ4bndfRXlZMXE0b0dnT2tScmpQc1hTVEtFdy1rWEtOeWJ1V013bHllZGQyczBsTGRrZ3EzMUpQamg5QW1SSWFFR1JkaEdpTTRGaTRGaEpibmEtMnlKUkVXaEpBMVYtR0NVamN0QXZHeTJ6cHM?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMipANBVV95cUxOdjBLUWNLZGNpQXE3RmpGLW14Q1BkNGFCbWNfdjBJMGhpb2QxYWo0VnNqem..."}, {"title": "南臺科大舉辦ISAT國際研討會 四校交流AI與永續科技研究 - Life 生活網", "link": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxPX1pUdU9xWTN6VEVRTTBGMm9Rb2htdTgzeHJTOE5qb3ZpSlJ1aXpoLXNvMmZTTEExMnlfMlUzNWp0TmwxMDZjVEx4d0lKM3FUVVhyVVYtUEVXYjFkOWdzSzVfYmxZYnBUaVlOWU90YWxvVVd4S0dEYlV5S28tX0VKRldtNl81R0lqbkN4cmd4TlNZbEFhMnZQM1dUeDJYX2pqOHJab0hOTEE4MjJNRDJZaFZzVnlPa0oxbVR4TEtFNlRJQTRKTThaRllvOGoxdzlJQUwxNjJHVlY3OUNxOGxZcHFLdnFYWnpodVJXbnZ3LV8zc3VSNzVOX0liVkhOZXkyc1lwT1pkMXl1N1I0WHFfQ2NzQjVhSlZWMlo4Vkw1T1Y0MTRSWC0wNmtzWUpaX29PdUp0RlhJbTdQcVY1Z1ZnNWllSDhicl9WVjNoRmJZczgtWEtqYW1sYQ?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMi2AJBVV95cUxPX1pUdU9xWTN6VEVRTTBGMm9Rb2htdTgzeHJTOE5qb3ZpSlJ1aXpoLXNvMm..."}, {"title": "綠島溫泉村大浪沖上岸 離海100公尺民宅受災", "link": "https://news.pts.org.tw/article/832744", "summary": "薔琵颱風外圍環流挾帶強風，台東離島和沿海地區掀起巨浪，尤其是蘭嶼和綠島首當其衝。蘭嶼迎風面的朗島村，就發生超過8米大浪打上馬路，街道都是礁石；而綠島的溫泉村，也發生大浪沖進離岸100公尺的民宅，共有9戶受災。下午強風也吹斷蘭嶼舊鄉公所電線，..."}, {"title": "澳洲洪災記者採訪遇車輛受困 與目擊民眾跳入救出駕駛", "link": "https://news.pts.org.tw/article/832732", "summary": "澳洲昆士蘭布里斯本以北地區最近傳出洪水災情，一名澳洲廣播公司記者採訪時，目擊一輛皮卡車泡在水裡、駕駛受困，這名記者和一名民眾勇敢跳進水裡，千鈞一髮救出駕駛，車輛隨即滅頂。而受極端氣候劇烈降雨影響，南美洲巴拉圭、厄瓜多等國，近期也都發生嚴重洪..."}, {"title": "業者涉將工業氣體混入食品級 販售好市多、IKEA上千瓶", "link": "https://news.pts.org.tw/article/832727", "summary": "台中地檢署偵辦非法氣體案，發現不肖業者涉嫌把工業用二氧化碳，充填進食品級鋼瓶，賣給好市多、IKEA，甚至把工業氧氣當成醫用氧氣，販售給醫療及長照機構。從餐飲到醫療，黑心氣體恐怕影響民眾健康。台中地檢署偵查終結，依《食安法》、《藥事法》及詐欺..."}];
+            const newsData = [{"title": "〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高 - 鉅亨網", "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8yWWhDbmFUQ3BnOFdLQmVHbS10d0lGM0ZtXzg5cERoTVNrT0p5RFcwRTZPQlFCb0Q3TXBxNjhKV0xJTFhKbWhXQ3BHZDYzdkU?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiT0FVX3lxTE8yWWhDbmFUQ3BnOFdLQmVHbS10d0lGM0ZtXzg5cERoTVNrT0p5RFcwRTZPQl..."}, {"title": "颱風後易孳生病媒蚊 疾管署示警3感染症", "link": "https://news.pts.org.tw/article/832805", "summary": "薔琵過境，各地傳出災情，疾管署提醒，颱風帶來的強風暴雨，容易擾動土壤及底泥中的病原菌，進而擴散，增加環境傳染病的感染風險，大雨過後的積水，也會讓登革熱等蟲媒傳染病風險上升。..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
