@@ -41,11 +41,11 @@
     <body>
         <header>
             <h1>🌱 EcoNews</h1>
-            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-27 02:06</p>
+            <p class="update-info">今日產經與環境能源焦點 | 更新：2026-10-27 11:23</p>
         </header>
 
         <div class="nav-tabs">
-            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (3)</button>
+            <button id="tab-all" class="active" onclick="showPage('all')">最新動態 (2)</button>
             <button id="tab-fav" onclick="showPage('fav')">分類資料夾</button>
         </div>
 
@@ -57,7 +57,7 @@
         </footer>
 
         <script>
-            const newsData = [{"title": "2026年世界投資論壇：為能源安全與永續轉型籌資 - 新聞與統計 - IndexBox", "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPVXJ5WDdveVVhbzVQNjFpN3czenRoOGNsZGxUcnozRHJseTdXRTR3SEh0VngzLXJkOEZROXhZYmEzM2w0VnNqaHk0bHlubGZveFo3QTZxX3ZGOTFfXzJuR2xoSTRmV1pOOTFTcnRrOURwSTI0SnM1X3hfLXl3ZDE3UUQ0dHZ6bnJBTGEtV2tQN3JvM2RZdjI5YkVuUzVESWxLNGNMVVlvV3MyYXhQdkJjT1N4dUVmVmU1Ymw2X2EyX0ZBN0IxQUtpTWNlakRqRW1xbkVUbzgyNEM0NkN2Y3c?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMi3gFBVV95cUxPVXJ5WDdveVVhbzVQNjFpN3czenRoOGNsZGxUcnozRHJseTdXRTR3SEh0Vn..."}, {"title": "五年規劃列4大環境約束性指標 楊秀權：展現政府推動減碳決心 - 新城廣播", "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMmU3YXdRLThKU28wRHQwSTd4THUyNWtOc1FDQzFmTEVNWHowQ20yQ2JVWWN6aFc0ZTMyWnhsSkpUeFBvYkpjcFV6OFVpQ3JSRDhGbVNXR3JxOVppUWtUU0lBb0NNSWNCcE9SdC15ZDhaN1VhV05fV0ptZjRjMEdtZFB3?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOMmU3YXdRLThKU28wRHQwSTd4THUyNWtOc1FDQzFmTEVNWHowQ20yQ2JVWW..."}, {"title": "直升機放流魚苗存活近5成 櫻花鉤吻鮭重返司界蘭溪", "link": "https://news.pts.org.tw/article/833026", "summary": "國寶魚櫻花鉤吻鮭復育傳出好消息。去（2025）年雪霸國家公園，首度以直升機空運魚苗，放流司界蘭溪，今年追蹤調查，發現魚苗存活率將近5成，甚至已經出現繁殖跡象，有望在歷史棲地自然繁衍。另一方面，日月潭車埕貯木池也展開外來魚種移除作業，成功捕獲..."}];
+            const newsData = [{"title": "五年規劃列4大環境約束性指標 楊秀權：展現政府推動減碳決心 - 新城廣播", "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMmU3YXdRLThKU28wRHQwSTd4THUyNWtOc1FDQzFmTEVNWHowQ20yQ2JVWWN6aFc0ZTMyWnhsSkpUeFBvYkpjcFV6OFVpQ3JSRDhGbVNXR3JxOVppUWtUU0lBb0NNSWNCcE9SdC15ZDhaN1VhV05fV0ptZjRjMEdtZFB3?oc=5", "summary": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOMmU3YXdRLThKU28wRHQwSTd4THUyNWtOc1FDQzFmTEVNWHowQ20yQ2JVWW..."}, {"title": "直升機放流魚苗存活近5成 櫻花鉤吻鮭重返司界蘭溪", "link": "https://news.pts.org.tw/article/833026", "summary": "國寶魚櫻花鉤吻鮭復育傳出好消息。去（2025）年雪霸國家公園，首度以直升機空運魚苗，放流司界蘭溪，今年追蹤調查，發現魚苗存活率將近5成，甚至已經出現繁殖跡象，有望在歷史棲地自然繁衍。另一方面，日月潭車埕貯木池也展開外來魚種移除作業，成功捕獲..."}];
             let favorites = JSON.parse(localStorage.getItem('eco_favs_v4')) || [];
 
             function renderNews() {
